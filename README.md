@@ -1,9 +1,16 @@
 # rotten-potatoes
+
+## Contributed to by Derek Vogel
+## Contributed to by German Almonte
+## Contributed to by Omar Moreta
+## Contributed to by Aaron Lu
+
   [![GitHub contributors](https://img.shields.io/github/contributors/Dnsghd49/rotten-potatoes.svg)](https://GitHub.com/Dnsghd49/rotten-potatoes/graphs/contributors/)
   [![Build Status](https://img.shields.io/github/forks/Dnsghd49/rotten-potatoes.svg)](https://github.com/Dnsghd49/rotten-potatoes/network/)
   [![Build Status](https://img.shields.io/github/stars/Dnsghd49/rotten-potatoes.svg)](https://github.com/Dnsghd49/rotten-potatoes/)
   [![GitHub issues](https://img.shields.io/github/issues/Dnsghd49/rotten-potatoes.svg)](https://GitHub.com/Dnsghd49/rotten-potatoes/issues/)
   ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
+
 
 
 ## Description
@@ -29,6 +36,17 @@ later
 ## Deployed-Link:
 
 https://thawing-coast-40769.herokuapp.com/
+
+https://developer.imdb.com/documentation/
+
+# Backend Steps:
+
+## Setup BrowserRoutes
+### HomePage
+### Movies Comming Out This Week
+### Top Box Office
+### Coming Soon to Theaters
+
 
 ## Screenshot
 
@@ -63,3 +81,4 @@ npm test
 ## Questions
 
 If you have any questions about the repo, open an issue or contact me directly at . You can find more of my work at [Dnsghd49](https://github.com/Dnsghd49/).
+

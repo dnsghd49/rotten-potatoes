@@ -1,4 +1,7 @@
+
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
 import './App.css';
 
 // Components
@@ -11,6 +14,11 @@ import Comments from './pages/Comments'
 function App() {
   return (
     <div className="App">
+
+      <header className="App-header">
+        
+      </header>
+
       <BrowserRouter>
         <Topbar />
 
@@ -19,6 +27,7 @@ function App() {
           <Route path="/comments" element={<Comments />} />
         </Routes>
       </BrowserRouter>
+
     </div>
   );
 }
