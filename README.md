@@ -1,2 +1,2 @@
 # rotten-potatoes
-## Derek Vogel
+## Contributed to by Derek Vogel
