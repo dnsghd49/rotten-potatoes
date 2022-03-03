@@ -7,10 +7,10 @@ function Topbar() {
                 <Nav.Link href="/">Home</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-                <Nav.Link href="#">Link</Nav.Link>
+                <Nav.Link href="/comments">Comments</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-                <Nav.Link href="#">Link</Nav.Link>
+                <Nav.Link href="#">idkyet</Nav.Link>
             </Nav.Item>
         </Nav>
     )
