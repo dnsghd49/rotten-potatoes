@@ -14,11 +14,6 @@ import Comments from './pages/Comments'
 function App() {
   return (
     <div className="App">
-
-      <header className="App-header">
-        
-      </header>
-
       <BrowserRouter>
         <Topbar />
 
