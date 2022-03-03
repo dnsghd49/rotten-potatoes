@@ -1,0 +1,1 @@
+we might want to put each pages to a folder to do more custom stylings
