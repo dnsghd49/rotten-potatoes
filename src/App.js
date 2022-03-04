@@ -19,12 +19,17 @@ function App() {
 })
 .then(response => response.json())
 .then(data => {
+  // data is the data of movies generated from api
+  // results is the array of titles
   const list = data.results;
   list.map((results) => {
+    // results = array | titleText = title info targeting text or movie title
     const name = results.titleText.text;
+    // results = array | primaryImage = imgage of movie targeting the url specifically
     const poster = results.primaryImage.url;
     const movie = `<li><img src="${poster}"><h2>${name}</h2></li>`
     document.querySelector('.movies').innerHTML += movie;
+    // added additional documentation in backend.md
   })
 })
 .catch(err => {
