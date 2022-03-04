@@ -10,7 +10,7 @@ import Main from './pages/Main'
 import Comments from './pages/Comments'
 
 function App() {
-  fetch("https://data-imdb1.p.rapidapi.com/titles/search/title/game?info=mini_info&limit=10&page=1", {
+  fetch("https://data-imdb1.p.rapidapi.com/titles/search/title/007?info=mini_info&limit=5&page=1&titleType=movie", {
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-host": "data-imdb1.p.rapidapi.com",
@@ -18,7 +18,12 @@ function App() {
 	}
 })
 .then(response => response.json())
-.then(data => console.log(data))
+.then(data => {
+  const list = data.results;
+  list.map((results) => {
+    console.log(results)
+  })
+})
 .catch(err => {
 	console.error(err);
 });
