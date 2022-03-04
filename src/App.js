@@ -21,7 +21,10 @@ function App() {
 .then(data => {
   const list = data.results;
   list.map((results) => {
-    console.log(results)
+    const name = results.titleText.text;
+    const poster = results.primaryImage.url;
+    const movie = `<li><img src="${poster}"><h2>${name}</h2></li>`
+    document.querySelector('.movies').innerHTML += movie;
   })
 })
 .catch(err => {
