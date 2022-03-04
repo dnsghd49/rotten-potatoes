@@ -10,7 +10,7 @@ import Main from './pages/Main'
 import Comments from './pages/Comments'
 
 function App() {
-  fetch("https://data-imdb1.p.rapidapi.com/titles/search/keyword/%7Bkeyword%7D?info=mini_info&limit=10&page=1&titleType=movie", {
+  fetch("https://data-imdb1.p.rapidapi.com/titles/search/title/game?info=mini_info&limit=10&page=1", {
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-host": "data-imdb1.p.rapidapi.com",
