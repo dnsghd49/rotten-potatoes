@@ -1,7 +1,7 @@
 function Main() {
     return (
-        <div>
-            this is home page
+        <div className="movieTitles">
+           <script src="./components/movies.js"></script>
         </div>
     )
 }
