@@ -3,7 +3,7 @@ import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 // Components
-// import Topbar from './components/Topbar/Topbar';
+import Topbar from './components/Topbar/Topbar';
 
 // Pages
 import Main from './pages/Main'
@@ -38,7 +38,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        {/* <Topbar /> */}
+        <Topbar />
 
         <Routes>
           <Route exact path="/" element={<Main />} />
