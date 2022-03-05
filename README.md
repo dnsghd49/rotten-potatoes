@@ -39,15 +39,6 @@ https://thawing-coast-40769.herokuapp.com/
 
 https://developer.imdb.com/documentation/
 
-# Backend Steps:
-
-## Setup BrowserRoutes
-### HomePage
-### Movies Comming Out This Week
-### Top Box Office
-### Coming Soon to Theaters
-
-
 ## Screenshot
 
 ![ScreenShot](https://raw.github.com/Dnsghd49/rotten-potatoes/notyet)
