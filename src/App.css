@@ -1,7 +1,11 @@
+.AppBG{
+  background-color: #F3F3F3;
+}
 .App {
   text-align: center;
   margin-left: 21%;
   margin-right: 21%;
+  background-color: #ffffff;
 }
 
 .App-logo {

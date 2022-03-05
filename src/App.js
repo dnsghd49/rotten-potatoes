@@ -11,6 +11,7 @@ import Comments from './pages/Comments'
 
 function App() {
   return (
+    <div className="AppBG">
     <div className="App">
       <BrowserRouter>
         <Topbar />
@@ -21,7 +22,7 @@ function App() {
         </Routes>
       </BrowserRouter>
       <Footer />
-    </div>
+    </div></div>
   );
 }
 
