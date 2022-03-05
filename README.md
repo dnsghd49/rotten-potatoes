@@ -1,19 +1,17 @@
 # rotten-potatoes
 
-## Contribution
-
-* Derek Vogel
-* German Almonte
-* Omar Moreta
-* Aaron Lu
-
   [![GitHub contributors](https://img.shields.io/github/contributors/Dnsghd49/rotten-potatoes.svg)](https://GitHub.com/Dnsghd49/rotten-potatoes/graphs/contributors/)
   [![Build Status](https://img.shields.io/github/forks/Dnsghd49/rotten-potatoes.svg)](https://github.com/Dnsghd49/rotten-potatoes/network/)
   [![Build Status](https://img.shields.io/github/stars/Dnsghd49/rotten-potatoes.svg)](https://github.com/Dnsghd49/rotten-potatoes/)
   [![GitHub issues](https://img.shields.io/github/issues/Dnsghd49/rotten-potatoes.svg)](https://GitHub.com/Dnsghd49/rotten-potatoes/issues/)
   ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
+## Contributors
 
+* Derek Vogel
+* German Almonte
+* Omar Moreta
+* Aaron Lu
 
 ## Description
 
