@@ -8,49 +8,11 @@ this folder is for backend stuff
 ### Top Box Office
 ### Coming Soon to Theaters
 
-<!-- Titles by Keyword
+API Key
+ce4b7c589e2fe59bcbd5a587aa552004
 
-path: /titles/search/keyword/{keyword}
+Example API Request
+https://api.themoviedb.org/3/movie/550?api_key=ce4b7c589e2fe59bcbd5a587aa552004
 
-path parameter (required) : keyword - DO NOT USE QUOTES
-description: returns array of titles acording to filters / sorting query parameters provided and the keyword provided in path
-query parameters: *multiple
-model: title
-
-Titles by Title
-
-path: /titles/search/title/{title}
-
-path parameter (required) : title -> a title or part of a title - DO NOT USE QUOTES
-description: returns array of titles acording to filters / sorting query parameters provided and the title provided in path
-query parameters: *multiple
-model: title -->
-
-{id: 'tt13075554', primaryImage: {…}, titleType: {…}, titleText: {…}, releaseDate: {…}}
-id: "tt13075554"
-primaryImage:
-caption: {plainText: '007 - For Our Eyes Only (2020)', __typename: 'Markdown'}
-height: 1000
-id: "rm3997607425"
-url: "https://m.media-amazon.com/images/M/MV5BYTM4N2Y2MDUtZTVhNC00NWQ1LWI1MDUtOGU2MGE5NTYwNDM4XkEyXkFqcGdeQXVyNzA2Nzk4ODc@._V1_.jpg"
-width: 694
-__typename: "Image"
-[[Prototype]]: Object
-releaseDate:
-day: 20
-month: 8
-year: 2020
-__typename: "ReleaseDate"
-[[Prototype]]: Object
-titleText:
-text: "007 - For Our Eyes Only"
-__typename: "TitleText"
-[[Prototype]]: Object
-titleType:
-id: "movie"
-isEpisode: false
-isSeries: false
-text: "Movie"
-__typename: "TitleType"
-[[Prototype]]: Object
-[[Prototype]]: Object
+API Read Access TOken
+eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjZTRiN2M1ODllMmZlNTliY2JkNWE1ODdhYTU1MjAwNCIsInN1YiI6IjYyMjNiM2Y5YTI0YzUwMDA0MWVlZGYxYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.LL24RNVm_8W7F9q9r7eXnBwQDKzhIP5bYoD_Ql32KG4
