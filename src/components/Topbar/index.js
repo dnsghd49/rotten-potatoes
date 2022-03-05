@@ -13,7 +13,7 @@ function Topbar() {
         <Navbar bg="dark" variant="dark">
             <Container>
                 <Navbar.Brand href="/">
-                    <img style={{ paddingTop: '11px', paddingBottom: '11px' }} src={Logo} alt='Rotten-Potatos logo'></img>
+                    <img src={Logo} alt='Rotten-Potatos logo'></img>
                 </Navbar.Brand>
                 
                 <Searchbar />

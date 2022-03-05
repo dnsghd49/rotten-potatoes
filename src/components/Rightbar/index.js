@@ -3,7 +3,7 @@ import './style.css'
 
 function Rightbar() {
     return (
-        <div>
+        <div className='rightbar-container'>
             <Nav className="justify-content-end nav-fonts">
                 <Nav.Link href="/movies">What's the Potatometer®?</Nav.Link>
                 <Nav.Link href="/critics">Critics</Nav.Link>
