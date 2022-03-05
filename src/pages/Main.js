@@ -1,7 +1,9 @@
+import SlideShow from "../components/SlideShow"
+
 function Main() {
     return (
         <div>
-            this is home page
+            <SlideShow />
         </div>
     )
 }

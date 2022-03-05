@@ -1,0 +1,29 @@
+.footer-bg {
+    background-color: rgba(0, 0, 0, 0.281);
+}
+
+.footer-pos {
+    display: flex;
+    padding: 30px;
+}
+
+.footer-container {
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer-group {
+    font-family: "SF Pro Text", "Myriad Set Pro", "SF Pro Icons", "Apple Legacy Chevron", "Helvetica Neue", "Helvetica",
+        "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.footer-container ul li {
+    list-style-type: none;
+}
+
+.icon-flex {
+    display: flex;
+}

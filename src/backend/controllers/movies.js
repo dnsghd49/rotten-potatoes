@@ -1,6 +1,8 @@
 const movies = require("express").Router();
 
-movies.get("/", async (req, res) => {});
+movies.get("/", (req, res) => {
+  res.send("/movies");
+});
 
 movies.get("/:id", async (req, res) => {});
 
