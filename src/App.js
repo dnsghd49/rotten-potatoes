@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Components
 import Topbar from './components/Topbar';
@@ -11,6 +12,7 @@ import Comments from './pages/Comments'
 
 function App() {
   return (
+    <div className="AppBG">
     <div className="App">
       <BrowserRouter>
         <Topbar />
@@ -21,7 +23,7 @@ function App() {
         </Routes>
       </BrowserRouter>
       <Footer />
-    </div>
+    </div></div>
   );
 }
 

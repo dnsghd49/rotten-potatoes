@@ -1,8 +1,9 @@
-import SlideShow from "../components/SlideShow"
+import SlideShow from "../components/SlideShow";
+import './style.css';
 
 function Main() {
     return (
-        <div>
+        <div className="content">
             <SlideShow />
         </div>
     )
