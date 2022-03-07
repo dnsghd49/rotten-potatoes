@@ -1,17 +1,17 @@
 # rotten-potatoes
 
-## Contributed to by Derek Vogel
-## Contributed to by German Almonte
-## Contributed to by Omar Moreta
-## Contributed to by Aaron Lu
-
   [![GitHub contributors](https://img.shields.io/github/contributors/Dnsghd49/rotten-potatoes.svg)](https://GitHub.com/Dnsghd49/rotten-potatoes/graphs/contributors/)
   [![Build Status](https://img.shields.io/github/forks/Dnsghd49/rotten-potatoes.svg)](https://github.com/Dnsghd49/rotten-potatoes/network/)
   [![Build Status](https://img.shields.io/github/stars/Dnsghd49/rotten-potatoes.svg)](https://github.com/Dnsghd49/rotten-potatoes/)
   [![GitHub issues](https://img.shields.io/github/issues/Dnsghd49/rotten-potatoes.svg)](https://GitHub.com/Dnsghd49/rotten-potatoes/issues/)
   ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
+## Contributors
 
+* Derek Vogel
+* German Almonte
+* Omar Moreta
+* Aaron Lu
 
 ## Description
 
@@ -35,13 +35,15 @@ later
 
 ## Deployed-Link:
 
-https://thawing-coast-40769.herokuapp.com/
+https://rotten-p0tat0es.herokuapp.com/
+
+## API-Helper-Link:
 
 https://developer.imdb.com/documentation/
 
 ## Screenshot
 
-![ScreenShot](https://raw.github.com/Dnsghd49/rotten-potatoes/notyet)
+![ScreenShot](https://github.com/Dnsghd49/rotten-potatoes/notyet)
 
 ## Installation
 

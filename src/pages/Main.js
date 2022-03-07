@@ -1,9 +1,12 @@
+import SlideShow from "../components/SlideShow";
+import "./style.css";
+
 function Main() {
-    return (
-        <div className="movies">
-            
-        </div>
-    )
+  return (
+    <div className="content">
+      <SlideShow />
+    </div>
+  );
 }
 
-export default Main
+export default Main;
