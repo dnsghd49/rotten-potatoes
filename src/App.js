@@ -14,7 +14,7 @@ import { useEffect, useState } from "react";
 function App() {
   const [data, setData] = useState("");
 
-  const API_URL = "https://tastedive.com/api/similar?q=batman";
+  const API_URL = "https://imdb-api.com/en/API/SearchAll/k_zeuppxb1/${value}";
 
   const fetchMovie = async () => {
     const response = await fetch(API_URL);
@@ -23,9 +23,9 @@ function App() {
     console.log(data);
   };
 
-  // useEffect(() => {
-  //   fetchMovie();
-  // }, []);
+  useEffect(() => {
+    fetchMovie();
+  }, []);
 
   return (
     <div className="App">
@@ -36,9 +36,6 @@ function App() {
           <Route path="/comments" element={<Comments />} />
         </Routes>
       </BrowserRouter>
-      <div>
-        <button onClick={() => fetchMovie()}>Display Movie</button>
-      </div>
       <div>Movie: {data}</div>
       <Footer />
     </div>
