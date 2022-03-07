@@ -5,74 +5,43 @@ function Footer() {
         <div className="footer-bg">
             <div className='footer-pos'>
                 <div className="footer-container">
-                    <div className="footer-group">
+                    <div className="footer-group-l">
                         <ul>
-                            <li><strong>Customer Care</strong></li>
-                            <li>Support</li>
-                            <li>Terms</li>
-                            <li>Shipping</li>
-                            <li>Contact Us</li>
+                            <li>Help</li>
+                            <li>About Rotten Potatoes</li>
+                            <li>What's the Potatometer®?</li>
+                        </ul>
+                    </div>
+                    <div className="footer-group-l">
+                        <ul>
+                            <li>Critic Submission</li>
+                            <li>Licensing</li>
+                            <li>Advertise</li>
+                            <li>Careers</li>
                         </ul>
                     </div>
                     <div className="footer-group">
                         <ul>
-                            <li><strong>Customer Care</strong></li>
-                            <li>Support</li>
-                            <li>Terms</li>
-                            <li>Shipping</li>
-                            <li>Contact Us</li>
-                            <li>Support</li>
-                            <li>Terms</li>
-                            <li>Shipping</li>
-                            <li>Contact Us</li>
+                            <li><i class="cib-gmail"></i>
+                            <strong>JOIN THE NEWSLETTER</strong>
+                            </li>
+                            <li>Get the freshest reviews, news, and more delivered right to your inbox!</li>
+                            <li><button type = "button" class = "btn btn-primary">JOIN THE NEWSLETTER</button></li>
                         </ul>
                     </div>
-                    <div className="footer-group">
-                        <ul>
-                            <li><strong>Stuff</strong></li>
-                            <li>place-holder</li>
-                            <li>place-holder</li>
-                            <li>place-holder</li>
-                            <br></br>
-                            <li><strong>Stuff</strong></li>
-                            <li>place-holder</li>
-                            <li>place-holder</li>
-                            <li>place-holder</li>
-                            <br></br>
-                            <li><strong>Stuff</strong></li>
-                            <li>place-holder</li>
-                            <li>place-holder</li>
-                            <li>place-holder</li>
-                        </ul>
-                    </div>
-                    <div className="footer-group">
-                        <ul>
-                            <li><strong>Stuff</strong></li>
-                            <li>place-holder</li>
-                            <li>place-holder</li>
-                            <li>place-holder</li>
-                            <br></br>
-                            <li><strong>Stuff</strong></li>
-                            <li>place-holder</li>
-                            <li>place-holder</li>
-                            <li>place-holder</li>
-                            <br></br>
-                            <li><strong>Stuff</strong></li>
-                            <li>place-holder</li>
-                            <li>place-holder</li>
-                            <li>place-holder</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div>
-                    <strong>Connect with us!</strong>
+                    <div className="footer-group-l">
+                    <strong>FOLLOW US</strong>
                     <div className='icon-flex'>
-                        <p>sns icon</p>
+                    <i class="cib-facebook"></i>
+                    <i class="cib-twitter"></i>
+                    <i class="cib-instagram"></i>
+                    <i class="cib-snapchat"></i>
+                    <i class="cib-youtube"></i>
+                    </div>
                     </div>
                 </div>
             </div>
-            <div>
+            <div className="footer-copyright">
                 <strong>©2022 by Rotten Potatoes</strong>
             </div>
         </div>

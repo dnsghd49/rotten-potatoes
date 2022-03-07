@@ -1,6 +1,6 @@
-import "./App.css";
-import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 // Components
 import Topbar from "./components/Topbar";
@@ -28,16 +28,18 @@ function App() {
   console.log(data.results.title);
 
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Topbar />
-        <Routes>
-          <Route exact path="/" element={<Main />} />
-          <Route path="/comments" element={<Comments />} />
-        </Routes>
-      </BrowserRouter>
-      <div>Movie: {data.results.title}</div>
-      <Footer />
+    <div className="AppBG">
+      <div className="App">
+        <BrowserRouter>
+          <Topbar />
+          <Routes>
+            <Route exact path="/" element={<Main />} />
+            <Route path="/comments" element={<Comments />} />
+          </Routes>
+        </BrowserRouter>
+        <div>Movie: {data.results.title}</div>
+        <Footer />
+      </div>
     </div>
   );
 }
