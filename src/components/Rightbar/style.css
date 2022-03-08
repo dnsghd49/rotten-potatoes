@@ -20,6 +20,7 @@ p {
     position: absolute;
     z-index: 2;
     left: -711px;
+    width: 1103px;
     background-color: #212529;
     padding: 2em;
 }
@@ -33,13 +34,16 @@ p {
 }
 
 .dropdown-items {
-    padding-right: 5em;
+    padding-right: 3em;
+    font-size: small;
 }
 
 .dropdown-imgs {
-    padding-left: 517px;
+    padding-left: 100px;
+    font-size: small;
 }
 
 .movie-poster {
     display: flex;
+    padding-left: 100px;
 }
