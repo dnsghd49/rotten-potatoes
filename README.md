@@ -41,15 +41,6 @@ https://rotten-p0tat0es.herokuapp.com/
 
 https://developer.imdb.com/documentation/
 
-# Backend Steps:
-
-## Setup BrowserRoutes
-### HomePage
-### Movies Comming Out This Week
-### Top Box Office
-### Coming Soon to Theaters
-
-
 ## Screenshot
 
 ![ScreenShot](https://github.com/Dnsghd49/rotten-potatoes/notyet)
