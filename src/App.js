@@ -35,15 +35,8 @@ function App() {
             <Route path="/comments" element={<Comments />} />
           </Routes>
         </BrowserRouter>
-        <input
-          type="text"
-          value={movie.setData}
-          onChange={(e) => {
-            dispatch(searchMovie(e.target.value));
-          }}
-        />
         <div>{movie.apiData.title}</div>
-        {/* <img src={movie.apidData.image} alt="movie" /> */}
+        <img src={movie.apiData.image} alt="movie" />
         <div>{movie.apiData.description}</div>
         <Footer />
       </div>
