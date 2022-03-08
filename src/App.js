@@ -9,23 +9,21 @@ import Footer from "./components/Footer";
 // Pages
 import Main from "./pages/Main";
 import Comments from "./pages/Comments";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { useSelector, useDispatch, connect } from "react-redux";
+import { fetchMovie, searchMovie, setData } from "./features/movieSlice";
+
+const mapStateToProps = (state) => ({
+  search: state.movie.searchMovie,
+});
 
 function App() {
-  const [data, setData] = useState("");
-
-  const API_URL = "https://imdb-api.com/en/API/SearchAll/k_zeuppxb1/batman";
-
-  const fetchMovie = async () => {
-    const response = await fetch(API_URL);
-    const resData = await response.json();
-    setData(resData);
-  };
+  const movie = useSelector((state) => state.movie);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    fetchMovie();
-  }, []);
-  console.log(data.results.title);
+    dispatch(fetchMovie());
+  }, [movie.search, dispatch]);
 
   return (
     <div className="AppBG">
@@ -37,11 +35,20 @@ function App() {
             <Route path="/comments" element={<Comments />} />
           </Routes>
         </BrowserRouter>
-        <div>Movie: {data.results.title}</div>
+        <input
+          type="text"
+          value={movie.setData}
+          onChange={(e) => {
+            dispatch(searchMovie(e.target.value));
+          }}
+        />
+        <div>{movie.apiData.title}</div>
+        {/* <img src={movie.apidData.image} alt="movie" /> */}
+        <div>{movie.apiData.description}</div>
         <Footer />
       </div>
     </div>
   );
 }
 
-export default App;
+export default connect(mapStateToProps)(App);
