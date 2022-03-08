@@ -1,0 +1,13 @@
+
+.textcontent{
+    margin-top: 3vh;
+}
+
+.headingtitle{
+    text-align: start;
+    border-left: 3px solid orange;
+}
+
+.viewalltext{
+    text-align: end;
+}
