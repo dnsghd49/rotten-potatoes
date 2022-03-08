@@ -3,6 +3,8 @@ import Carolist from "../components/Carousel/carolist";
 import './style.css';
 
 
+
+
 function Main() {
     return (
         <div className="content">
@@ -12,4 +14,4 @@ function Main() {
     )
 }
 
-export default Main
+export default Main;

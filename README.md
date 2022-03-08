@@ -35,22 +35,15 @@ later
 
 ## Deployed-Link:
 
-https://thawing-coast-40769.herokuapp.com/
+https://rotten-p0tat0es.herokuapp.com/
+
+## API-Helper-Link:
 
 https://developer.imdb.com/documentation/
 
-# Backend Steps:
-
-## Setup BrowserRoutes
-### HomePage
-### Movies Comming Out This Week
-### Top Box Office
-### Coming Soon to Theaters
-
-
 ## Screenshot
 
-![ScreenShot](https://raw.github.com/Dnsghd49/rotten-potatoes/notyet)
+![ScreenShot](https://github.com/Dnsghd49/rotten-potatoes/notyet)
 
 ## Installation
 
