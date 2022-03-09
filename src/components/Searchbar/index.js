@@ -1,24 +1,34 @@
+import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import Button from "react-bootstrap/Button";
 import "./style.css";
-import { useSelector, useDispatch } from "react-redux";
-import { searchMovie, setData } from "../../features/movieSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { showData, movieData, fetchData } from "../../features/movieSlice";
 
 function Searchbar() {
+  // const data = useSelector((state) => state.movie);
+  //set state for the search
+  const [search, setSearch] = useState("");
   const dispatch = useDispatch();
-  const movie = useSelector((state) => state.movie);
+  //handle the submit so page doesn't refresh and if nothing is searched
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (search === "") return alert("Please enter a movie or show.");
+    dispatch(fetchData(search));
+    // dispatch(showData(search));
+    setSearch("");
+  };
+
   return (
-    <Form className="d-flex">
+    <Form className="d-flex" onSubmit={handleSubmit}>
       <FormControl
         type="search"
         placeholder="Search movies, TV, actors, more..."
         className="me-2"
         aria-label="Search"
-        value={movie.setData}
-        onSubmit={(e) => {
-          dispatch(searchMovie(e.target.value));
-        }}
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
       />
       <Button variant="primary" type="submit">
         Search
