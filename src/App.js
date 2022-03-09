@@ -9,6 +9,8 @@ import Footer from "./components/Footer";
 // Pages
 import Main from "./pages/Main";
 import Comments from "./pages/Comments";
+import Signup from "./pages/Signup";
+import Login from "./pages/Login";
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Main />} />
             <Route path="/comments" element={<Comments />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/login" element={<Login />} />
           </Routes>
         </BrowserRouter>
         <Footer />
