@@ -73,19 +73,19 @@ export default movieSlice.reducer;
 export const fetchData = () => {
   const movieThunk = async (dispatch, getState) => {
     const state = getState();
-    console.log(state);
+    // console.log(state);
     const responseMovies = await fetch(
       `https://www.omdbapi.com?apikey=${API_key}&s=batman&type=series`
     );
     const moviesData = await responseMovies.json();
     dispatch(movieData(moviesData));
-    console.log(state, moviesData);
-    // const responseShows = await fetch(
-    //   `https://www.omdbapi.com?apikey=${API_key}&s=seinfeld&type=series`
-    // );
-    // const showsData = await responseShows.json();
-    // dispatch(showData(showsData));
-    // console.log(state, showsData);
+    // console.log("MovieDate: ", moviesData.Search[5].Poster);
+    const responseShows = await fetch(
+      `https://www.omdbapi.com?apikey=${API_key}&s=seinfeld&type=series`
+    );
+    const showsData = await responseShows.json();
+    dispatch(showData(showsData));
+    // console.log("ShowData: ", showsData.Search[0].Title);
   };
   return movieThunk;
 };

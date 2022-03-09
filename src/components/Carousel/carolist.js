@@ -2,6 +2,9 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Figure, Container, Row, Col } from "react-bootstrap";
 import "./style.css";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchData } from "../../features/movieSlice";
 
 const responsive = {
   superLargeDesktop: {
@@ -23,6 +26,35 @@ const responsive = {
 };
 
 const Carolist = ({ deviceType }) => {
+  const dispatch = useDispatch();
+  const { movies } = useSelector((state) => state.movie);
+
+  useEffect(() => {
+    const data = dispatch(fetchData());
+    console.log(data);
+    return data;
+  }, []);
+
+  const renderMovies =
+    movies.Response === "True" ? (
+      movies.Search.map((movie, index) => (
+        <div>
+          <Figure>
+            <Figure.Image
+              width={180}
+              height={255}
+              className="rounded"
+              alt="180x255"
+              src={movie.Poster}
+              key={index}
+            />
+            <Figure.Caption>ABSOLUTE BANGER/10 🔥</Figure.Caption>
+          </Figure>
+        </div>
+      ))
+    ) : (
+      <div>{movies.Error}</div>
+    );
   return (
     <Container>
       <Row className="textcontent">
@@ -43,7 +75,8 @@ const Carolist = ({ deviceType }) => {
           containerClass="carousel-container"
           autoPlay={false}
         >
-          <div>
+          {renderMovies}
+          {/* <div>
             <Figure>
               <Figure.Image
                 width={180}
@@ -114,7 +147,7 @@ const Carolist = ({ deviceType }) => {
               />
               <Figure.Caption>ABSOLUTE BANGER/10 🔥</Figure.Caption>
             </Figure>
-          </div>
+          </div> */}
         </Carousel>
       </Row>
     </Container>
