@@ -1,6 +1,8 @@
+import './style.css'
+
 function Signup() {
     return (
-        <div>this is sign-up page</div>
+        <div></div>
     )
 }
 

@@ -1,6 +1,8 @@
+import './style.css'
+
 function Login() {
     return (
-        <div>this is login page</div>
+        <div></div>
     )
 }
 
