@@ -22,21 +22,21 @@ function Footer() {
                     </div>
                     <div className="footer-group">
                         <ul>
-                            <li><i class="cib-gmail"></i>
+                            <li><i className="cib-gmail"></i>
                             <strong>JOIN THE NEWSLETTER</strong>
                             </li>
                             <li>Get the freshest reviews, news, and more delivered right to your inbox!</li>
-                            <li><button type = "button" class = "btn btn-primary">JOIN THE NEWSLETTER</button></li>
+                            <li><button type = "button" className = "btn btn-primary">JOIN THE NEWSLETTER</button></li>
                         </ul>
                     </div>
                     <div className="footer-group-l">
                     <strong>FOLLOW US</strong>
                     <div className='icon-flex'>
-                    <i class="cib-facebook"></i>
-                    <i class="cib-twitter"></i>
-                    <i class="cib-instagram"></i>
-                    <i class="cib-snapchat"></i>
-                    <i class="cib-youtube"></i>
+                    <i className="cib-facebook"></i>
+                    <i className="cib-twitter"></i>
+                    <i className="cib-instagram"></i>
+                    <i className="cib-snapchat"></i>
+                    <i className="cib-youtube"></i>
                     </div>
                     </div>
                 </div>

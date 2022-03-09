@@ -10,7 +10,7 @@ import Footer from "./components/Footer";
 import Main from "./pages/Main";
 import Comments from "./pages/Comments";
 import { useEffect } from "react";
-import { useSelector, useDispatch, connect } from "react-redux";
+import Redux, { useSelector, useDispatch, connect } from "react-redux";
 import { fetchMovie, searchMovie, setData } from "./features/movieSlice";
 
 const mapStateToProps = (state) => ({
@@ -43,7 +43,7 @@ function App() {
           }}
         />
         <div>{movie.apiData.title}</div>
-        {/* <img src={movie.apidData.image} alt="movie" /> */}
+        <div>{movie.apiData.image} </div>
         <div>{movie.apiData.description}</div>
         <Footer />
       </div>
