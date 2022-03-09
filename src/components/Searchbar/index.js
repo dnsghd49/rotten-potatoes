@@ -8,7 +8,6 @@ import { fetchSearchData } from "../../features/movieSlice";
 
 function Searchbar() {
   let { search } = useSelector((state) => state.movie);
-  //set state for the search
   const [searchTerm, setSearch] = useState("");
   const dispatch = useDispatch();
 
