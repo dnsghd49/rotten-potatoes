@@ -1,0 +1,17 @@
+
+.textcontent{
+    margin-top: 3vh;
+}
+
+.headingtitle{
+    text-align: start;
+    border-left: 3px solid #ecd574;
+}
+
+.viewalltext{
+    text-align: end;
+    color: #e0bd4d;
+}
+.viewalltext:hover{
+    color: #f6ecbb;
+}
