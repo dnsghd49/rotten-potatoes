@@ -9,7 +9,6 @@ import Footer from "./components/Footer";
 // Pages
 import Main from "./pages/Main";
 import Comments from "./pages/Comments";
-// import { useSelector } from "react-redux";
 
 function App() {
   return (
@@ -28,5 +27,4 @@ function App() {
   );
 }
 
-// export default connect(mapStateToProps)(App);
 export default App;

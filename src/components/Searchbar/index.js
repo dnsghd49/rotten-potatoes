@@ -4,19 +4,20 @@ import FormControl from "react-bootstrap/FormControl";
 import Button from "react-bootstrap/Button";
 import "./style.css";
 import { useDispatch, useSelector } from "react-redux";
-import { showData, movieData, fetchData } from "../../features/movieSlice";
+import { fetchSearchData } from "../../features/movieSlice";
 
 function Searchbar() {
-  // const data = useSelector((state) => state.movie);
+  let { search } = useSelector((state) => state.movie);
   //set state for the search
-  const [search, setSearch] = useState("");
+  const [searchTerm, setSearch] = useState("");
   const dispatch = useDispatch();
-  //handle the submit so page doesn't refresh and if nothing is searched
+
+  //handle the submit if nothing is searched
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (search === "") return alert("Please enter a movie or show.");
-    dispatch(fetchData(search));
-    // dispatch(showData(search));
+    if (searchTerm === "") return alert("Please enter a movie or show.");
+    search = dispatch(fetchSearchData(searchTerm));
+    console.log(search);
     setSearch("");
   };
 
@@ -27,7 +28,7 @@ function Searchbar() {
         placeholder="Search movies, TV, actors, more..."
         className="me-2"
         aria-label="Search"
-        value={search}
+        value={searchTerm}
         onChange={(e) => setSearch(e.target.value)}
       />
       <Button variant="primary" type="submit">
