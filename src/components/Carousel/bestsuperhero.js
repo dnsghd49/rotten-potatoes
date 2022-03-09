@@ -23,12 +23,12 @@ const responsive = {
 };
 
 
-const Carolist = ({ deviceType }) => {
+const BestSuperhero = ({ deviceType }) => {
   return (
     <Container>
       <Row className="textcontent">
         <Col>
-          <h6 className='headingtitle'>NEW AND UPCOMING MOVIES</h6>
+          <h6 className='headingtitle'>BEST SUPERHERO MOVIES</h6>
         </Col>
         <Col>
           <p className="viewalltext">VIEW ALL</p>
@@ -134,4 +134,4 @@ const Carolist = ({ deviceType }) => {
   );
 };
 
-export default Carolist;
+export default BestSuperhero;
