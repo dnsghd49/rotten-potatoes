@@ -16,7 +16,6 @@ function Searchbar() {
     e.preventDefault();
     if (searchTerm === "") return alert("Please enter a movie or show.");
     search = dispatch(fetchSearchData(searchTerm));
-    console.log(search);
     setSearch("");
   };
 
