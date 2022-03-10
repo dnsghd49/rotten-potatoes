@@ -1,4 +1,4 @@
-.popup {
+.signup-popup {
     position: fixed;
     top: 0;
     left: 0;
@@ -9,9 +9,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 3;
 }
 
-.popup-inner {
+.popup-item {
     position: relative;
     padding: 32px;
     width: 100%;
@@ -19,7 +20,7 @@
     background-color: aliceblue;
 }
 
-.popup-inner .close-btn {
+.popup-item .close-btn {
     position: absolute;
     top: 16px;
     right: 16px;
