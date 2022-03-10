@@ -10,9 +10,9 @@ function Signup(props) {
     return (
         <div className='signup-popup'>
             <div className='popup-inner'>
-            <FontAwesomeIcon className='fa-lg close-btn' onClick={() => props.setTrigger(false)} icon={faXmark} />
+            {/* <FontAwesomeIcon className='fa-lg close-btn' onClick={() => props.setTrigger(false)} icon={faXmark} /> */}
                 {/* {props.children} */}
-                <Form Form onSubmit={() => props.setTrigger(false)} action="/users/sign-up" method="POST">
+                <Form action="/users/sign-up" method="POST">
                 <Form.Group className="mb-3" controlId="formBasicName">
                         <Form.Label>Name</Form.Label>
                         <Form.Control type="text" placeholder="Enter name" required/>
