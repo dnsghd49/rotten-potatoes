@@ -4,6 +4,7 @@
     text-transform: uppercase;
     font-variant-caps: petite-caps;
     padding: 0;
+    margin-top: 50px;
 }
 
 .listStyle{
@@ -21,4 +22,18 @@
 
 .rightborder{
     border-right: 1px solid #f3f3f3;
+}
+
+.results{
+    margin-top: 25px;
+    text-align: left;
+}
+
+.buttonStyle{
+    margin-right: 10px;
+    margin-top: 20px;
+}
+
+#thumbnailStyle{
+    margin-right: 10px;
 }

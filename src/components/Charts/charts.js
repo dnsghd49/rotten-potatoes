@@ -37,7 +37,7 @@ function ChartList() {
             </Col>
             </Row>
             <Row>
-            <Col>
+            <Col sm={4}>
             <ul className="listStyle">
             <h6 className="headingtitle">new tv this week</h6>
                 <li className="rightborder">Texas Chainsaw Massacre</li>
@@ -52,8 +52,6 @@ function ChartList() {
                 <li className="rightborder">Texas Chainsaw Massacre</li>
             </ul>
             </Col>
-            <Col></Col>
-            <Col></Col>
             </Row>
         </Container>
     )

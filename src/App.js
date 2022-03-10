@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 // Pages
 import Main from "./pages/Main";
 import Comments from "./pages/Comments";
+import SearchPage from "./pages/Search";
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Main />} />
             <Route path="/comments" element={<Comments />} />
-            <Route path="#" element={<Main />} />
+            <Route path="/search" element={<SearchPage/>} />
             <Route path="#" element={<Main />} />
           </Routes>
         </BrowserRouter>
