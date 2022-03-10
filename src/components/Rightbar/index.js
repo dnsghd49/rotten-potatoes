@@ -28,12 +28,10 @@ function Rightbar() {
                 <Nav.Link onClick={() => setSignupPopup(true)}>SIGN UP</Nav.Link>
                 <Nav.Link onClick={() => setLoginPopup(true)}>LOG IN</Nav.Link>
             </Nav>
-                {/* signup popup */}
+            
+            {/* signup/login popup */}
             <Signup trigger={signupPopup} setTrigger={setSignupPopup} />
-
-                {/* login popup */}
-            <Login trigger={loginPopup} setTrigger={setLoginPopup}>
-            </Login>
+            <Login trigger={loginPopup} setTrigger={setLoginPopup} />
 
             <Nav className="justify-content-end">
                 {/* this section is for movies dropdown */}
