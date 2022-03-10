@@ -1,8 +1,8 @@
 import Nav from 'react-bootstrap/Nav'
 import { useState } from 'react'
 import './style.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faXmark } from '@fortawesome/free-solid-svg-icons/faXmark'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faXmark } from '@fortawesome/free-solid-svg-icons/faXmark'
 
 // components
 import MoviesDropdown from '../MoviesDropdown'
@@ -29,13 +29,10 @@ function Rightbar() {
                 <Nav.Link onClick={() => setLoginPopup(true)}>LOG IN</Nav.Link>
             </Nav>
                 {/* signup popup */}
-            <Signup trigger={signupPopup} setTrigger={setSignupPopup}>
-                <FontAwesomeIcon className='fa-lg close-btn' onClick={() => setSignupPopup(false)} icon={faXmark} />
-            </Signup>
+            <Signup trigger={signupPopup} setTrigger={setSignupPopup} />
 
                 {/* login popup */}
             <Login trigger={loginPopup} setTrigger={setLoginPopup}>
-                <FontAwesomeIcon className='fa-lg close-btn' onClick={() => setLoginPopup(false)} icon={faXmark} />
             </Login>
 
             <Nav className="justify-content-end">

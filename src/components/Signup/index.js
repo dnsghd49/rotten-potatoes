@@ -2,12 +2,15 @@ import './style.css'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faXmark } from '@fortawesome/free-solid-svg-icons/faXmark'
+
 // name password email
 function Signup(props) {
     return (props.trigger) ? (
         <div className='signup-popup'>
             <div className='popup-item'>
-                {props.children}
+                <FontAwesomeIcon className='fa-lg close-btn' onClick={() => props.setTrigger(false)} icon={faXmark} />
                 <Form onSubmit={() => props.setTrigger(false)}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Username</Form.Label>
