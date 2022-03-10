@@ -9,31 +9,36 @@ import { faXmark } from '@fortawesome/free-solid-svg-icons/faXmark'
 function Signup(props) {
     return (
         <div className='signup-popup'>
-            <div className='popup-inner'>
-            {/* <FontAwesomeIcon className='fa-lg close-btn' onClick={() => props.setTrigger(false)} icon={faXmark} /> */}
-                {/* {props.children} */}
-                <Form action="/users/sign-up" method="POST">
-                <Form.Group className="mb-3" controlId="formBasicName">
-                        <Form.Label>Name</Form.Label>
-                        <Form.Control type="text" placeholder="Enter name" required/>
+            <div className='popup-item'>
+                {props.children}
+                <FontAwesomeIcon className='fa-lg close-btn' onClick={() => props.setTrigger(false)} icon={faXmark} />
+                <Form action='/' method='POST' onSubmit={() => props.setTrigger(false)}>
+                    <ul>
+                        {/* {if (typeof  errors != 'undefined'){
+                            errors.forEach(error)=>{alert(errors.message)}
+                        }; */}
+                    </ul>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label>Username</Form.Label>
+                        <Form.Control type="username" placeholder="Enter username" />
                     </Form.Group>
-                   <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
-                        <Form.Control type="email" placeholder="Enter email" required/>
+                        <Form.Control type="email" placeholder="Enter email" />
                     </Form.Group>
-                    <Form.Group className="mb-3" controlId="formBasicPassword" >
+                    <Form.Group className="mb-3" controlId="formBasicPassword">
                         <Form.Label>Password</Form.Label>
-                        <Form.Control type="password" placeholder="Password" required/>
+                        <Form.Control type="password" placeholder="Password" />
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formBasicPassword">
                         <Form.Label>Confirm Password</Form.Label>
-                        <Form.Control type="password" placeholder="Password2" required/>
+                        <Form.Control type="password" placeholder="Password2" />
                     </Form.Group>
                     <Button variant="primary" type="submit">
                         Submit
                     </Button>
                 </Form>
-        </div>
+            </div>
         </div>
     )
 }

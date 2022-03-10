@@ -30,7 +30,7 @@ function Rightbar() {
             </Nav>
             
             {/* signup/login popup */}
-            <Signup trigger={signupPopup} setTrigger={setSignupPopup} />
+            {/* <Signup trigger={signupPopup} setTrigger={setSignupPopup} /> */}
             <Login trigger={loginPopup} setTrigger={setLoginPopup} />
 
             <Nav className="justify-content-end">

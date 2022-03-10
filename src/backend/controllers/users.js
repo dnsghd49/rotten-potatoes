@@ -2,25 +2,26 @@ const users = require('express').Router();
 const express = require('express')
 const app = express();
 const { pool } = require('.../dbConfig');
+const bcrypt = require('bcrypt')
 
 //Configuration / Middleware 
 app.use(users.urlencoded({ extended: false}))
 
 
 users.get("/", (req, res) => {
-  res.render("./pages/main");
+  res.send("./pages/main");
 });
 
 users.get("/", async (req, res) => {
-    res.render("./Signup/sign-up");
+    res.send("./Signup/sign-up");
 });
 
 users.get("/", async (req, res) => {
-    res.render("./Signup/login");
+    res.send("./Signup/login");
 });
 
 users.get("/", async (req, res) => {
-    res.render("./Signup/dashboard");
+    res.send("./Signup/dashboard");
 });
 
 users.post("/", async (req, res) => {
@@ -31,6 +32,24 @@ users.post("/", async (req, res) => {
         password,
         password2
     })
+
+    let errors = [];
+
+    if (!name || !email || !password || !password2){
+        errors.push({ message: 'Please eneter all fields'})
+    }
+    if (password.length < 6){
+        errors.push({ message: 'Password should be at least 6 characters'})
+    }
+    if (password !== password2){
+        errors.push({ message: 'Passwords do not match'})
+    }
+    if(errors.length > 0){
+        res.render('register', {errors});
+    }else{
+        let hashPassword = await bcrypt.hash(password, 10);
+        console.log(hashPassword)
+    }
 });
 
 users.put("/users/register/:id", async (req, res) => {

@@ -20,6 +20,7 @@ app.use(express.json());
 
 // Movies controller
 app.use("/movies", require("./src/backend/controllers/movies"));
+app.use("/users", require("./src/backend/controllers/users"));
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(publicPath, "index.html"));
