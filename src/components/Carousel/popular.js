@@ -62,11 +62,11 @@ const PopularIn = ({ deviceType }) => {
     <Container>
       <Row className="textcontent">
         <Col>
-          <h6 className="headingtitle">POPULAR IN THEATERS</h6>
+          <h6 className="headingtitle">popular in theatres</h6>
         </Col>
-        <Col>
+        {/* <Col>
           <p className="viewalltext">VIEW ALL</p>
-        </Col>
+        </Col> */}
       </Row>
       <Row>
         <Carousel
