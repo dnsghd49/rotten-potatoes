@@ -19,6 +19,8 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Main />} />
             <Route path="/comments" element={<Comments />} />
+            <Route path="#" element={<Main />} />
+            <Route path="#" element={<Main />} />
           </Routes>
         </BrowserRouter>
         <Footer />
