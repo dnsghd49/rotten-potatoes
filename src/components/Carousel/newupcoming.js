@@ -31,7 +31,6 @@ const NewUpcoming = ({ deviceType }) => {
 
   useEffect(() => {
     const data = dispatch(fetchUpcomingData());
-    // console.log(data);
     return data;
   }, [dispatch]);
 
