@@ -1,5 +1,5 @@
 import Nav from 'react-bootstrap/Nav'
-import { useState } from 'react'
+import { state, useState } from 'react'
 import './style.css'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faXmark } from '@fortawesome/free-solid-svg-icons/faXmark'
@@ -19,6 +19,9 @@ import Login from '../Login'
 function Rightbar() {
     const [signupPopup, setSignupPopup] = useState(false)
     const [loginPopup, setLoginPopup] = useState(false)
+    // state = {
+    //     visible: true
+    // };
 
     return (
         <div className='rightbar-container'>
@@ -30,7 +33,7 @@ function Rightbar() {
             </Nav>
             
             {/* signup/login popup */}
-            {/* <Signup trigger={signupPopup} setTrigger={setSignupPopup}/> */}
+            <Signup trigger={signupPopup} setTrigger={setSignupPopup}/>
             <Login trigger={loginPopup} setTrigger={setLoginPopup} />
 
             <Nav className="justify-content-end">

@@ -7,21 +7,12 @@ import { faXmark } from '@fortawesome/free-solid-svg-icons/faXmark'
 
 // name password email
 function Signup(props) {
-    return (
+    return (props.trigger) ? (
         <div className='signup-popup'>
             <div className='popup-item'>
                 {props.children}
                 <FontAwesomeIcon className='fa-lg close-btn' onClick={() => props.setTrigger(false)} icon={faXmark} />
-                <Form action='/' 
-                method='POST' 
-                onSubmit={() => props.setTrigger(true)}
-                >
-                    <ul>
-                        {/* errors msg is under controllers/users */}
-                        {/* {if (typeof  errors != 'undefined'){
-                            errors.forEach(error)=>{alert(errors.message)}
-                        }; */}
-                    </ul>
+                <Form onSubmit={() => props.setTrigger(true)}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Username</Form.Label>
                         <Form.Control type="username" placeholder="Enter username" />
@@ -44,7 +35,7 @@ function Signup(props) {
                 </Form>
             </div>
         </div>
-    )
+    ) : ""
 }
 
 export default Signup
