@@ -1,5 +1,11 @@
-const users = require("express").Router();
-const { pool } = require('.../dbConfig')
+const users = require('express').Router();
+const express = require('express')
+const app = express();
+const { pool } = require('.../dbConfig');
+
+//Configuration / Middleware 
+app.use(users.urlencoded({ extended: false}))
+
 
 users.get("/", (req, res) => {
   res.render("./pages/main");
@@ -10,15 +16,21 @@ users.get("/users/sign-up", async (req, res) => {
 });
 
 users.get("/users/login", async (req, res) => {
-    res.render("./pages/login");
+    res.render("./Signup/login");
 });
 
 users.get("/users/dashboard", async (req, res) => {
-    res.render("./pages/dashboard");
+    res.render("./Signup/dashboard");
 });
 
-users.post("users/", async (req, res) => {
-    res.send("")
+users.post("users/sign-up", async (req, res) => {
+    let {name, email, password, password2 } = req.body;
+    console.log({
+        name, 
+        email,
+        password,
+        password2
+    })
 });
 
 users.put("/users/register/:id", async (req, res) => {
