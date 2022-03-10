@@ -7,6 +7,7 @@ import MoviesDropdown from '../MoviesDropdown'
 import TvshowsDropdown from '../TvshowsDropdown'
 import NewsDropdown from '../NewsDropdown'
 import Signup from '../Signup'
+import Login from '../Login'
 
 // posters 
 // import posterOne from ''
@@ -15,7 +16,7 @@ import Signup from '../Signup'
 
 function Rightbar() {
     const [signupPopup, setSignupPopup] = useState(false)
-    // const [loginPopup, setLoginPopup] = useState(false)
+    const [loginPopup, setLoginPopup] = useState(false)
 
     return (
         <div className='rightbar-container'>
@@ -23,11 +24,17 @@ function Rightbar() {
                 <Nav.Link href="/movies">What's the Potatometer®?</Nav.Link>
                 <Nav.Link href="/critics">Critics</Nav.Link>
                 <Nav.Link onClick={() => setSignupPopup(true)}>SIGN UP</Nav.Link>
-                <Nav.Link href="/login">LOG IN</Nav.Link>
+                <Nav.Link onClick={() => setLoginPopup(true)}>LOG IN</Nav.Link>
             </Nav>
+                {/* signup popup */}
             <Signup trigger={signupPopup} setTrigger={setSignupPopup}>
-                <button className='close-btn' onClick={() =>setSignupPopup(false)}>close</button>
+                <button className='close-btn' onClick={() => setSignupPopup(false)}>close</button>
             </Signup>
+            
+                {/* login popup */}
+            <Login trigger={loginPopup} setTrigger={setLoginPopup}>
+                <button className='close-btn' onClick={() => setLoginPopup(false)}>close</button>
+            </Login>
 
             <Nav className="justify-content-end">
                 {/* this section is for movies dropdown */}

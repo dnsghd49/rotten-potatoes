@@ -10,7 +10,7 @@ function Signup(props) {
                 {props.children}
                 <Form>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label>Name</Form.Label>
+                        <Form.Label>Username</Form.Label>
                         <Form.Control type="email" placeholder="Enter name" />
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
