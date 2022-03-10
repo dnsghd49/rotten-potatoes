@@ -1,11 +1,12 @@
 const users = require("express").Router();
+const { pool } = require('.../dbConfig')
 
 users.get("/", (req, res) => {
   res.render("./pages/main");
 });
 
-users.get("/users/register", async (req, res) => {
-    res.render("./pages/register");
+users.get("/users/sign-up", async (req, res) => {
+    res.render("./Signup/sign-up");
 });
 
 users.get("/users/login", async (req, res) => {

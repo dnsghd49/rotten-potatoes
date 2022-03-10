@@ -9,7 +9,7 @@ import Footer from "./components/Footer";
 // Pages
 import Main from "./pages/Main";
 import Comments from "./pages/Comments";
-import Signup from "./components/Signup";
+import SignUp from "./components/Signup";
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Main />} />
             <Route path="/comments" element={<Comments />} />
-            <Route path="/sign-up" element={<Signup />} />
+            <Route path="/users/sign-up" element={<SignUp />} />
             <Route path="#" element={<Main />} />
           </Routes>
         </BrowserRouter>
