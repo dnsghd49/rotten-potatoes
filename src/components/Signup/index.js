@@ -12,8 +12,12 @@ function Signup(props) {
             <div className='popup-item'>
                 {props.children}
                 <FontAwesomeIcon className='fa-lg close-btn' onClick={() => props.setTrigger(false)} icon={faXmark} />
-                <Form action='/' method='POST' onSubmit={() => props.setTrigger(false)}>
+                <Form action='/' 
+                method='POST' 
+                onSubmit={() => props.setTrigger(true)}
+                >
                     <ul>
+                        {/* errors msg is under controllers/users */}
                         {/* {if (typeof  errors != 'undefined'){
                             errors.forEach(error)=>{alert(errors.message)}
                         }; */}

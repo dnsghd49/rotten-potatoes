@@ -11,7 +11,7 @@ function Dashboard(props) {
         <div className='dashboard-popup'>
             <div className=''>
                 <FontAwesomeIcon className='' onClick={() => props.setTrigger(false)} icon={faXmark} />
-                <Form Form onSubmit={() => props.setTrigger(false)} action='/users/dashboard' method='POST'>
+                <Form Form onSubmit={() => props.setTrigger(false)} action='/dashboard' method='POST'>
                     <div>
                         Hello User!  
                     </div>
