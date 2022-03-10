@@ -4,34 +4,30 @@ import Button from 'react-bootstrap/Button'
 
 // name password email
 function Signup(props) {
-    return (
-        // <div className='popup'>
-        //     <div className='popup-inner'>
-        //         <button className='close-btn' onClick={props.setTrigger(false)}>X</button>
-        //         {props.children}
+    return (props.trigger) ? (
+        <div className='signup-popup'>
+            <div className='popup-item'>
+                {props.children}
                 <Form>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label>Name</Form.Label>
+                        <Form.Control type="email" placeholder="Enter name" />
+                    </Form.Group>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
                         <Form.Control type="email" placeholder="Enter email" />
-                        <Form.Text className="text-muted">
-                            We'll never share your email with anyone else.
-                        </Form.Text>
                     </Form.Group>
-
                     <Form.Group className="mb-3" controlId="formBasicPassword">
                         <Form.Label>Password</Form.Label>
                         <Form.Control type="password" placeholder="Password" />
-                    </Form.Group>
-                    <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                        <Form.Check type="checkbox" label="Check me out" />
                     </Form.Group>
                     <Button variant="primary" type="submit">
                         Submit
                     </Button>
                 </Form>
-        //     </div>
-        // </div>
-    )
+            </div>
+        </div>
+    ) : ""
 }
 
 export default Signup

@@ -22,11 +22,12 @@ function Rightbar() {
             <Nav className="justify-content-end nav-fonts">
                 <Nav.Link href="/movies">What's the Potatometer®?</Nav.Link>
                 <Nav.Link href="/critics">Critics</Nav.Link>
-                {/* <Nav.Link onClick={() => setSignupPopup(true)}>SIGN UP</Nav.Link> */}
+                <Nav.Link onClick={() => setSignupPopup(true)}>SIGN UP</Nav.Link>
                 <Nav.Link href="/login">LOG IN</Nav.Link>
-
-                {/* <Signup trigger={signupPopup} setTrigger={setSignupPopup} /> */}
             </Nav>
+            <Signup trigger={signupPopup} setTrigger={setSignupPopup}>
+                <button className='close-btn' onClick={() =>setSignupPopup(false)}>close</button>
+            </Signup>
 
             <Nav className="justify-content-end">
                 {/* this section is for movies dropdown */}
