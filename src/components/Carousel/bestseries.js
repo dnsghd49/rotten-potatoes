@@ -62,11 +62,11 @@ const BestSeries = ({ deviceType }) => {
     <Container>
       <Row className="textcontent">
         <Col>
-          <h6 className="headingtitle">BEST SERIES ON NETFLIX</h6>
+          <h6 className="headingtitle">best series on netflix</h6>
         </Col>
-        <Col>
+        {/* <Col>
           <p className="viewalltext">VIEW ALL</p>
-        </Col>
+        </Col> */}
       </Row>
       <Row>
         <Carousel

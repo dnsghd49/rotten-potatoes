@@ -31,7 +31,6 @@ const NewUpcoming = ({ deviceType }) => {
 
   useEffect(() => {
     const data = dispatch(fetchUpcomingData());
-    // console.log(data);
     return data;
   }, [dispatch]);
 
@@ -62,11 +61,11 @@ const NewUpcoming = ({ deviceType }) => {
     <Container>
       <Row className="textcontent">
         <Col>
-          <h6 className="headingtitle">NEW AND UPCOMING MOVIES</h6>
+          <h6 className="headingtitle">new and upcoming movies</h6>
         </Col>
-        <Col>
+        {/* <Col>
           <p className="viewalltext">VIEW ALL</p>
-        </Col>
+        </Col> */}
       </Row>
       <Row>
         <Carousel
