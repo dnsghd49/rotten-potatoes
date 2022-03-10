@@ -11,7 +11,7 @@ function Main() {
     <div className="content">
       <SlideShow />
       <NewUpcoming />
-      <ChartList/>
+      <ChartList />
       <PopularIn />
       <BestSuperhero />
       <BestSeries />

@@ -20,7 +20,7 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Main />} />
             <Route path="/comments" element={<Comments />} />
-            <Route path="/search" element={<SearchPage/>} />
+            <Route path="/search" element={<SearchPage />} />
             <Route path="#" element={<Main />} />
           </Routes>
         </BrowserRouter>

@@ -8,6 +8,7 @@ const initialState = {
   mostStreaming: {},
   mostPopular: {},
   newTV: {},
+  searchShow: {},
 };
 
 export const chartSlice = createSlice({
@@ -23,10 +24,13 @@ export const chartSlice = createSlice({
     newTVData: (state, action) => {
       return { ...state, newTV: action.payload };
     },
+    searchShowData: (state, action) => {
+      return { ...state, searchShow: action.payload };
+    },
   },
 });
 
-export const { mostStreamingData, mostPopularData, newTVData } =
+export const { mostStreamingData, mostPopularData, newTVData, searchShowData } =
   chartSlice.actions;
 
 export default chartSlice.reducer;
@@ -34,7 +38,7 @@ export default chartSlice.reducer;
 export const fetchMostStreamingData = () => {
   const mostStreamingThunk = async (dispatch) => {
     const response = await fetch(
-      `https://www.omdbapi.com?apikey=${API_key}&s=chainsaw&t=movie`
+      `https://www.omdbapi.com?apikey=${API_key}&s=chainsaw&type=movie`
     );
     const data = await response.json();
     dispatch(mostStreamingData(data));
@@ -45,7 +49,7 @@ export const fetchMostStreamingData = () => {
 export const fetchMostPopularData = () => {
   const mostPopularThunk = async (dispatch) => {
     const response = await fetch(
-      `https://www.omdbapi.com?apikey=${API_key}&s=batman&t=movie`
+      `https://www.omdbapi.com?apikey=${API_key}&s=batman&type=movie`
     );
     const data = await response.json();
     dispatch(mostPopularData(data));
@@ -56,10 +60,21 @@ export const fetchMostPopularData = () => {
 export const fetchnewTVData = () => {
   const newTVThunk = async (dispatch) => {
     const response = await fetch(
-      `https://www.omdbapi.com?apikey=${API_key}&s=seinfeld&t=series`
+      `https://www.omdbapi.com?apikey=${API_key}&s=seinfeld&type=series`
     );
     const data = await response.json();
     dispatch(newTVData(data));
   };
   return newTVThunk;
+};
+
+export const fetchSearchShowData = (search) => {
+  const searchShowThunk = async (dispatch) => {
+    const response = await fetch(
+      `https://www.omdbapi.com?apikey=${API_key}&s=${search}&type=series`
+    );
+    const data = await response.json();
+    dispatch(searchShowData(data));
+  };
+  return searchShowThunk;
 };

@@ -3,11 +3,14 @@ import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import Button from "react-bootstrap/Button";
 import "./style.css";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchSearchData } from "../../features/movieSlice";
+import { useDispatch } from "react-redux";
+import { fetchSearchMovieData } from "../../features/movieSlice";
+import { fetchSearchShowData } from "../../features/chartSlice";
+// import ResultList from "../Charts/resultlist";
 
 function Searchbar() {
-  let { search } = useSelector((state) => state.movie);
+  //need to set the resultlist to render on submit
+  // const [displaySearch, setDisplaySearch] = useState(false);
   const [searchTerm, setSearch] = useState("");
   const dispatch = useDispatch();
 
@@ -15,8 +18,12 @@ function Searchbar() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (searchTerm === "") return alert("Please enter a movie or show.");
-    search = dispatch(fetchSearchData(searchTerm));
+    dispatch(fetchSearchMovieData(searchTerm));
+    dispatch(fetchSearchShowData(searchTerm));
     setSearch("");
+    // if (displaySearch === false) {
+    //   setDisplaySearch(true);
+    // }
   };
 
   return (
