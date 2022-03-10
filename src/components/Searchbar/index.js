@@ -6,25 +6,26 @@ import "./style.css";
 import { useDispatch } from "react-redux";
 import { fetchSearchMovieData } from "../../features/movieSlice";
 import { fetchSearchShowData } from "../../features/chartSlice";
-// import ResultList from "../Charts/resultlist";
+import SearchPage from "../../pages/Search";
 
 function Searchbar() {
   //need to set the resultlist to render on submit
-  // const [displaySearch, setDisplaySearch] = useState(false);
   const [searchTerm, setSearch] = useState("");
   const dispatch = useDispatch();
 
+  let handleSubmit;
   //handle the submit if nothing is searched
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (searchTerm === "") return alert("Please enter a movie or show.");
-    dispatch(fetchSearchMovieData(searchTerm));
-    dispatch(fetchSearchShowData(searchTerm));
-    setSearch("");
-    // if (displaySearch === false) {
-    //   setDisplaySearch(true);
-    // }
-  };
+  searchTerm != "" ? (
+    (handleSubmit = (e) => {
+      e.preventDefault();
+      if (searchTerm === "") return alert("Please enter a movie or show.");
+      dispatch(fetchSearchMovieData(searchTerm));
+      dispatch(fetchSearchShowData(searchTerm));
+      setSearch("");
+    })
+  ) : (
+    <SearchPage />
+  );
 
   return (
     <Form className="d-flex" onSubmit={handleSubmit}>
