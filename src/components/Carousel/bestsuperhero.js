@@ -62,11 +62,11 @@ const BestSuperhero = ({ deviceType }) => {
     <Container>
       <Row className="textcontent">
         <Col>
-          <h6 className="headingtitle">BEST SUPERHERO MOVIES</h6>
+          <h6 className="headingtitle">best superhero movies</h6>
         </Col>
-        <Col>
+        {/* <Col>
           <p className="viewalltext">VIEW ALL</p>
-        </Col>
+        </Col> */}
       </Row>
       <Row>
         <Carousel

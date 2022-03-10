@@ -5,7 +5,9 @@
 
 .headingtitle{
     text-align: start;
-    border-left: 3px solid #ecd574;
+    border-left: 4px solid #ecd574;
+    text-transform: uppercase;
+    font-variant-caps: all-petite-caps;
 }
 
 .viewalltext{
