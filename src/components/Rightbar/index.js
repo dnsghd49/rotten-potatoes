@@ -1,10 +1,12 @@
 import Nav from 'react-bootstrap/Nav'
+import { useState } from 'react'
 import './style.css'
 
 // components
 import MoviesDropdown from '../MoviesDropdown'
 import TvshowsDropdown from '../TvshowsDropdown'
 import NewsDropdown from '../NewsDropdown'
+import Signup from '../Signup'
 
 // posters 
 // import posterOne from ''
@@ -12,13 +14,18 @@ import NewsDropdown from '../NewsDropdown'
 // import posterThree from ''
 
 function Rightbar() {
+    const [signupPopup, setSignupPopup] = useState(false)
+    // const [loginPopup, setLoginPopup] = useState(false)
+
     return (
         <div className='rightbar-container'>
             <Nav className="justify-content-end nav-fonts">
                 <Nav.Link href="/movies">What's the Potatometer®?</Nav.Link>
                 <Nav.Link href="/critics">Critics</Nav.Link>
-                <Nav.Link href="/signup">SIGN UP</Nav.Link>
+                {/* <Nav.Link onClick={() => setSignupPopup(true)}>SIGN UP</Nav.Link> */}
                 <Nav.Link href="/login">LOG IN</Nav.Link>
+
+                {/* <Signup trigger={signupPopup} setTrigger={setSignupPopup} /> */}
             </Nav>
 
             <Nav className="justify-content-end">
@@ -32,7 +39,7 @@ function Rightbar() {
 
                 {/* this section is for TV shows dropdown */}
                 <NewsDropdown />
-                
+
                 <Nav.Link href="/showtimes">Showtimes</Nav.Link>
             </Nav>
         </div>
