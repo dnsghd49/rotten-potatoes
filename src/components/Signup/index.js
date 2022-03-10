@@ -8,10 +8,10 @@ function Signup(props) {
         <div className='signup-popup'>
             <div className='popup-item'>
                 {props.children}
-                <Form>
+                <Form onSubmit={() => props.setTrigger(false)}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Username</Form.Label>
-                        <Form.Control type="email" placeholder="Enter name" />
+                        <Form.Control type="username" placeholder="Enter username" />
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
