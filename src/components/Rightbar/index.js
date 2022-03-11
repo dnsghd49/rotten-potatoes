@@ -45,7 +45,7 @@ function Rightbar() {
                 {/* this section is for TV shows dropdown */}
                 <NewsDropdown />
 
-                <Nav.Link href="/showtimes">Showtimes</Nav.Link>
+                <Nav.Link href="/developers">Our Team</Nav.Link>
             </Nav>
         </div>
     )
