@@ -39,7 +39,7 @@ function Derek() {
             </Card.Body>
             <ListGroup className="list-group-flush">
                 <ListGroupItem>Email: {githubEmail}</ListGroupItem>
-                <ListGroupItem>Located: {githubLocation}</ListGroupItem>
+                <ListGroupItem>Located: New Jersey {githubLocation}</ListGroupItem>
             </ListGroup>
             <Card.Body>
                 <ExternalLink href={githubUrl} target="_blank">Github Page</ExternalLink>
