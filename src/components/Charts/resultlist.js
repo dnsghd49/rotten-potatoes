@@ -8,7 +8,7 @@ class ResultList extends React.Component {
   constructor() {
     super();
     this.state = {
-      allVisible: false,
+      allVisible: true,
       movieVisible: false,
       showVisible: false,
     };
