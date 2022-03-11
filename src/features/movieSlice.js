@@ -58,7 +58,7 @@ export const fetchUpcomingData = () => {
 export const fetchPopularData = () => {
   const popularThunk = async (dispatch) => {
     const response = await fetch(
-      `https://www.omdbapi.com?apikey=${API_key}&type=movie&s=harry potter`
+      `https://www.omdbapi.com?apikey=${API_key}&type=movie&s=star wars`
     );
     const data = await response.json();
     dispatch(popularData(data));
