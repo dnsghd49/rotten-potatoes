@@ -29,7 +29,7 @@ function Derek() {
     }, [])
 
     return (
-        <Card style={{ width: '18rem' }}>
+        <Card style={{ width: '20rem' }}>
             <Card.Img variant="top" src={githubAvatar} alt="Aarons profile picture" />
             <Card.Body>
                 <Card.Title>{githubName}</Card.Title>
@@ -38,8 +38,8 @@ function Derek() {
                 </Card.Text>
             </Card.Body>
             <ListGroup className="list-group-flush">
-                <ListGroupItem>Email: {githubEmail}</ListGroupItem>
-                <ListGroupItem>Located: {githubLocation}</ListGroupItem>
+                <ListGroupItem>Email: dvogel345@gmail.com {githubEmail}</ListGroupItem>
+                <ListGroupItem>Located: New Jersey {githubLocation}</ListGroupItem>
             </ListGroup>
             <Card.Body>
                 <ExternalLink href={githubUrl} target="_blank">Github Page</ExternalLink>
