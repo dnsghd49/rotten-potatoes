@@ -12,7 +12,6 @@ function Searchbar() {
   //need to set the resultlist to render on submit
   const [searchTerm, setSearch] = useState("");
   const dispatch = useDispatch();
-  const [isVisible, setIsVisible] = useState(false);
 
   //handle the submit if nothing is searched
   const handleSubmit = (e) => {

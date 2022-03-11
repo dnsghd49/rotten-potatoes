@@ -60,7 +60,7 @@ export const fetchMostPopularData = () => {
 export const fetchnewTVData = () => {
   const newTVThunk = async (dispatch) => {
     const response = await fetch(
-      `https://www.omdbapi.com?apikey=${API_key}&s=seinfeld&type=series`
+      `https://www.omdbapi.com?apikey=${API_key}&s=family&type=series`
     );
     const data = await response.json();
     dispatch(newTVData(data));
