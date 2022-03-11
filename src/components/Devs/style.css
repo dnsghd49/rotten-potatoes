@@ -5,3 +5,7 @@
 .card-text {
     color: black;
 }
+
+.card {
+    margin: 70px;
+}

@@ -32,13 +32,12 @@ function Aaron() {
         <Card style={{ width: '18rem' }}>
             <Card.Img variant="top" src={githubAvatar} alt="Aarons profile picture" />
             <Card.Body>
-                <Card.Title>Aaron Lu</Card.Title>
+                <Card.Title>{githubName}</Card.Title>
                 <Card.Text className='card-text'>
                     {githubBio}
                 </Card.Text>
             </Card.Body>
             <ListGroup className="list-group-flush">
-                <ListGroupItem>Github Name: {githubName}</ListGroupItem>
                 <ListGroupItem>Email: {githubEmail}</ListGroupItem>
                 <ListGroupItem>Located: {githubLocation}</ListGroupItem>
             </ListGroup>
