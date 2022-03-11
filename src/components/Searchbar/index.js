@@ -3,36 +3,49 @@ import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 import Button from "react-bootstrap/Button";
 import "./style.css";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchSearchData } from "../../features/movieSlice";
+import { useDispatch } from "react-redux";
+import { fetchSearchMovieData } from "../../features/movieSlice";
+import { fetchSearchShowData } from "../../features/chartSlice";
+import { useNavigate } from "react-router-dom";
 
 function Searchbar() {
-  let { search } = useSelector((state) => state.movie);
+  //need to set the resultlist to render on submit
   const [searchTerm, setSearch] = useState("");
   const dispatch = useDispatch();
+  const [isVisible, setIsVisible] = useState(false);
 
   //handle the submit if nothing is searched
   const handleSubmit = (e) => {
     e.preventDefault();
     if (searchTerm === "") return alert("Please enter a movie or show.");
-    search = dispatch(fetchSearchData(searchTerm));
+    dispatch(fetchSearchMovieData(searchTerm));
+    dispatch(fetchSearchShowData(searchTerm));
     setSearch("");
   };
 
+  let navigate = useNavigate();
+
+  const routeChange = () => {
+    let path = `/search`;
+    navigate(path);
+  };
+
   return (
-    <Form className="d-flex" onSubmit={handleSubmit}>
-      <FormControl
-        type="search"
-        placeholder="Search movies, TV, actors, more..."
-        className="me-2"
-        aria-label="Search"
-        value={searchTerm}
-        onChange={(e) => setSearch(e.target.value)}
-      />
-      <Button variant="primary" type="submit">
-        Search
-      </Button>
-    </Form>
+    <div>
+      <Form className="d-flex" onSubmit={handleSubmit}>
+        <FormControl
+          type="search"
+          placeholder="Search movies, TV, actors, more..."
+          className="me-2"
+          aria-label="Search"
+          value={searchTerm}
+          onChange={(e) => setSearch(e.target.value)}
+        />
+        <Button variant="primary" type="submit" onClick={routeChange}>
+          Search
+        </Button>
+      </Form>
+    </div>
   );
 }
 
