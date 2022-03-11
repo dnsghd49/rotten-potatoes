@@ -47,7 +47,7 @@ export default movieSlice.reducer;
 export const fetchUpcomingData = () => {
   const upcomingThunk = async (dispatch) => {
     const response = await fetch(
-      `https://www.omdbapi.com?apikey=${API_key}&type=movie&y=2022&s=moon`
+      `https://www.omdbapi.com?apikey=${API_key}&type=movie&s=x-men`
     );
     const data = await response.json();
     dispatch(newUpcomingData(data));
@@ -58,7 +58,7 @@ export const fetchUpcomingData = () => {
 export const fetchPopularData = () => {
   const popularThunk = async (dispatch) => {
     const response = await fetch(
-      `https://www.omdbapi.com?apikey=${API_key}&type=movie&y=2022&s=dreams`
+      `https://www.omdbapi.com?apikey=${API_key}&type=movie&s=harry potter`
     );
     const data = await response.json();
     dispatch(popularData(data));
@@ -80,7 +80,7 @@ export const fetchBestSuperHeroData = () => {
 export const fetchBestSeriesData = () => {
   const bestSeriesThunk = async (dispatch) => {
     const response = await fetch(
-      `https://www.omdbapi.com?apikey=${API_key}&s=cats&type=series`
+      `https://www.omdbapi.com?apikey=${API_key}&s=star trek&type=series`
     );
     const data = await response.json();
     dispatch(bestSeriesData(data));
