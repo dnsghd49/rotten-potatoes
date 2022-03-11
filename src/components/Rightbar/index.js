@@ -7,7 +7,6 @@ import './style.css'
 // components
 import MoviesDropdown from '../MoviesDropdown'
 import TvshowsDropdown from '../TvshowsDropdown'
-import NewsDropdown from '../NewsDropdown'
 import Signup from '../Signup'
 import Login from '../Login'
 
@@ -41,10 +40,7 @@ function Rightbar() {
                 <TvshowsDropdown />
 
                 <Nav.Link href="/podcast">RT podcast</Nav.Link>
-
-                {/* this section is for TV shows dropdown */}
-                <NewsDropdown />
-
+                <Nav.Link href="/showtimes">Showtimes</Nav.Link>
                 <Nav.Link href="/developers">Our Team</Nav.Link>
             </Nav>
         </div>
