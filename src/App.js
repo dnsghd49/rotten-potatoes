@@ -24,7 +24,6 @@ function App() {
             <Route path="/comments" element={<Comments />} />
             <Route path="/search" element={<SearchPage />} />
             <Route path="/sign-up" element={<Comments />} />
-            <Route path="#" element={<Main />} />
             <Route path="/movie" element={<MoviesTab />} />
             <Route path="/show" element={<TvShowsTab />} />
           </Routes>
