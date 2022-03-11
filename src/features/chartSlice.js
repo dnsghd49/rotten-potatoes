@@ -1,6 +1,3 @@
-//https://redux-toolkit.js.org/tutorials/quick-start
-//https://redux-toolkit.js.org/api/createAsyncThunk
-// import { createAsyncThunk } from "@reduxjs/toolkit";
 import { createSlice } from "@reduxjs/toolkit";
 import { API_key } from "../API/handleAPI";
 
