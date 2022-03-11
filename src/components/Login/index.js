@@ -7,20 +7,20 @@ import { faXmark } from "@fortawesome/free-solid-svg-icons/faXmark";
 
 function Login(props) {
   return props.trigger ? (
-    <div className="signup-popup">
-      <div className="popup-item">
+    <div className="login-popup">
+      <div className="login-popup-item">
         <FontAwesomeIcon
-          className="fa-lg close-btn"
+          className="fa-lg login-close-btn"
           onClick={() => props.setTrigger(false)}
           icon={faXmark}
         />
-        <Form Form onSubmit={() => props.setTrigger(false)}>
+        <Form className="login-form" onSubmit={() => props.setTrigger(false)}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Email address</Form.Label>
+            <Form.Label className="login-label">Email address</Form.Label>
             <Form.Control type="email" placeholder="Enter email" />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Label>Password</Form.Label>
+            <Form.Label className="login-label">Password</Form.Label>
             <Form.Control type="password" placeholder="Password" />
           </Form.Group>
           <Button variant="primary" type="submit">

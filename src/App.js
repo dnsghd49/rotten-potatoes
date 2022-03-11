@@ -12,6 +12,7 @@ import Comments from "./pages/Comments";
 import SearchPage from "./pages/Search";
 import MoviesTab from "./pages/MoviesTab";
 import TvShowsTab from "./pages/TvShowsTab";
+import DevTeam from "./pages/DevTeam";
 import ShowtimesTab from "./pages/ShowtimesTab";
 
 function App() {
@@ -25,9 +26,9 @@ function App() {
             <Route path="/comments" element={<Comments />} />
             <Route path="/search" element={<SearchPage />} />
             <Route path="/sign-up" element={<Comments />} />
-            <Route path="#" element={<Main />} />
             <Route path="/movie" element={<MoviesTab />} />
             <Route path="/show" element={<TvShowsTab />} />
+            <Route path="/developers" element={<DevTeam />} />
             <Route path="/showtimes" element={<ShowtimesTab />} />
           </Routes>
         </BrowserRouter>
