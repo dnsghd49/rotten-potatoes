@@ -9,6 +9,7 @@ function MoviesDropdown() {
     let path = `/movie`;
     navigate(path);
   };
+
   return (
     <div className="dropdown">
       <Nav.Link onClick={routeMovie}>Movies</Nav.Link>

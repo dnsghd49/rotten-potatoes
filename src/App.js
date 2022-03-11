@@ -13,6 +13,7 @@ import SearchPage from "./pages/Search";
 import MoviesTab from "./pages/MoviesTab";
 import TvShowsTab from "./pages/TvShowsTab";
 import DevTeam from "./pages/DevTeam";
+import ShowtimesTab from "./pages/ShowtimesTab";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             <Route path="/movie" element={<MoviesTab />} />
             <Route path="/show" element={<TvShowsTab />} />
             <Route path="/developers" element={<DevTeam />} />
+            <Route path="/showtimes" element={<ShowtimesTab />} />
           </Routes>
         </BrowserRouter>
         <Footer />
