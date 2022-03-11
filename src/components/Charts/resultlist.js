@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Button, Figure } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import "./style.css";
 import MovieSearch from "./moviesearch";
 import ShowSearch from "./showsearch";
@@ -8,7 +8,7 @@ class ResultList extends React.Component {
   constructor() {
     super();
     this.state = {
-      allVisible: true,
+      allVisible: false,
       movieVisible: false,
       showVisible: false,
     };
@@ -54,12 +54,40 @@ class ResultList extends React.Component {
               <ShowSearch />
             </div>
           ) : null}
+          {this.state.movieVisible ? (
+            <div>
+              <MovieSearch />
+            </div>
+          ) : null}
+          {this.state.showVisible ? (
+            <div>
+              <ShowSearch />
+            </div>
+          ) : null}
         </Row>
       </Container>
     );
   }
   onAll() {
-    this.setState((prevState) => ({ allVisible: !prevState.allVisible }));
+    this.setState((prevState) => ({
+      allVisible: !prevState.allVisible,
+      movieVisible: false,
+      showVisible: false,
+    }));
+  }
+  onMovies() {
+    this.setState((prevState) => ({
+      movieVisible: !prevState.movieVisible,
+      showVisible: false,
+      allVisible: false,
+    }));
+  }
+  onShows() {
+    this.setState((prevState) => ({
+      showVisible: !prevState.showVisible,
+      movieVisible: false,
+      allVisible: false,
+    }));
   }
 }
 
