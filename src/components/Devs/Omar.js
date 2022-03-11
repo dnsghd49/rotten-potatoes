@@ -29,7 +29,7 @@ function Omar() {
     }, [])
 
     return (
-        <Card style={{ width: '18rem' }}>
+        <Card style={{ width: '20rem' }}>
             <Card.Img variant="top" src={githubAvatar} alt="Aarons profile picture" />
             <Card.Body>
                 <Card.Title>{githubName}</Card.Title>
@@ -38,7 +38,7 @@ function Omar() {
                 </Card.Text>
             </Card.Body>
             <ListGroup className="list-group-flush">
-                <ListGroupItem>Email: {githubEmail}</ListGroupItem>
+                <ListGroupItem>Email: o.moreta@gmail.com {githubEmail}</ListGroupItem>
                 <ListGroupItem>Located: {githubLocation}</ListGroupItem>
             </ListGroup>
             <Card.Body>

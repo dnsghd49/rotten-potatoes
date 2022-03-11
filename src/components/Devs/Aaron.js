@@ -29,7 +29,7 @@ function Aaron() {
     }, [])
 
     return (
-        <Card style={{ width: '18rem' }}>
+        <Card style={{ width: '20rem' }}>
             <Card.Img variant="top" src={githubAvatar} alt="Aarons profile picture" />
             <Card.Body>
                 <Card.Title>{githubName}</Card.Title>
