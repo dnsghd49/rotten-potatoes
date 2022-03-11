@@ -10,6 +10,7 @@ import TvshowsDropdown from '../TvshowsDropdown'
 import NewsDropdown from '../NewsDropdown'
 import Signup from '../Signup'
 import Login from '../Login'
+import Dashboard from '../Dashboard'
 
 // posters 
 // import posterOne from ''

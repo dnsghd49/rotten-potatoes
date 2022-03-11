@@ -1,10 +1,9 @@
-import './style.css'
+// import './style.css'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark } from '@fortawesome/free-solid-svg-icons/faXmark'
-import userEvent from '@testing-library/user-event'
 
 function Dashboard(props) {
     return (props.trigger) ? (

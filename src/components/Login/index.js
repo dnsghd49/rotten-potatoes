@@ -10,7 +10,7 @@ function Login(props) {
         <div className='signup-popup'>
             <div className='popup-item'>
                 <FontAwesomeIcon className='fa-lg close-btn' onClick={() => props.setTrigger(false)} icon={faXmark} />
-                <Form Form onSubmit={() => props.setTrigger(false)}>
+                <Form onSubmit={() => props.setTrigger(false)}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
                         <Form.Control type="email" placeholder="Enter email" />

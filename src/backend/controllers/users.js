@@ -3,25 +3,35 @@ const express = require('express')
 const app = express();
 const { pool } = require('.../dbConfig');
 const bcrypt = require('bcrypt')
+const session = require('express-session')
+const flash = require('express-flash')
 
 //Configuration / Middleware 
 app.use(users.urlencoded({ extended: false }))
+app.use(session({
+    secret: 'secret',
 
+    resave: false,
+
+    saveUninitialized: false
+})
+);
+app.use(flash);
 
 users.get("/", (req, res) => {
     res.send("./pages/main");
 });
 
 users.get("/", async (req, res) => {
-    res.send("./Signup/sign-up");
+    res.send("./signup");
 });
 
 users.get("/", async (req, res) => {
-    res.send("./Signup/login");
+    res.send("./login");
 });
 
 users.get("/dashboard", async (req, res) => {
-    res.send("./Signup/dashboard");
+    res.send("./dashboard");
 });
 
 users.post("/signup", async (req, res) => {
@@ -64,6 +74,20 @@ users.post("/signup", async (req, res) => {
                 if (results.rows.length > 0) {
                     errors.push({ message: 'email is already signed up' })
                     res.render('signup', { errors });
+                }else{
+                    pool.query(
+                        `INSERT INTO users (name, password, email)
+                        VALUES ($1, $2, $3)
+                        RETURNING id, password`, {name, password, email}, 
+                        (err, results) => {
+                            if(err){
+                                throw err;
+                            }
+                            console.log(results.row)    
+                            req.flash('success_msg', 'You are now signed up. Please log in!')
+                            res.redirect('/login')                      
+                        }
+                    )
                 }
             }
         );
