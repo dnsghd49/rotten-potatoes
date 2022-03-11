@@ -38,7 +38,7 @@ function Aaron() {
                 </Card.Text>
             </Card.Body>
             <ListGroup className="list-group-flush">
-                <ListGroupItem>Email: {githubEmail}</ListGroupItem>
+                <ListGroupItem>Email: yunhonglu0409@gmail.com {githubEmail}</ListGroupItem>
                 <ListGroupItem>Located: {githubLocation}</ListGroupItem>
             </ListGroup>
             <Card.Body>
