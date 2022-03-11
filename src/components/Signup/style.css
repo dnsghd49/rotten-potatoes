@@ -12,15 +12,15 @@
     z-index: 3;
 }
 
-.popup-item {
+.signup-popup-item {
     position: relative;
     padding: 32px;
     width: 100%;
     max-width: 640px;
-    background-color: aliceblue;
+    background-color: wheat;
 }
 
-.popup-item .close-btn {
+.signup-popup-item .signup-close-btn {
     position: absolute;
     top: 16px;
     right: 16px;

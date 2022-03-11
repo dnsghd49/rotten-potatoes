@@ -9,9 +9,9 @@ import { faXmark } from "@fortawesome/free-solid-svg-icons/faXmark";
 function Signup(props) {
   return props.trigger ? (
     <div className="signup-popup">
-      <div className="popup-item">
+      <div className="signup-popup-item">
         <FontAwesomeIcon
-          className="fa-lg close-btn"
+          className="fa-lg signup-close-btn"
           onClick={() => props.setTrigger(false)}
           icon={faXmark}
         />

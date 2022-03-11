@@ -1,4 +1,4 @@
-.signup-popup {
+.login-popup {
     position: fixed;
     top: 0;
     left: 0;
@@ -12,7 +12,7 @@
     z-index: 3;
 }
 
-.popup-item {
+.login-popup-item {
     position: relative;
     padding: 32px;
     width: 100%;
@@ -20,7 +20,7 @@
     background-color: aliceblue;
 }
 
-.popup-item .close-btn {
+.login-popup-item .login-close-btn {
     position: absolute;
     top: 16px;
     right: 16px;
