@@ -1,6 +1,7 @@
 import Nav from 'react-bootstrap/Nav'
-import { state, useState } from 'react'
+import { useState } from 'react'
 import './style.css'
+import index from '.../controllers/'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faXmark } from '@fortawesome/free-solid-svg-icons/faXmark'
 
@@ -10,7 +11,7 @@ import TvshowsDropdown from '../TvshowsDropdown'
 import NewsDropdown from '../NewsDropdown'
 import Signup from '../Signup'
 import Login from '../Login'
-import Dashboard from '../Dashboard'
+// import Dashboard from '../Dashboard'
 
 // posters 
 // import posterOne from ''
@@ -20,10 +21,8 @@ import Dashboard from '../Dashboard'
 function Rightbar() {
     const [signupPopup, setSignupPopup] = useState(false)
     const [loginPopup, setLoginPopup] = useState(false)
-    // state = {
-    //     visible: true
-    // };
-
+ 
+    
     return (
         <div className='rightbar-container'>
             <Nav className="justify-content-end nav-fonts">

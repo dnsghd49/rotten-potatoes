@@ -1,4 +1,5 @@
 const pool = require('.../dbConfig');
+const req = require('request')
 
 const getUsers = () => {
     return new Promise(function(resolve, reject) {
