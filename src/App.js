@@ -12,6 +12,7 @@ import Comments from "./pages/Comments";
 import SearchPage from "./pages/Search";
 import MoviesTab from "./pages/MoviesTab";
 import TvShowsTab from "./pages/TvShowsTab";
+import DevTeam from "./pages/DevTeam";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             <Route path="/sign-up" element={<Comments />} />
             <Route path="/movie" element={<MoviesTab />} />
             <Route path="/show" element={<TvShowsTab />} />
+            <Route path="/developers" element={<DevTeam />} />
           </Routes>
         </BrowserRouter>
         <Footer />
