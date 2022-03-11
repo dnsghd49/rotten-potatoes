@@ -1,8 +1,13 @@
+import './style.css'
+
+import Aaron from "../components/Devs/Aaron"
 
 function DevTeam() {
     return (
-        <div>this is dev-team page</div>
+        <div className="devteam-container">
+            <Aaron />
+        </div>
     )
-} 
+}
 
 export default DevTeam
