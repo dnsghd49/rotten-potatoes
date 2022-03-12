@@ -1,6 +1,6 @@
 import TvshowsTopBar from "../components/Carousel/TvshowsTopBar";
 import "./style.css";
-import banner from "./banner2.png"
+import banner from "./banners/banner2.png"
 
 const TvShowsTab = () => {
   return (
