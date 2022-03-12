@@ -7,6 +7,7 @@ import {
   fetchMostPopularData,
   fetchnewTVData,
 } from "../../features/chartSlice";
+import icon from "./img/icon.png"
 
 function Showtimes() {
   const dispatch = useDispatch();
@@ -37,8 +38,10 @@ function Showtimes() {
     mostStreaming.Response === "True" ? (
       mostStreaming.Search.map((movie, index) => (
         <li key={index} className="rightborder">
+          <div>
           {movie.Title}
-          {index + 1 - (hours - 12) > 0 ? (
+          </div>
+          {/* {index + 1 - (hours - 12) > 0 ? (
             <div>
               in {index + 1 - (hours - 12)} hours and {60 - minutes} minutes
             </div>
@@ -50,7 +53,7 @@ function Showtimes() {
             ) : (
               <div>Show ended</div>
             )}
-          </div>
+          </div> */}
         </li>
       ))
     ) : (
@@ -60,9 +63,9 @@ function Showtimes() {
   const renderMostPopular =
     mostPopular.Response === "True" ? (
       mostPopular.Search.map((movie, index) => (
-        <li key={index}>
+        <li key={index} className="rightborder">
           {movie.Title}
-          {index + 1 - (hours - 12) > 0 ? (
+          {/* {index + 1 - (hours - 12) > 0 ? (
             <div>
               in {index + 1 - (hours - 12)} hours and {60 - minutes} minutes
             </div>
@@ -74,7 +77,7 @@ function Showtimes() {
             ) : (
               <div>Show ended</div>
             )}
-          </div>
+          </div> */}
         </li>
       ))
     ) : (
@@ -84,9 +87,9 @@ function Showtimes() {
   const renderNewTV =
     newTV.Response === "True" ? (
       newTV.Search.map((movie, index) => (
-        <li key={index} className="rightborder">
+        <li key={index} >
           {movie.Title}
-          {index + 1 - (hours - 12) > 0 ? (
+          {/* {index + 1 - (hours - 12) > 0 ? (
             <div>
               in {index + 1 - (hours - 12)} hours and {60 - minutes} minutes
             </div>
@@ -98,7 +101,7 @@ function Showtimes() {
             ) : (
               <div>Show ended</div>
             )}
-          </div>
+          </div> */}
         </li>
       ))
     ) : (
@@ -120,16 +123,12 @@ function Showtimes() {
             {renderMostPopular}
           </ul>
         </Col>
-      </Row>
-      <Row>
-        <Col>
+        <Col sm={4}>
           <ul className="listStyle">
             <h6 className="headingtitle">new tv showtimes</h6>
             {renderNewTV}
           </ul>
         </Col>
-        <Col></Col>
-        <Col></Col>
       </Row>
     </Container>
   );
