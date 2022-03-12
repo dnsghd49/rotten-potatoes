@@ -1,11 +1,18 @@
 import "./style.css";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import { useNavigate } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons/faXmark";
 
 function Login(props) {
+  let navigate = useNavigate();
+  const loginRedirect = () => {
+    let path = `/dashboard`;
+    navigate(path);
+  };
+
   return props.trigger ? (
     <div className="login-popup">
       <div className="login-popup-item">
@@ -23,7 +30,7 @@ function Login(props) {
             <Form.Label className="login-label">Password</Form.Label>
             <Form.Control type="password" placeholder="Password" />
           </Form.Group>
-          <Button variant="primary" type="submit">
+          <Button variant="primary" type="submit" onClick={loginRedirect}>
             Submit
           </Button>
         </Form>
