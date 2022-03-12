@@ -1,15 +1,15 @@
-import MovieTopBar from "../components/Carousel/MovieTopBar";
 import "./style.css";
-import banner from "./banners/banner1.png";
+import banner from "./banners/banner4.png";
+import PodcastList from "../components/Charts/PodcastList";
 
-const MoviesTab = () => {
+const PodCast = () => {
   return (
     <div className="content">
       <img src={banner} alt="a big potato" />
+      <PodcastList />
       {/* <h3 className="headerc">Movies</h3> */}
-      <MovieTopBar />
     </div>
   );
 };
 
-export default MoviesTab;
+export default PodCast;

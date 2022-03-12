@@ -36,18 +36,15 @@ const MovieTopBar = ({ deviceType }) => {
   );
 
   useEffect(() => {
-    const data = dispatch(fetchPopularData());
-    return data;
+    dispatch(fetchPopularData());
   }, [dispatch]);
 
   useEffect(() => {
-    const data = dispatch(fetchUpcomingData());
-    return data;
+    dispatch(fetchUpcomingData());
   }, [dispatch]);
 
   useEffect(() => {
-    const data = dispatch(fetchBestSuperHeroData());
-    return data;
+    dispatch(fetchBestSuperHeroData());
   }, [dispatch]);
 
   const renderPopular =
