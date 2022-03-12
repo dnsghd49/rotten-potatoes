@@ -1,12 +1,13 @@
-.AppBG{
+.AppBG {
   background-color: #F3F3F3;
 }
+
 .App {
   text-align: center;
   margin-left: 21%;
   margin-right: 21%;
   background-color: #ffffff;
-  font-family: "Franklin Gothic",-apple-system,BlinkMacSystemFont,"PT Sans",Arial,Sans-Serif;
+  font-family: "Franklin Gothic", -apple-system, BlinkMacSystemFont, "PT Sans", Arial, Sans-Serif;
 }
 
 .App-logo {
@@ -39,7 +40,29 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 1890px) {
+  .App {
+    margin-left: 12%;
+    margin-right: 12%;
+  }
+}
+
+@media screen and (max-width: 1414px) {
+  .App {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
+@media screen and (max-width: 1343px) {
+  .App {
+    margin-left: 7%;
+    margin-right: 7%;
   }
 }
