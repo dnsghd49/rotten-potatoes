@@ -40,7 +40,7 @@ function Searchbar() {
           value={searchTerm}
           onChange={(e) => setSearch(e.target.value)}
         />
-        <Button variant="primary" type="submit" onClick={routeChange}>
+        <Button className="search-btn" variant="primary" type="submit" onClick={routeChange}>
           Search
         </Button>
       </Form>
