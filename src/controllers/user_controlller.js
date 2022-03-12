@@ -34,8 +34,8 @@ exports.create = (req, res) => {
 
 // Retrieve all users from the database.
 exports.findAll = (req, res) => {
-  const title = req.query.title;
-  var condition = title ? { title: { [Op.iLike]: `%${title}%` } } : null;
+  const email = req.query.email;
+  var condition = email ? { email: { [Op.iLike]: `%${email}%` } } : null;
 
   user.findAll({ where: condition })
     .then(data => {
@@ -89,12 +89,12 @@ exports.update = (req, res) => {
     });
 };
 
-// Delete a user with the specified id in the request
+// Delete a user with the specified email in the request
 exports.delete = (req, res) => {
-  const id = req.params.id;
+  const email = req.params.email;
 
   user.destroy({
-    where: { id: id }
+    where: { email: email }
   })
     .then(num => {
       if (num == 1) {
@@ -103,13 +103,13 @@ exports.delete = (req, res) => {
         });
       } else {
         res.send({
-          message: `Cannot delete user with id=${id}. Maybe user was not found!`
+          message: `Cannot delete user with id=${email}. Maybe user was not found!`
         });
       }
     })
     .catch(err => {
       res.status(500).send({
-        message: "Could not delete user with id=" + id
+        message: "Could not delete user with id=" + email
       });
     });
 };
