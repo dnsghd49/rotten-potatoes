@@ -8,7 +8,7 @@ import Omar from "../components/Devs/Omar"
 function DevTeam() {
     return (
         <div className='dev-team'>
-            <img src={banner}/>
+            <img className="bannerStyle" src={banner}/>
             <h3 className="headerc">front-end devs</h3>
             <div className='alignments'>
                 <div className='card-alignments'>
