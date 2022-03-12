@@ -23,8 +23,7 @@ strong{
     margin: 6px;
 }
 
-
-ul li {
+.bg ul li {
     list-style-type: none;
     margin-top: 0.3rem;
     font-family: "Franklin Gothic","PT Sans",Arial,Sans-Serif;
