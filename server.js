@@ -1,15 +1,20 @@
-const path = require("path");
+// const path = require("path");
 const express = require("express");
 
 // DEPENDENCIES
 const app = express()
 const { Sequelize } = require('sequelize')
 
+const port = process.env.PORT || 3000;
+
+// CONTROLLERS 
+const userController = require('./src/controllers/user_controller')
+app.use('/user', userController)
+
 // CONFIGURATION / MIDDLEWARE
 require('dotenv').config()
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
-
 
 // SEQUELIZE CONNECTION
 const sequelize = new Sequelize(process.env.PG_URI)
@@ -28,20 +33,9 @@ app.get('/', (req, res) => {
     })
 })
 
-// CONTROLLERS 
-const userController = require('./controllers/user_controllers')
-app.use('/user', userController)
-
-const port = process.env.PORT || 3000;
-
-const publicPath = path.join(__dirname, "..", "public");
-
-app.use(express.static(publicPath));
-app.use(express.json());
-
-app.get("*", (req, res) => {
-  res.sendFile(path.join(publicPath, "index.html"));
-});
+// app.get("*", (req, res) => {
+//   // res.sendFile(path.join(publicPath, "index.html"));
+// });
 
 app.listen(port, () => {
   console.log(`Server is up on port ${port}!`);

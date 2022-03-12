@@ -1,10 +1,10 @@
-
+"use-strict"
 const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class Movie extends Model {
-    static associate({Rating}) {
+    static associate({ Rating }) {
 
       // ratings 
       Movie.hasMany(Rating, {
@@ -14,10 +14,20 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Movie.init({
-    movie_id: DataTypes.INTEGER,
-    name: DataTypes.STRING,
-    image: DataTypes.STRING,
-    description: DataTypes.STING
+    movie_id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true
+    },
+    name: {
+      type: DataTypes.STRING
+    },
+    image: {
+      type: DataTypes.STRING
+    },
+    description: {
+      type: DataTypes.STING
+    }
   }, {
     sequelize,
     modelName: 'Movie',

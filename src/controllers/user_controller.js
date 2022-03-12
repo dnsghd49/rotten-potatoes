@@ -5,7 +5,7 @@ const { User } = db
 const { Op } = require('sequelize')
 
 // // FIND ALL Users
-users.get('/', async (req, res) => {
+users.get('/users', async (req, res) => {
     try {
         const foundUsers = await User.findAll({
             order: [['email', 'ASC']],
@@ -34,16 +34,7 @@ users.get('/', async (req, res) => {
 //             //             as: "ratings", 
 //             //             where: { name: { [Op.like]: `%${req.query.event ? req.query.event : ''}%` } } 
 //             //         }
-//             //     },
-//             //     { 
-//             //         model: SetTime, 
-//             //         as: "set_times",
-//             //         attributes: { exclude: ["band_id", "event_id"] },
-//             //         include: { 
-//             //             model: Event, 
-//             //             as: "events", 
-//             //             where: { name: { [Op.like]: `%${req.query.event ? req.query.event : ''}%` } } 
-//             //         }
+//             //     }
 //             //     }
 //             // ],
 //             // order: [
