@@ -1,6 +1,9 @@
 import Nav from "react-bootstrap/Nav";
 import "./style.css";
 import { useNavigate } from "react-router-dom";
+import poster1 from "./poster1.jpg"
+import poster2 from "./poster2.jpg"
+import poster3 from "./poster3.jpg"
 
 function MoviesDropdown() {
   let navigate = useNavigate();
@@ -32,11 +35,11 @@ function MoviesDropdown() {
             <p>ON DVD & STREAMING</p>
             <p>VUDU</p>
             <p>Netflix Streaming</p>
-            <p>iTunes</p>
+            {/* <p>iTunes</p> */}
             <p>Amazon and Amazon Prime</p>
             <p>Top DVD & Streaming</p>
             <p>Certified Fresh Movies</p>
-            <p>Browse All</p>
+            {/* <p>Browse All</p> */}
             {/* <Nav.Link href="/tv-shows">VUDU</Nav.Link>
             <Nav.Link href="/podcast">Netflix Streaming</Nav.Link>
             <Nav.Link href="/tv-shows">iTunes</Nav.Link>
@@ -55,9 +58,9 @@ function MoviesDropdown() {
           <div className="dropdown-imgs">
             <p>CERTIFIED FRESH PICKS</p>
             <div className="movie-poster">
-              <img src={{}} alt="movie poster"></img>
-              <img src={{}} alt="movie poster"></img>
-              <img src={{}} alt="movie poster"></img>
+              <img src={poster1} className="posterStyle" alt="movie poster"></img>
+              <img src={poster2} className="posterStyle" alt="movie poster"></img>
+              <img src={poster3} className="posterStyle" alt="movie poster"></img>
             </div>
           </div>
         </div>

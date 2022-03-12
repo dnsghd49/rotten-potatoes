@@ -14,6 +14,7 @@ import MoviesTab from "./pages/MoviesTab";
 import TvShowsTab from "./pages/TvShowsTab";
 import DevTeam from "./pages/DevTeam";
 import ShowtimesTab from "./pages/ShowtimesTab";
+import PodCast from "./pages/Podcast";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
             <Route path="/show" element={<TvShowsTab />} />
             <Route path="/developers" element={<DevTeam />} />
             <Route path="/showtimes" element={<ShowtimesTab />} />
+            <Route path="/podcast" element={<PodCast/>}/>
           </Routes>
         </BrowserRouter>
         <Footer />
