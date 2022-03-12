@@ -1,35 +1,42 @@
 const path = require("path");
 const express = require("express");
-const bodyParser = require("body-parser");
-const cors = require('cors');
 
-const app = express();
+// DEPENDENCIES
+const app = express()
+const { Sequelize } = require('sequelize')
 
-var corsOptions = {
-  origin: "http://localhost:3001"
+// CONFIGURATION / MIDDLEWARE
+require('dotenv').config()
+app.use(express.json())
+app.use(express.urlencoded({ extended: false }))
+
+
+// SEQUELIZE CONNECTION
+const sequelize = new Sequelize(process.env.PG_URI)
+
+try {
+    sequelize.authenticate() 
+    console.log(`Connected with Sequelize at ${process.env.PG_URI}`) 
+} catch(err) {
+    console.log(`Unable to connect to PG: ${err}`) 
 }
 
-//MIDDLEWARE
-app.use(cors(corsOptions));
+// ROOT
+app.get('/', (req, res) => {
+    res.status(200).json({
+        message: 'Welcome to the Tour API'
+    })
+})
 
-// parse req of content-type
-app.use(bodyParser.json());
+// CONTROLLERS 
+const userController = require('./controllers/user_controllers')
+app.use('/user', userController)
 
-// parse requests of content-type - application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: true }));
 
-const db = require("./src/models");
-db.sequelize.sync();
-// db.sequelize.sync({ force: true }).then(() => {
-//   console.log("Drop and re-sync db.");
-// });
-
-// simple route
-app.get("/", (req, res) => {
-  res.json({ message: "Welcome to Rotten Potatoes." });
-});
-
-require("./app/routes/user.routes")(app);
+// LISTEN
+app.listen(process.env.PORT, () => {
+    console.log(`🎸 Rockin' on port: ${process.env.PORT}`)
+})
 
 const port = process.env.PORT || 3000;
 
