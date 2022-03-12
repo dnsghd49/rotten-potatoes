@@ -28,7 +28,7 @@ const MovieSearch = () => {
   return (
     <Container>
       <Row>
-        <Col sm={6}>
+        <Col>
           <ul className="listStyle">
             <h6 className="headingtitle">Movies</h6>
             {renderMovieSearch}

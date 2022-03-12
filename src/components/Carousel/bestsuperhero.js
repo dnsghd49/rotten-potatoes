@@ -61,8 +61,8 @@ const BestSuperhero = ({ deviceType }) => {
   return (
     <Container>
       <Row className="textcontent">
-        <Col>
-          <h6 className="headingtitle">best superhero movies</h6>
+        <Col className="flexstyle">
+            <h6 className="headingtitle">best superhero movies</h6>
         </Col>
         {/* <Col>
           <p className="viewalltext">VIEW ALL</p>
