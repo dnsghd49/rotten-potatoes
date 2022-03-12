@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 // components
 import MoviesDropdown from '../MoviesDropdown'
 import TvshowsDropdown from '../TvshowsDropdown'
-import NewsDropdown from '../NewsDropdown'
+// import NewsDropdown from '../NewsDropdown'
 import Signup from '../Signup'
 import Login from '../Login'
 // import Dashboard from '../Dashboard'

@@ -14,9 +14,9 @@ exports.create = (req, res) => {
 
   // Create a user
   const user = {
-    title: req.body.title,
-    description: req.body.description,
-    published: req.body.published ? req.body.published : false
+    name: req.body.name,
+    email: req.body.email,
+    pasword: req.body.password ? req.body.password : false
   };
 
   // Save user in the database
@@ -131,9 +131,9 @@ exports.deleteAll = (req, res) => {
     });
 };
 
-// find all published user
-exports.findAllPublished = (req, res) => {
-  user.findAll({ where: { published: true } })
+// find all passwords for users
+exports.findAllPasswords = (req, res) => {
+  user.findAll({ where: { password: true } })
     .then(data => {
       res.send(data);
     })
