@@ -1,47 +1,46 @@
- .bg{
-    background-color: #2A2C32;
-    box-shadow: 0px -20px #FFFFFF , 0px -60px #F3F3F3 ;
-    padding-right: 2vw;
-    padding-top: 2vh;
-    margin-right: -1.5vh;
-    margin-left: -1.5vh;
+.bg {
+  background-color: #2a2c32;
+  box-shadow: 0px -20px #ffffff, 0px -60px #f3f3f3;
+  padding-right: 2vw;
+  padding-top: 2vh;
+  margin-right: -1.5vh;
+  margin-left: -1.5vh;
 }
 
 .bgcontainer {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
-strong{
-    font-weight: 500;
-    font-size: 18px;
+strong {
+  font-weight: 500;
+  font-size: 18px;
 }
 
-.cib-gmail{
-    font-size: 1rem;
-    margin: 6px;
+.cib-gmail {
+  font-size: 1rem;
+  margin: 6px;
 }
-
 
 ul li {
-    list-style-type: none;
-    margin-top: 0.3rem;
-    font-family: "Franklin Gothic","PT Sans",Arial,Sans-Serif;
-    font-weight: 400;
-    font-size: 16px;
-    color: #FFFFFF;
+  list-style-type: none;
+  margin-top: 0.3rem;
+  font-family: "Franklin Gothic", "PT Sans", Arial, Sans-Serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: black;
 }
 
 .icon-flex {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 .icon-flex > i {
-    margin: 6px;
-    font-size: 1.5rem;
+  margin: 6px;
+  font-size: 1.5rem;
 }
 
-.footer-copyright{
-    color:#6B6F6F;
+.footer-copyright {
+  color: #6b6f6f;
 }
