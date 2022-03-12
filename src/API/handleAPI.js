@@ -1,1 +1,1 @@
-export const API_key = "44e8994a";
+export const API_key = `${process.env.REACT_APP_API_KEY}`;

@@ -15,18 +15,15 @@ function ChartList() {
   );
 
   useEffect(() => {
-    const data = dispatch(fetchMostStreamingData());
-    return data;
+    dispatch(fetchMostStreamingData());
   }, [dispatch]);
 
   useEffect(() => {
-    const data = dispatch(fetchMostPopularData());
-    return data;
+    dispatch(fetchMostPopularData());
   }, [dispatch]);
 
   useEffect(() => {
-    const data = dispatch(fetchnewTVData());
-    return data;
+    dispatch(fetchnewTVData());
   }, [dispatch]);
 
   const renderMostStreaming =
@@ -43,7 +40,9 @@ function ChartList() {
   const renderMostPopular =
     mostPopular.Response === "True" ? (
       mostPopular.Search.map((movie, index) => (
-        <li key={index} className="rightborder" >{movie.Title}</li>
+        <li key={index} className="rightborder">
+          {movie.Title}
+        </li>
       ))
     ) : (
       <li>{mostPopular.Error}</li>
@@ -51,11 +50,7 @@ function ChartList() {
 
   const renderNewTV =
     newTV.Response === "True" ? (
-      newTV.Search.map((movie, index) => (
-        <li key={index}>
-          {movie.Title}
-        </li>
-      ))
+      newTV.Search.map((movie, index) => <li key={index}>{movie.Title}</li>)
     ) : (
       <li>{newTV.Error}</li>
     );
