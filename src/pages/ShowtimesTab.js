@@ -1,6 +1,6 @@
 import Showtimes from "../components/Charts/showtimes";
 import "./style.css";
-import banner from "./banner3.png"
+import banner from "./banners/banner3.png"
 
 const ShowtimesTab = () => {
   return (
