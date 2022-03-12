@@ -18,7 +18,7 @@ class ResultList extends React.Component {
     return (
       <Container>
         <div className="results">
-          <h4>Search Results for : "omar omar"</h4>
+          <h4>Search Results</h4>
         </div>
         <div className="buttons">
           <Row>

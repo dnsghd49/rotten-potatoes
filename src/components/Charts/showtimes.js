@@ -15,18 +15,15 @@ function Showtimes() {
   );
 
   useEffect(() => {
-    const data = dispatch(fetchMostStreamingData());
-    return data;
+    dispatch(fetchMostStreamingData());
   }, [dispatch]);
 
   useEffect(() => {
-    const data = dispatch(fetchMostPopularData());
-    return data;
+    dispatch(fetchMostPopularData());
   }, [dispatch]);
 
   useEffect(() => {
-    const data = dispatch(fetchnewTVData());
-    return data;
+    dispatch(fetchnewTVData());
   }, [dispatch]);
 
   let today = new Date();
@@ -38,6 +35,7 @@ function Showtimes() {
       mostStreaming.Search.map((movie, index) => (
         <li key={index} className="rightborder">
           {movie.Title}
+          <div></div>
           {index + 1 - (hours - 12) > 0 ? (
             <div>
               in {index + 1 - (hours - 12)} hours and {60 - minutes} minutes
