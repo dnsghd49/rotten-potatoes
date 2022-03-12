@@ -30,8 +30,7 @@ const NewUpcoming = ({ deviceType }) => {
   const { newUpcoming } = useSelector((state) => state.movie);
 
   useEffect(() => {
-    const data = dispatch(fetchUpcomingData());
-    return data;
+    dispatch(fetchUpcomingData());
   }, [dispatch]);
 
   const renderNewUpcoming =
@@ -47,9 +46,7 @@ const NewUpcoming = ({ deviceType }) => {
               src={movie.Poster}
               key={movie.imbdbID}
             />
-            <Figure.Caption>
-              {movie.Title} 🔥
-            </Figure.Caption>
+            <Figure.Caption>{movie.Title} 🔥</Figure.Caption>
           </Figure>
         </div>
       ))

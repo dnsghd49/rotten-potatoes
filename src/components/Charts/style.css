@@ -18,7 +18,7 @@
   border-bottom: 1px solid #ebebeb;
   padding-top: 15px;
   padding-bottom: 15px;
-  display: flex;
+  /* display: flex; */
 }
 .rightborder {
   border-right: 1px solid #ebebeb;
@@ -37,4 +37,3 @@
 #thumbnailStyle {
   margin-right: 10px;
 }
-

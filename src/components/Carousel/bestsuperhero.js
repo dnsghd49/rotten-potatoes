@@ -30,9 +30,7 @@ const BestSuperhero = ({ deviceType }) => {
   const { bestSuperHero } = useSelector((state) => state.movie);
 
   useEffect(() => {
-    const data = dispatch(fetchBestSuperHeroData());
-    // console.log(data);
-    return data;
+    dispatch(fetchBestSuperHeroData());
   }, [dispatch]);
 
   const renderBestSuperHero =
@@ -62,7 +60,7 @@ const BestSuperhero = ({ deviceType }) => {
     <Container>
       <Row className="textcontent">
         <Col className="flexstyle">
-            <h6 className="headingtitle">best superhero movies</h6>
+          <h6 className="headingtitle">best superhero movies</h6>
         </Col>
         {/* <Col>
           <p className="viewalltext">VIEW ALL</p>

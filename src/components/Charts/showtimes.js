@@ -1,5 +1,6 @@
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Figure } from "react-bootstrap";
 import "./style.css";
+import "./styleShowtime.css";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -7,7 +8,7 @@ import {
   fetchMostPopularData,
   fetchnewTVData,
 } from "../../features/chartSlice";
-import icon from "./img/icon.png"
+// import icon from "./img/icon.png";
 
 function Showtimes() {
   const dispatch = useDispatch();
@@ -16,18 +17,15 @@ function Showtimes() {
   );
 
   useEffect(() => {
-    const data = dispatch(fetchMostStreamingData());
-    return data;
+    dispatch(fetchMostStreamingData());
   }, [dispatch]);
 
   useEffect(() => {
-    const data = dispatch(fetchMostPopularData());
-    return data;
+    dispatch(fetchMostPopularData());
   }, [dispatch]);
 
   useEffect(() => {
-    const data = dispatch(fetchnewTVData());
-    return data;
+    dispatch(fetchnewTVData());
   }, [dispatch]);
 
   let today = new Date();
@@ -37,23 +35,28 @@ function Showtimes() {
   const renderMostStreaming =
     mostStreaming.Response === "True" ? (
       mostStreaming.Search.map((movie, index) => (
-        <li key={index} className="rightborder">
+        <li key={index} className="rightborder" id="showtime">
+          <div>{movie.Title}</div>
+          <Figure.Image
+            width={80}
+            height={80}
+            id="thumbnailStyle"
+            className="thumbnail"
+            src={movie.Poster}
+            alt={movie.Title}
+          />
           <div>
-          {movie.Title}
+            {hours - 12 < index + 1 ? (
+              <li>Show starts @ {index + 1}:00 PM</li>
+            ) : (
+              <li>Show ended</li>
+            )}
           </div>
-          {/* {index + 1 - (hours - 12) > 0 ? (
+          {index + 1 - (hours - 12) > 0 ? (
             <div>
               in {index + 1 - (hours - 12)} hours and {60 - minutes} minutes
             </div>
           ) : null}
-
-          <div>
-            {hours - 12 < index + 1 ? (
-              <div>Show starts @ {index + 1}:00 PM</div>
-            ) : (
-              <div>Show ended</div>
-            )}
-          </div> */}
         </li>
       ))
     ) : (
@@ -63,21 +66,28 @@ function Showtimes() {
   const renderMostPopular =
     mostPopular.Response === "True" ? (
       mostPopular.Search.map((movie, index) => (
-        <li key={index} className="rightborder">
-          {movie.Title}
-          {/* {index + 1 - (hours - 12) > 0 ? (
-            <div>
-              in {index + 1 - (hours - 12)} hours and {60 - minutes} minutes
-            </div>
-          ) : null}
-
+        <li key={index} className="rightborder" id="showtime">
+          <div>{movie.Title}</div>
+          <Figure.Image
+            width={80}
+            height={80}
+            id="thumbnailStyle"
+            className="thumbnail"
+            src={movie.Poster}
+            alt={movie.Title}
+          />
           <div>
-            {hours - 12 < index + 1 ? (
-              <div>Show starts @ {index + 1}:00 PM</div>
+            {hours - 12 < index + 3 ? (
+              <div>Show starts @ {index + 3}:00 PM</div>
             ) : (
               <div>Show ended</div>
             )}
-          </div> */}
+          </div>
+          {index + 3 - (hours - 12) > 0 ? (
+            <div>
+              in {index + 3 - (hours - 12)} hours and {60 - minutes} minutes
+            </div>
+          ) : null}
         </li>
       ))
     ) : (
@@ -87,21 +97,28 @@ function Showtimes() {
   const renderNewTV =
     newTV.Response === "True" ? (
       newTV.Search.map((movie, index) => (
-        <li key={index} >
-          {movie.Title}
-          {/* {index + 1 - (hours - 12) > 0 ? (
-            <div>
-              in {index + 1 - (hours - 12)} hours and {60 - minutes} minutes
-            </div>
-          ) : null}
-
+        <li key={index} id="showtime">
+          <div>{movie.Title}</div>
+          <Figure.Image
+            width={80}
+            height={80}
+            id="thumbnailStyle"
+            className="thumbnail"
+            src={movie.Poster}
+            alt={movie.Title}
+          />
           <div>
-            {hours - 12 < index + 1 ? (
-              <div>Show starts @ {index + 1}:00 PM</div>
+            {hours - 12 < index + 2 ? (
+              <div>Show starts @ {index + 2}:00 PM</div>
             ) : (
               <div>Show ended</div>
             )}
-          </div> */}
+          </div>
+          {index + 2 - (hours - 12) > 0 ? (
+            <div>
+              in {index + 2 - (hours - 12)} hours and {60 - minutes} minutes
+            </div>
+          ) : null}
         </li>
       ))
     ) : (
@@ -113,19 +130,25 @@ function Showtimes() {
       <Row>
         <Col sm={4}>
           <ul className="listStyle">
-            <h6 className="headingtitle">showcase cinemas showtimes</h6>
+            <h6 className="headingtitle" id="showtime">
+              showcase cinemax showtimes
+            </h6>
             {renderMostStreaming}
           </ul>
         </Col>
         <Col sm={4}>
           <ul className="listStyle">
-            <h6 className="headingtitle">amc showtimes</h6>
+            <h6 className="headingtitle" id="showtime">
+              super-deluxe showtimes
+            </h6>
             {renderMostPopular}
           </ul>
         </Col>
         <Col sm={4}>
           <ul className="listStyle">
-            <h6 className="headingtitle">new tv showtimes</h6>
+            <h6 className="headingtitle" id="showtime">
+              new tv showtimes
+            </h6>
             {renderNewTV}
           </ul>
         </Col>

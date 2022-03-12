@@ -30,9 +30,7 @@ const BestSeries = ({ deviceType }) => {
   const { bestSeries } = useSelector((state) => state.movie);
 
   useEffect(() => {
-    const data = dispatch(fetchBestSeriesData());
-    // console.log(data);
-    return data;
+    dispatch(fetchBestSeriesData());
   }, [dispatch]);
 
   const renderBestSeries =

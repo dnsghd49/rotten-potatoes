@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Button, Figure } from "react-bootstrap";
+import { Container, Row, Col, Figure } from "react-bootstrap";
 import "./style.css";
 import { useSelector } from "react-redux";
 
@@ -32,12 +32,12 @@ const ShowSearch = () => {
             <h6 className="headingtitle">Show</h6>
             {renderShowSearch}
           </ul>
-          <Button variant="light" className="buttonStyle">
+          {/* <Button variant="light" className="buttonStyle">
             Previous
           </Button>{" "}
           <Button variant="light" className="buttonStyle">
             Next
-          </Button>{" "}
+          </Button>{" "} */}
         </Col>
       </Row>
     </Container>
