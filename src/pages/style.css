@@ -2,3 +2,16 @@
     margin-bottom: 9.5vh;
     background-color: #FFFFFF;
 }
+
+.alignments {
+    display: flex;
+    justify-content: center;
+}
+
+.card-alignments {
+    display: flex;
+}
+
+.dev-team h4 {
+    padding-top: 1em;
+}

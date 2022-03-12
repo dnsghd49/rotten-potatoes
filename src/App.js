@@ -10,6 +10,10 @@ import Footer from "./components/Footer";
 import Main from "./pages/Main";
 import Comments from "./pages/Comments";
 import SearchPage from "./pages/Search";
+import MoviesTab from "./pages/MoviesTab";
+import TvShowsTab from "./pages/TvShowsTab";
+import DevTeam from "./pages/DevTeam";
+import ShowtimesTab from "./pages/ShowtimesTab";
 
 function App() {
   return (
@@ -20,8 +24,12 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Main />} />
             <Route path="/comments" element={<Comments />} />
-            <Route path="/search" element={<SearchPage/>} />
-            <Route path="#" element={<Main />} />
+            <Route path="/search" element={<SearchPage />} />
+            <Route path="/sign-up" element={<Comments />} />
+            <Route path="/movie" element={<MoviesTab />} />
+            <Route path="/show" element={<TvShowsTab />} />
+            <Route path="/developers" element={<DevTeam />} />
+            <Route path="/showtimes" element={<ShowtimesTab />} />
           </Routes>
         </BrowserRouter>
         <Footer />

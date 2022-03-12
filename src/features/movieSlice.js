@@ -9,7 +9,7 @@ const initialState = {
   bestSeries: {},
   bestSuperHero: {},
   newUpcoming: {},
-  search: {},
+  searchMovie: {},
 };
 
 export const movieSlice = createSlice({
@@ -28,8 +28,8 @@ export const movieSlice = createSlice({
     newUpcomingData: (state, action) => {
       return { ...state, newUpcoming: action.payload };
     },
-    searchData: (state, action) => {
-      return { ...state, search: action.payload };
+    searchMovieData: (state, action) => {
+      return { ...state, searchMovie: action.payload };
     },
   },
 });
@@ -39,7 +39,7 @@ export const {
   popularData,
   bestSeriesData,
   bestSuperHeroData,
-  searchData,
+  searchMovieData,
 } = movieSlice.actions;
 
 export default movieSlice.reducer;
@@ -47,7 +47,7 @@ export default movieSlice.reducer;
 export const fetchUpcomingData = () => {
   const upcomingThunk = async (dispatch) => {
     const response = await fetch(
-      `https://www.omdbapi.com?apikey=${API_key}&s=2022&y=2022`
+      `https://www.omdbapi.com?apikey=${API_key}&type=movie&s=x-men`
     );
     const data = await response.json();
     dispatch(newUpcomingData(data));
@@ -58,7 +58,7 @@ export const fetchUpcomingData = () => {
 export const fetchPopularData = () => {
   const popularThunk = async (dispatch) => {
     const response = await fetch(
-      `https://www.omdbapi.com?apikey=${API_key}&s=potter&t=movie`
+      `https://www.omdbapi.com?apikey=${API_key}&type=movie&s=star wars`
     );
     const data = await response.json();
     dispatch(popularData(data));
@@ -69,7 +69,7 @@ export const fetchPopularData = () => {
 export const fetchBestSuperHeroData = () => {
   const bestSuperHeroThunk = async (dispatch) => {
     const response = await fetch(
-      `https://www.omdbapi.com?apikey=${API_key}&s=avengers&t=movie`
+      `https://www.omdbapi.com?apikey=${API_key}&s=avengers&type=movie`
     );
     const data = await response.json();
     dispatch(bestSuperHeroData(data));
@@ -80,7 +80,7 @@ export const fetchBestSuperHeroData = () => {
 export const fetchBestSeriesData = () => {
   const bestSeriesThunk = async (dispatch) => {
     const response = await fetch(
-      `https://www.omdbapi.com?apikey=${API_key}&s=cats&t=series`
+      `https://www.omdbapi.com?apikey=${API_key}&s=star trek&type=series`
     );
     const data = await response.json();
     dispatch(bestSeriesData(data));
@@ -88,13 +88,13 @@ export const fetchBestSeriesData = () => {
   return bestSeriesThunk;
 };
 
-export const fetchSearchData = (search) => {
+export const fetchSearchMovieData = (search) => {
   const searchThunk = async (dispatch) => {
     const response = await fetch(
-      `https://www.omdbapi.com?apikey=${API_key}&s=${search}&t=movie`
+      `https://www.omdbapi.com?apikey=${API_key}&s=${search}&type=movie`
     );
     const data = await response.json();
-    dispatch(searchData(data));
+    dispatch(searchMovieData(data));
   };
   return searchThunk;
 };
