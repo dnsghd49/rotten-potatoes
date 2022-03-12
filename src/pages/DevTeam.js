@@ -24,15 +24,6 @@ function DevTeam() {
                 </div>
             </div>
         </div>
-      </div>
-      <h3 className="headerc">back-end devs</h3>
-      <div className="alignments">
-        <div className="card-alignments">
-          <Derek />
-          <Omar />
-        </div>
-      </div>
-    </div>
   );
 }
 
