@@ -48,7 +48,7 @@ const NewUpcoming = ({ deviceType }) => {
               key={movie.imbdbID}
             />
             <Figure.Caption>
-              {movie.Title}, ({movie.Year}) 🔥
+              {movie.Title} 🔥
             </Figure.Caption>
           </Figure>
         </div>

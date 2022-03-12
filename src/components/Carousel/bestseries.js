@@ -38,7 +38,7 @@ const BestSeries = ({ deviceType }) => {
   const renderBestSeries =
     bestSeries.Response === "True" ? (
       bestSeries.Search.map((movie, index) => (
-        <div key={index}>
+        <div className="figureStyle" key={index}>
           <Figure>
             <Figure.Image
               width={180}
@@ -77,6 +77,9 @@ const BestSeries = ({ deviceType }) => {
           infinite={true}
           containerClass="carousel-container"
           autoPlay={false}
+          focusOnSelect={true}
+          customTransition="all .5"
+          transitionDuration={2000}
         >
           {renderBestSeries}
         </Carousel>
