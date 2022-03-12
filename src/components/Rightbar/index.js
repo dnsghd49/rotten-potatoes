@@ -1,7 +1,6 @@
 import Nav from 'react-bootstrap/Nav'
 import { useState } from 'react'
 import './style.css'
-import index from '.../controllers/'
 import { useNavigate } from "react-router-dom";
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faXmark } from '@fortawesome/free-solid-svg-icons/faXmark'
