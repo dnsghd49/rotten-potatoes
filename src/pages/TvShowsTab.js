@@ -6,7 +6,7 @@ const TvShowsTab = () => {
   return (
     <div className="content">
       {/* <h3 className="headerc">TV Shows</h3> */}
-      <img src={banner} alt="a big potato" />
+      <img className="bannerStyle" src={banner} alt="a big potato"/>
       <TvshowsTopBar />
     </div>
   );

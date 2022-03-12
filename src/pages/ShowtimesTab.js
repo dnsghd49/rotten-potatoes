@@ -5,7 +5,7 @@ import banner from "./banners/banner3.png";
 const ShowtimesTab = () => {
   return (
     <div className="content">
-      <img src={banner} alt="a big potato" />
+      <img className="bannerStyle" src={banner} alt="a big potato"/>
       {/* <h3 className="headerc">Showtimes</h3> */}
       <Showtimes />
     </div>

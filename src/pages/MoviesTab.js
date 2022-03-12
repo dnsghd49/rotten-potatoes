@@ -5,6 +5,7 @@ import banner from "./banners/banner1.png";
 const MoviesTab = () => {
   return (
     <div className="content">
+      <img className="bannerStyle" src={banner} alt="a big potato"/>
       <img src={banner} alt="a big potato" />
       {/* <h3 className="headerc">Movies</h3> */}
       <MovieTopBar />

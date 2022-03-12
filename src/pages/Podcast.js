@@ -4,8 +4,10 @@ import PodcastList from "../components/Charts/PodcastList";
 
 const PodCast = () => {
   return (
+
     <div className="content">
-      <img src={banner} alt="a big potato" />
+
+      <img className="bannerStyle" src={banner} alt="a big potato"/>
       <PodcastList />
       {/* <h3 className="headerc">Movies</h3> */}
     </div>

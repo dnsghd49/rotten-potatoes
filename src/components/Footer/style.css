@@ -1,13 +1,13 @@
-.footer-bg {
+ .bg{
     background-color: #2A2C32;
     box-shadow: 0px -20px #FFFFFF , 0px -60px #F3F3F3 ;
+    padding-right: 2vw;
+    padding-top: 2vh;
+    margin-right: -1.5vh;
+    margin-left: -1.5vh;
 }
 
-.footer-pos {
-    padding: 30px;
-}
-
-.footer-container {
+.bgcontainer {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -18,33 +18,19 @@ strong{
     font-size: 18px;
 }
 
-.footer-group {
-    font-family: "Franklin Gothic","PT Sans",Arial,Sans-Serif;
-    font-weight: 400;
-    font-size: 16px;
-    color: #FFFFFF;
-
-}
-
 .cib-gmail{
     font-size: 1rem;
     margin: 6px;
 }
 
-#nbutton{
-    font-size: 14px;
-}
 
-.footer-group-l {
+ul li {
+    list-style-type: none;
+    margin-top: 0.3rem;
     font-family: "Franklin Gothic","PT Sans",Arial,Sans-Serif;
     font-weight: 400;
     font-size: 16px;
     color: #FFFFFF;
-    text-align: left;
-}
-.footer-container ul li {
-    list-style-type: none;
-    margin-top: 0.3rem;
 }
 
 .icon-flex {
