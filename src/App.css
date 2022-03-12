@@ -52,3 +52,17 @@
     margin-right: 12%;
   }
 }
+
+@media screen and (max-width: 1414px) {
+  .App {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
+@media screen and (max-width: 1343px) {
+  .App {
+    margin-left: 7%;
+    margin-right: 7%;
+  }
+}
