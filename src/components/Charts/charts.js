@@ -43,7 +43,7 @@ function ChartList() {
   const renderMostPopular =
     mostPopular.Response === "True" ? (
       mostPopular.Search.map((movie, index) => (
-        <li key={index}>{movie.Title}</li>
+        <li key={index} className="rightborder" >{movie.Title}</li>
       ))
     ) : (
       <li>{mostPopular.Error}</li>
@@ -52,7 +52,7 @@ function ChartList() {
   const renderNewTV =
     newTV.Response === "True" ? (
       newTV.Search.map((movie, index) => (
-        <li key={index} className="rightborder">
+        <li key={index}>
           {movie.Title}
         </li>
       ))
@@ -75,16 +75,12 @@ function ChartList() {
             {renderMostPopular}
           </ul>
         </Col>
-      </Row>
-      <Row>
-        <Col>
+        <Col sm={4}>
           <ul className="listStyle">
             <h6 className="headingtitle">new tv this week</h6>
             {renderNewTV}
           </ul>
         </Col>
-        <Col></Col>
-        <Col></Col>
       </Row>
     </Container>
   );
