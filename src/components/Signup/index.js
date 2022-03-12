@@ -1,7 +1,7 @@
 import './style.css'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
-import { useEffect, useState } from 'react'
+// import { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark } from '@fortawesome/free-solid-svg-icons/faXmark'
 
@@ -13,7 +13,7 @@ function Signup(props) {
             <div className='popup-item'>
                 {props.children}
                 <FontAwesomeIcon className='fa-lg close-btn' onClick={() => props.setTrigger(false)} icon={faXmark} />
-                <Form onSubmit={() => props.setTrigger(true)}>
+                <Form onSubmit={() => props.setTrigger(true)} action="/signup" method="POST">
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Username</Form.Label>
                         <Form.Control type="username" placeholder="Enter username" />

@@ -24,19 +24,13 @@ try {
 // ROOT
 app.get('/', (req, res) => {
     res.status(200).json({
-        message: 'Welcome to the Tour API'
+        message: 'Welcome to Rotten Potatoes'
     })
 })
 
 // CONTROLLERS 
 const userController = require('./controllers/user_controllers')
 app.use('/user', userController)
-
-
-// LISTEN
-app.listen(process.env.PORT, () => {
-    console.log(`🎸 Rockin' on port: ${process.env.PORT}`)
-})
 
 const port = process.env.PORT || 3000;
 
