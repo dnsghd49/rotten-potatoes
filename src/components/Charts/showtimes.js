@@ -7,6 +7,7 @@ import {
   fetchMostPopularData,
   fetchnewTVData,
 } from "../../features/chartSlice";
+import icon from "./img/icon.png"
 
 function Showtimes() {
   const dispatch = useDispatch();

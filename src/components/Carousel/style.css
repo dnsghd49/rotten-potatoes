@@ -1,7 +1,7 @@
-
+/*
 .textcontent{
     margin-top: 3vh;
-}
+} */
 
 .headingtitle{
     text-align: start;
@@ -16,4 +16,8 @@
 }
 .viewalltext:hover{
     color: #f6ecbb;
+}
+
+.flexstyle{
+    display:flex;
 }
