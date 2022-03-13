@@ -18,7 +18,7 @@ class ResultList extends React.Component {
     return (
       <Container>
         <div className="results">
-          <h4>Search Results for : "omar omar"</h4>
+          <h4>Search Results</h4>
         </div>
         <div className="buttons">
           <Row>
@@ -47,24 +47,36 @@ class ResultList extends React.Component {
             </Col>
           </Row>
         </div>
-        <Row>
           {this.state.allVisible ? (
             <div>
+              <Row>
+              <Col md="6">
               <MovieSearch />
+              </Col>
+              <Col md="6">
               <ShowSearch />
+              </Col>
+              </Row>
             </div>
           ) : null}
           {this.state.movieVisible ? (
             <div>
+              <Row>
+                <Col md="6">
               <MovieSearch />
+                </Col>
+              </Row>
             </div>
           ) : null}
           {this.state.showVisible ? (
             <div>
+              <Row>
+              <Col md="6">
               <ShowSearch />
+              </Col>
+              </Row>
             </div>
           ) : null}
-        </Row>
       </Container>
     );
   }

@@ -5,11 +5,12 @@ module.exports = (sequelize, DataTypes) => {
   class Rating extends Model {
     static associate({ User, Movie }) {
       // user
-      Rating.belongsTo(User, {
+      Rating.hasMany(User, {
         foreignKey: "user_id",
         as: "users"
       })
-      Rating.belongsTo(Movie, {
+      
+      Rating.hasMany(Movie, {
         foreignKey: "movie_id",
         as: "movies"
       })

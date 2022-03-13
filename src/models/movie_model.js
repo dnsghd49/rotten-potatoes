@@ -7,9 +7,9 @@ module.exports = (sequelize, DataTypes) => {
     static associate({ Rating }) {
 
       // ratings 
-      Movie.hasMany(Rating, {
-        foreignKey: "rating_id",
-        as: "ratings"
+      Movie.belongsTo(Rating, {
+        foreignKey: "movie_id",
+        as: "movies"
       })
     }
   }
@@ -26,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING
     },
     description: {
-      type: DataTypes.STING
+      type: DataTypes.STRING
     }
   }, {
     sequelize,

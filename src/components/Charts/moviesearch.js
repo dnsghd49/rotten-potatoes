@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Button, Figure } from "react-bootstrap";
+import { Container, Row, Col, Figure } from "react-bootstrap";
 import "./style.css";
 import { useSelector } from "react-redux";
 
@@ -28,17 +28,17 @@ const MovieSearch = () => {
   return (
     <Container>
       <Row>
-        <Col sm={6}>
+        <Col>
           <ul className="listStyle">
             <h6 className="headingtitle">Movies</h6>
             {renderMovieSearch}
           </ul>
-          <Button variant="light" className="buttonStyle">
+          {/* <Button variant="light" className="buttonStyle">
             Previous
           </Button>{" "}
           <Button variant="light" className="buttonStyle">
             Next
-          </Button>{" "}
+          </Button>{" "} */}
         </Col>
       </Row>
     </Container>

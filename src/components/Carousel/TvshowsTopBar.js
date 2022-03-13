@@ -36,18 +36,15 @@ const TvshowsTopBar = ({ deviceType }) => {
   );
 
   useEffect(() => {
-    const data = dispatch(fetchMostStreamingData());
-    return data;
+    dispatch(fetchMostStreamingData());
   }, [dispatch]);
 
   useEffect(() => {
-    const data = dispatch(fetchMostPopularData());
-    return data;
+    dispatch(fetchMostPopularData());
   }, [dispatch]);
 
   useEffect(() => {
-    const data = dispatch(fetchnewTVData());
-    return data;
+    dispatch(fetchnewTVData());
   }, [dispatch]);
 
   const renderMostStreaming =

@@ -4,7 +4,9 @@ const {
 module.exports = (sequelize, DataTypes) => {
   class User extends Model {
     static associate({ Rating }) {
-      User.hasMany(Rating, {
+      
+      // User
+      User.belongsTo(Rating, {
         foreignKey: "user_id",
         as: "users"
       })
@@ -34,21 +36,5 @@ module.exports = (sequelize, DataTypes) => {
     modelName: 'User',
     tableName: 'users'
   });
-  return User;
-};
-
-module.exports = (sequelize, Sequelize) => {
-  const User = sequelize.define("users", {
-    name: {
-      type: Sequelize.STRING
-    },
-    password: {
-      type: Sequelize.STRING
-    },
-    email: {
-      type: Sequelize.STRING
-    }
-  });
-
   return User;
 };

@@ -30,9 +30,7 @@ const PopularIn = ({ deviceType }) => {
   const { popular } = useSelector((state) => state.movie);
 
   useEffect(() => {
-    const data = dispatch(fetchPopularData());
-    // console.log(data);
-    return data;
+    dispatch(fetchPopularData());
   }, [dispatch]);
 
   const renderPopular =

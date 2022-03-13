@@ -15,18 +15,15 @@ function ChartList() {
   );
 
   useEffect(() => {
-    const data = dispatch(fetchMostStreamingData());
-    return data;
+    dispatch(fetchMostStreamingData());
   }, [dispatch]);
 
   useEffect(() => {
-    const data = dispatch(fetchMostPopularData());
-    return data;
+    dispatch(fetchMostPopularData());
   }, [dispatch]);
 
   useEffect(() => {
-    const data = dispatch(fetchnewTVData());
-    return data;
+    dispatch(fetchnewTVData());
   }, [dispatch]);
 
   const renderMostStreaming =
@@ -43,7 +40,9 @@ function ChartList() {
   const renderMostPopular =
     mostPopular.Response === "True" ? (
       mostPopular.Search.map((movie, index) => (
-        <li key={index}>{movie.Title}</li>
+        <li key={index} className="rightborder">
+          {movie.Title}
+        </li>
       ))
     ) : (
       <li>{mostPopular.Error}</li>
@@ -51,11 +50,7 @@ function ChartList() {
 
   const renderNewTV =
     newTV.Response === "True" ? (
-      newTV.Search.map((movie, index) => (
-        <li key={index} className="rightborder">
-          {movie.Title}
-        </li>
-      ))
+      newTV.Search.map((movie, index) => <li key={index}>{movie.Title}</li>)
     ) : (
       <li>{newTV.Error}</li>
     );
@@ -75,16 +70,12 @@ function ChartList() {
             {renderMostPopular}
           </ul>
         </Col>
-      </Row>
-      <Row>
-        <Col>
+        <Col sm={4}>
           <ul className="listStyle">
             <h6 className="headingtitle">new tv this week</h6>
             {renderNewTV}
           </ul>
         </Col>
-        <Col></Col>
-        <Col></Col>
       </Row>
     </Container>
   );
