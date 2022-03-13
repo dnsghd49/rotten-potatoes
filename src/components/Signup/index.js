@@ -13,7 +13,7 @@ function Signup(props) {
             <div className='popup-item'>
                 {props.children}
                 <FontAwesomeIcon className='fa-lg close-btn' onClick={() => props.setTrigger(false)} icon={faXmark} />
-                <Form onSubmit={() => props.setTrigger(true)} action="/signup" method="POST">
+                <Form onSubmit={() => props.setTrigger(true)} action="/users/signup" method="POST">
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Username</Form.Label>
                         <Form.Control type="username" placeholder="Enter username" />

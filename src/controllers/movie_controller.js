@@ -7,6 +7,7 @@ const { Op } = require('sequelize')
 // // FIND ALL Movies
 movies.get('/movies', async (req, res) => {
     try {
+        console.log("movies array");
         const foundMovies = await Movie.findAll({
             order: [['email', 'ASC']],
             where: {
