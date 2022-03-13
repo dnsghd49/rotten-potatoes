@@ -1,9 +1,14 @@
-function Comments() {
-    return (
-        <div>
-            this is comments page
-        </div>
-    )
-}
+import "./style.css";
+import { Container, Row, Col } from "react-bootstrap";
+import banner from "./banners/banner1.png";
+import ContentComments from "../components/Comments/content";
 
-export default Comments
+const Comments = () => {
+    return (
+        <div className="content">
+            <ContentComments/>
+        </div>
+    );
+};
+
+export default Comments;
