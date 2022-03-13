@@ -2,10 +2,8 @@
 // const path = require("path");
 const express = require("express");
 const app = express()
-// const { Sequelize } = require('sequelize')
-const users = require('./controllers/user_controller')
-const movies = require('./controllers/movie_controller')
-const ratings = require('./controllers/rating_controller')
+const { Sequelize } = require('sequelize')
+
 
 const port = process.env.PORT || 3000;
 
@@ -14,15 +12,15 @@ require('dotenv').config()
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
-// // SEQUELIZE CONNECTION
-// const sequelize = new Sequelize(process.env.PG_URI)
+// SEQUELIZE CONNECTION
+const sequelize = new Sequelize(process.env.PG_URI)
 
-// try {
-//     sequelize.authenticate() 
-//     console.log(`Connected with Sequelize at ${process.env.PG_URI}`) 
-// } catch(err) {
-//     console.log(`Unable to connect to PG: ${err}`) 
-// }
+try {
+    sequelize.authenticate() 
+    // console.log(`Connected with Sequelize at ${process.env.PG_URI}`) 
+} catch(err) {
+    console.log(`Unable to connect to PG: ${err}`) 
+}
 
 // ROOT
 app.get('/', (req, res) => {
@@ -45,6 +43,9 @@ app.use('/ratings', ratingsController)
 const moviesController = require('./controllers/movie_controller')
 app.use('/movies', moviesController)
 
+require('./Routes/user_routes');
+// require('./Routes/movie_routes');
+// require('./Routes/rating_routes');
 app.listen(port, () => {
   console.log(`Server is up on port ${port}!`);
 });

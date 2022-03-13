@@ -32,6 +32,9 @@ module.exports = (sequelize, DataTypes) => {
     },
     rating: { 
       type: DataTypes.INTEGER 
+    },
+    comment: { 
+      type: DataTypes.STRING
     }
   }, {
     sequelize,
