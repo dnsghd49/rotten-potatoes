@@ -31,7 +31,7 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: true
     },
     rating: { 
-      type: DataTypes.STRING 
+      type: DataTypes.INTEGER 
     }
   }, {
     sequelize,

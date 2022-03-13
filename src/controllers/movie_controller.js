@@ -1,28 +1,28 @@
 // DEPENDENCIES
-const users = require('express').Router()
+const movies = require('express').Router()
 const db = require('../models')
-const { User, Rating } = db 
+const { Movie, Rating } = db 
 const { Op } = require('sequelize')
 
-// // FIND ALL Users
-users.get('/users', async (req, res) => {
+// // FIND ALL Movies
+movies.get('/movies', async (req, res) => {
     try {
-        const foundUsers = await User.findAll({
+        const foundMovies = await Movie.findAll({
             order: [['email', 'ASC']],
             where: {
                 name: { [Op.like]: `%${req.query.name ? req.query.name : ''}%`}
             }
         })
-        res.status(200).json(foundUsers)
+        res.status(200).json(foundMovies)
     } catch (error) {
         res.status(500).json(error)
     }
 })
 
-// FIND A SPECIFIC User
-users.get('/:name', async (req, res) => {
+// FIND A SPECIFIC Movie
+movies.get('/:name', async (req, res) => {
     try {
-        const foundUser = await User.findOne({
+        const founMovie = await Movie.findOne({
             where: { name: req.params.name },
             include: [
                 { 
@@ -41,51 +41,51 @@ users.get('/:name', async (req, res) => {
                 [{ model: Rating, as: "ratings" }, 'DESC']
             ]
         })
-        res.status(200).json(foundUser)
+        res.status(200).json(founMovie)
     } catch (error) {
         res.status(500).json(error)
     }
 })
 
-// CREATE A USER
-users.post('/signup', async (req, res) => {
+// CREATE A Moive
+movies.post('/signup', async (req, res) => {
     try {
-        const newUser = await User.create(req.body)
+        const newMovie = await Movie.create(req.body)
         res.status(200).json({
-            message: 'Successfully inserted a new user',
-            data: newUser
+            message: 'Successfully inserted a new movie',
+            data: newMovie
         })
     } catch(err) {
         res.status(500).json(err)
     }
 })
 
-// UPDATE A User
-users.put('/:id', async (req, res) => {
+// UPDATE A Movie
+movies.put('/:id', async (req, res) => {
     try {
-        const updatedUsers = await User.update(req.body, {
+        const updatedMovie = await Movie.update(req.body, {
             where: {
-                user_id: req.params.id
+                movie_id: req.params.id
             }
         })
         res.status(200).json({
-            message: `Successfully updated ${updatedUsers} user(s)`
+            message: `Successfully updated ${updatedMovie} movie(s)`
         })
     } catch(err) {
         res.status(500).json(err)
     }
 })
 
-// DELETE A USER
-users.delete('/:id', async (req, res) => {
+// DELETE A Movie
+movies.delete('/:id', async (req, res) => {
     try {
-        const deletedUsers = await User.destroy({
+        const deletedMovie = await Movie.destroy({
             where: {
-                user_id: req.params.id
+                movie_id: req.params.id
             }
         })
         res.status(200).json({
-            message: `Successfully deleted ${deletedUsers} user(s)`
+            message: `Successfully deleted ${deletedMovie} movie(s)`
         })
     } catch(err) {
         res.status(500).json(err)
@@ -93,4 +93,4 @@ users.delete('/:id', async (req, res) => {
 })
 
 // EXPORT
-module.exports = users
+module.exports = movies
