@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {
     fetchMostPopularData,
     fetchnewTVData,
-} from "../../../features/chartSlice";
+} from "../../features/chartSlice";
 import thumbnail from "./img/icon.png"
 
 const ContentComments = () => {
