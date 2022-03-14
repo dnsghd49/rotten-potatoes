@@ -9,3 +9,12 @@
 .card {
     margin: 70px;
 }
+
+.card-img-top {
+    border-radius: 100px;
+    width: 200px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+}
