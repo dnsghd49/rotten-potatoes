@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {
     fetchMostPopularData,
     fetchnewTVData,
-} from "../../features/chartSlice";
+} from "../../../features/chartSlice";
 import thumbnail from "./img/icon.png"
 
 const ContentComments = () => {
@@ -42,7 +42,7 @@ const ContentComments = () => {
         );
     const handleFormSubmit =async () => {
         const response = await fetch("/ratings", {
-            
+          // need to update this area of code to POST what is on the form/ 
         })
 
     }
