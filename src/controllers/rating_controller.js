@@ -8,10 +8,10 @@ const { Op } = require('sequelize')
 ratings.get('/', async (req, res) => {
     try {
         const foundRating = await Rating.findAll({
-            order: [[ 'date', 'ASC' ]],
-            where: {
-                name: { [Op.like]: `%${req.query.name ? req.query.name : ''}%`}
-            }
+            // order: [[ 'date', 'ASC' ]],
+            // where: {
+            //     name: { [Op.like]: `%${req.query.name ? req.query.name : ''}%`}
+            // }
         })
         res.status(200).json(foundRating)
     } catch (error) {

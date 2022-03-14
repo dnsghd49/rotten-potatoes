@@ -1,29 +1,30 @@
 // DEPENDENCIES
-const movies = require('express').Router()
+const moviesRouter = require('express').Router()
 const db = require('../models')
 const { Movie, Rating } = db 
 const { Op } = require('sequelize')
 
 // // FIND ALL Movies
-movies.get('/movies', async (req, res) => {
+moviesRouter.get('/', async (req, res) => {
     try {
         console.log("movies array");
         const foundMovies = await Movie.findAll({
-            order: [['email', 'ASC']],
-            where: {
-                name: { [Op.like]: `%${req.query.name ? req.query.name : ''}%`}
-            }
+        //     order: [['email', 'ASC']],
+        //     where: {
+        //         name: { [Op.like]: `%${req.query.name ? req.query.name : ''}%`}
+        //     }
         })
         res.status(200).json(foundMovies)
     } catch (error) {
+        console.error(error)
         res.status(500).json(error)
     }
 })
 
 // FIND A SPECIFIC Movie
-movies.get('/:name', async (req, res) => {
+moviesRouter.get('/:name', async (req, res) => {
     try {
-        const founMovie = await Movie.findOne({
+        const foundMovie = await Movie.findOne({
             where: { name: req.params.name },
             include: [
                 { 
@@ -42,14 +43,14 @@ movies.get('/:name', async (req, res) => {
                 [{ model: Rating, as: "ratings" }, 'DESC']
             ]
         })
-        res.status(200).json(founMovie)
+        res.status(200).json(foundMovie)
     } catch (error) {
         res.status(500).json(error)
     }
 })
 
 // CREATE A Moive
-movies.post('/signup', async (req, res) => {
+moviesRouter.post('/', async (req, res) => {
     try {
         const newMovie = await Movie.create(req.body)
         res.status(200).json({
@@ -62,7 +63,7 @@ movies.post('/signup', async (req, res) => {
 })
 
 // UPDATE A Movie
-movies.put('/:id', async (req, res) => {
+moviesRouter.put('/:id', async (req, res) => {
     try {
         const updatedMovie = await Movie.update(req.body, {
             where: {
@@ -78,7 +79,7 @@ movies.put('/:id', async (req, res) => {
 })
 
 // DELETE A Movie
-movies.delete('/:id', async (req, res) => {
+moviesRouter.delete('/:id', async (req, res) => {
     try {
         const deletedMovie = await Movie.destroy({
             where: {
@@ -94,4 +95,4 @@ movies.delete('/:id', async (req, res) => {
 })
 
 // EXPORT
-module.exports = movies
+module.exports = moviesRouter

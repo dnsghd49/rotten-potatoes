@@ -1,26 +1,30 @@
 // DEPENDENCIES
-const users = require('express').Router()
+const userRouter = require('express').Router()
 const db = require('../models')
 const { User, Rating } = db 
 const { Op } = require('sequelize')
 
 // // FIND ALL Users
-users.get('/users', async (req, res) => {
+userRouter.get('/', async (req, res) => {
     try {
-        const foundUsers = await User.findAll({
+        const foundUsers = await User.findAll(
+            {
             order: [['email', 'ASC']],
             where: {
                 name: { [Op.like]: `%${req.query.name ? req.query.name : ''}%`}
             }
-        })
+        }
+        )
+        console.log("found users",foundUsers)
         res.status(200).json(foundUsers)
     } catch (error) {
+        console.error(error)
         res.status(500).json(error)
     }
 })
 
 // FIND A SPECIFIC User
-users.get('/:name', async (req, res) => {
+userRouter.get('/:name', async (req, res) => {
     try {
         const foundUser = await User.findOne({
             where: { name: req.params.name },
@@ -47,8 +51,8 @@ users.get('/:name', async (req, res) => {
     }
 })
 
-// CREATE A USER
-users.post('/signup', async (req, res) => {
+// // CREATE A USER
+userRouter.post('/signup', async (req, res) => {
     try {
         const newUser = await User.create(req.body)
         res.status(200).json({
@@ -60,37 +64,37 @@ users.post('/signup', async (req, res) => {
     }
 })
 
-// UPDATE A User
-users.put('/:id', async (req, res) => {
-    try {
-        const updatedUsers = await User.update(req.body, {
-            where: {
-                user_id: req.params.id
-            }
-        })
-        res.status(200).json({
-            message: `Successfully updated ${updatedUsers} user(s)`
-        })
-    } catch(err) {
-        res.status(500).json(err)
-    }
-})
+// // UPDATE A User
+// userRouter.put('/:id', async (req, res) => {
+//     try {
+//         const updatedUsers = await User.update(req.body, {
+//             where: {
+//                 user_id: req.params.id
+//             }
+//         })
+//         res.status(200).json({
+//             message: `Successfully updated ${updatedUsers} user(s)`
+//         })
+//     } catch(err) {
+//         res.status(500).json(err)
+//     }
+// })
 
-// DELETE A USER
-users.delete('/:id', async (req, res) => {
-    try {
-        const deletedUsers = await User.destroy({
-            where: {
-                user_id: req.params.id
-            }
-        })
-        res.status(200).json({
-            message: `Successfully deleted ${deletedUsers} user(s)`
-        })
-    } catch(err) {
-        res.status(500).json(err)
-    }
-})
+// // DELETE A USER
+// userRouter.delete('/:id', async (req, res) => {
+//     try {
+//         const deletedUser = await User.destroy({
+//             where: {
+//                 user_id: req.params.id
+//             }
+//         })
+//         res.status(200).json({
+//             message: `Successfully deleted ${deletedUser} user(s)`
+//         })
+//     } catch(err) {
+//         res.status(500).json(err)
+//     }
+// })
 
 // EXPORT
-module.exports = users
+module.exports = userRouter
