@@ -42,7 +42,7 @@ const ContentComments = () => {
         );
     const handleFormSubmit =async () => {
         const response = await fetch("/ratings", {
-            
+          // need to update this area of code to POST what is on the form/ 
         })
 
     }
