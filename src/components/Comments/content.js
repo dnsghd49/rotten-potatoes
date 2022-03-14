@@ -7,6 +7,8 @@ import {
     fetchnewTVData,
 } from "../../features/chartSlice";
 import thumbnail from "./img/icon.png"
+import { response } from "express";
+import { post } from "../../controllers/rating_controller";
 
 const ContentComments = () => {
     const dispatch = useDispatch();
@@ -43,6 +45,7 @@ const ContentComments = () => {
     const handleFormSubmit =async () => {
         const response = await fetch("/ratings", {
             
+        
         })
 
     }

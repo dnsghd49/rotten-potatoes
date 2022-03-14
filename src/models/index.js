@@ -14,8 +14,7 @@ if (configPath.use_env_variable) {
     sequelize = new Sequelize(configPath.database, configPath.username, configPath.password, configPath);
 }
 
-fs
-    .readdirSync(__dirname)
+fs.readdirSync(__dirname)
     .filter(file => {
         return (file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js');
     })
