@@ -54,7 +54,8 @@ function Showtimes() {
           </div>
           {index + 1 - (hours - 12) > 0 ? (
             <div>
-              in {index + 1 - (hours - 12)} hours and {60 - minutes} minutes
+              in {index + 1 - (hours - 12) < 1 ? 0 : index - (hours - 12)} hours
+              and {60 - minutes} minutes
             </div>
           ) : null}
         </li>
@@ -77,15 +78,16 @@ function Showtimes() {
             alt={movie.Title}
           />
           <div>
-            {hours - 12 < index + 3 ? (
-              <div>Show starts @ {index + 3}:00 PM</div>
+            {hours - 12 < index + 2 ? (
+              <div>Show starts @ {index + 2}:00 PM</div>
             ) : (
               <div>Show ended</div>
             )}
           </div>
-          {index + 3 - (hours - 12) > 0 ? (
+          {index + 2 - (hours - 12) > 0 ? (
             <div>
-              in {index + 3 - (hours - 12)} hours and {60 - minutes} minutes
+              in {index + 2 - (hours - 12) < 1 ? 0 : index + 1 - (hours - 12)}{" "}
+              hours and {60 - minutes} minutes
             </div>
           ) : null}
         </li>
@@ -116,7 +118,8 @@ function Showtimes() {
           </div>
           {index + 2 - (hours - 12) > 0 ? (
             <div>
-              in {index + 2 - (hours - 12)} hours and {60 - minutes} minutes
+              in {index + 2 - (hours - 12) < 1 ? 0 : index + 1 - (hours - 12)}{" "}
+              hours and {60 - minutes} minutes
             </div>
           ) : null}
         </li>

@@ -64,37 +64,37 @@ userRouter.post('/signup', async (req, res) => {
     }
 })
 
-// // UPDATE A User
-// userRouter.put('/:id', async (req, res) => {
-//     try {
-//         const updatedUsers = await User.update(req.body, {
-//             where: {
-//                 user_id: req.params.id
-//             }
-//         })
-//         res.status(200).json({
-//             message: `Successfully updated ${updatedUsers} user(s)`
-//         })
-//     } catch(err) {
-//         res.status(500).json(err)
-//     }
-// })
+// UPDATE A User
+userRouter.put('/:id', async (req, res) => {
+    try {
+        const updatedUsers = await User.update(req.body, {
+            where: {
+                user_id: req.params.id
+            }
+        })
+        res.status(200).json({
+            message: `Successfully updated ${updatedUsers} user(s)`
+        })
+    } catch(err) {
+        res.status(500).json(err)
+    }
+})
 
-// // DELETE A USER
-// userRouter.delete('/:id', async (req, res) => {
-//     try {
-//         const deletedUser = await User.destroy({
-//             where: {
-//                 user_id: req.params.id
-//             }
-//         })
-//         res.status(200).json({
-//             message: `Successfully deleted ${deletedUser} user(s)`
-//         })
-//     } catch(err) {
-//         res.status(500).json(err)
-//     }
-// })
+// DELETE A USER
+userRouter.delete('/:id', async (req, res) => {
+    try {
+        const deletedUser = await User.destroy({
+            where: {
+                user_id: req.params.id
+            }
+        })
+        res.status(200).json({
+            message: `Successfully deleted ${deletedUser} user(s)`
+        })
+    } catch(err) {
+        res.status(500).json(err)
+    }
+})
 
 // EXPORT
 module.exports = userRouter
