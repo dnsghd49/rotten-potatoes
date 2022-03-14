@@ -1,0 +1,24 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "Dk_D0oM13!",
+    "port": "7213",
+    "database": "Rotten_Potatoes",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "postgres",
+    "password": "Dk_D0oM13!",
+    "database": "Rotten_Potatoes_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "postgres",
+    "password": "Dk_D0oM13!",
+    "database": "Rotten_Potatoes_production",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}

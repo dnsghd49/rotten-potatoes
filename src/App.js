@@ -17,7 +17,6 @@ import ShowtimesTab from "./pages/ShowtimesTab";
 import Dashboard from "./pages/Dashboard";
 import PodCast from "./pages/Podcast";
 
-
 function App() {
   return (
     <div className="AppBG">
