@@ -53,4 +53,14 @@
 .formcontentname{
     margin-left: -5vw;
     margin-bottom: 2vh;
+    text-align: left;
 }
+
+.ratingStyles{
+    align-items: center;
+}
+
+.submitStyle{
+    margin-top: 1vh;
+}
+
