@@ -1,6 +1,6 @@
 // DEPENDENCIES
 const ratings = require('express').Router()
-const db = require('../models')
+const db = require('../../models')
 const { User, Movie, Rating } = db 
 const { Op } = require('sequelize')
 
