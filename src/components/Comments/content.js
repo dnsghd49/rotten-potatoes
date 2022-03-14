@@ -40,7 +40,12 @@ const ContentComments = () => {
         ) : (
             <li>{newTV.Error}</li>
         );
+    const handleFormSubmit =async () => {
+        const response = await fetch("/ratings", {
+            
+        })
 
+    }
     return (
         <Container>
             <Row>
@@ -77,7 +82,7 @@ const ContentComments = () => {
                 <Col>
                     <div className="commentheader"><h3 className="headertext">Rate and Review</h3></div>
                     <Row>
-                        <Form className="formcontentname" >
+                        <Form className="formcontentname" onSubmit={handleFormSubmit} >
                             <Form.Group controlId="form.Textarea">
                                 <Form.Label>Review</Form.Label>
                                 <Form.Control as="textarea" rows={3} />
