@@ -1,15 +1,17 @@
-import Nav from "react-bootstrap/Nav";
-import { useState } from "react";
-import "./style.css";
+import Nav from 'react-bootstrap/Nav'
+import { useState } from 'react'
+import './style.css'
+import { useNavigate } from "react-router-dom";
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faXmark } from '@fortawesome/free-solid-svg-icons/faXmark'
 
 // components
-import MoviesDropdown from "../MoviesDropdown";
-import TvshowsDropdown from "../TvshowsDropdown";
-import Signup from "../Signup";
-import Login from "../Login";
-import { useNavigate } from "react-router-dom";
+import MoviesDropdown from '../MoviesDropdown'
+import TvshowsDropdown from '../TvshowsDropdown'
+// import NewsDropdown from '../NewsDropdown'
+import Signup from '../Signup'
+import Login from '../Login'
+// import Dashboard from '../Dashboard'
 
 // posters
 // import posterOne from ''
@@ -17,15 +19,15 @@ import { useNavigate } from "react-router-dom";
 // import posterThree from ''
 
 function Rightbar() {
-    const [signupPopup, setSignupPopup] = useState(false);
-    const [loginPopup, setLoginPopup] = useState(false);
+    const [signupPopup, setSignupPopup] = useState(false)
+    const [loginPopup, setLoginPopup] = useState(false)
     const navigate = useNavigate();
 
     const routeShowtimes = () => {
         let path = "/showtimes";
         navigate(path);
     };
-
+    
     return (
         <div className="rightbar-container">
             <Nav className="justify-content-end nav-fonts">
@@ -37,7 +39,7 @@ function Rightbar() {
             </Nav>
 
             {/* signup/login popup */}
-            <Signup trigger={signupPopup} setTrigger={setSignupPopup} />
+            <Signup trigger={signupPopup} setTrigger={setSignupPopup}/>
             <Login trigger={loginPopup} setTrigger={setLoginPopup} />
             <Nav className="justify-content-end">
                 {/* this section is for movies dropdown */}
