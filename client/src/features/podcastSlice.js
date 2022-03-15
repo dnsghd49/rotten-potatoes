@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { API_key } from "../API/handleAPI";
+import { API_key } from "../../src/API/handleAPI";
 
 const initialState = {
   newPodcast: {},

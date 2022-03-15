@@ -7,15 +7,15 @@ import Topbar from "./components/Topbar";
 import Footer from "./components/Footer";
 
 // Pages
-import Main from "./pages/Main";
-import Comments from "./pages/Comments";
-import SearchPage from "./pages/Search";
-import MoviesTab from "./pages/MoviesTab";
-import TvShowsTab from "./pages/TvShowsTab";
-import DevTeam from "./pages/DevTeam";
-import ShowtimesTab from "./pages/ShowtimesTab";
-import Dashboard from "./pages/Dashboard";
-import PodCast from "./pages/Podcast";
+import Main from "../src/pages/Main";
+import Comments from "../src/pages/Comments";
+import SearchPage from "../src/pages/Search";
+import MoviesTab from "../src/pages/MoviesTab";
+import TvShowsTab from "../src/pages/TvShowsTab";
+import DevTeam from "../src/pages/DevTeam";
+import ShowtimesTab from "../src/pages/ShowtimesTab";
+import Dashboard from "../src/pages/Dashboard";
+import PodCast from "../src/pages/Podcast";
 
 function App() {
   return (
