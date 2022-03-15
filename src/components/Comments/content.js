@@ -36,7 +36,7 @@ const ContentComments = () => {
 
     const handleFormSubmit = async () => {
         const response = await fetch("/ratings", {
-          // need to update this area of code to POST what is on the form/ 
+            // need to update this area of code to POST what is on the form/ 
 
         })
 
@@ -89,12 +89,12 @@ const ContentComments = () => {
                             </Form.Group>
                             <Form.Group>
                                 <Form.Label>Rating: </Form.Label>
-                            <ReactStars className="ratingStyles"
-                                count={5}
-                                onChange={ratingChanged}
-                                size={24}
-                                edit={true}
-                                color2={'#ffd700'} />
+                                <ReactStars className="ratingStyles"
+                                    count={5}
+                                    onChange={ratingChanged}
+                                    size={24}
+                                    edit={true}
+                                    color2={'#ffd700'} />
                             </Form.Group>
                             <Form.Group controlId="form.Textarea">
                                 <Form.Label>Review: </Form.Label>
