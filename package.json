@@ -28,6 +28,7 @@
     "react-redux": "^7.2.6",
     "react-router-dom": "^6.2.2",
     "react-scripts": "^5.0.0",
+    "react-stars": "^2.2.5",
     "sequelize": "^6.17.0",
     "web-vitals": "^2.1.4"
   },
