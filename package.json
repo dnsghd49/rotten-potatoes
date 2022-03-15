@@ -6,7 +6,7 @@
   "scripts": {
     "server": "node index.js",
     "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "start": "concurrently \"npm run server\" \"npm run client\""
   },
   "dependencies": {
     "config.json": "^0.0.4",

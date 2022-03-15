@@ -1,7 +1,7 @@
 const http = require("http");
 
 // Port Environment variable
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 5432;
 
 // Creating the node server
 const SERVER = http.createServer();
