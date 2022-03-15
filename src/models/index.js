@@ -9,9 +9,19 @@ const db = {};
 
 let sequelize;
 if (configPath.use_env_variable) {
-    sequelize = new Sequelize(process.env[configPath.use_env_variable], configPath);
+    sequelize = new Sequelize(process.env.PG_URI, 
+        {
+            
+            ssl: {require: false}
+        }
+    );
 } else {
-    sequelize = new Sequelize(configPath.database, configPath.username, configPath.password, configPath);
+    sequelize = new Sequelize(process.env.PG_URI, 
+        {
+            
+            ssl: {require: false}
+        }
+    );
 }
 
 fs
