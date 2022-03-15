@@ -16,9 +16,9 @@ function MoviesDropdown() {
   return (
     <div className="dropdown">
       <Nav.Link onClick={routeMovie}>Movies</Nav.Link>
-      <div className="dropdown-content">
+      <div className="movies-dropdown-content">
         <div className="dp-flex">
-          <div className="dropdown-items">
+          <div className="movies-dropdown-items">
             <p>MOVIES IN THEATERS</p>
             <p>Opening This Week</p>
             <p>Top Box Office</p>
@@ -31,7 +31,7 @@ function MoviesDropdown() {
             <Nav.Link href="/podcast">Weekend Earnings</Nav.Link>
             <Nav.Link href="/tv-shows">Certified Fresh Movies</Nav.Link> */}
           </div>
-          <div className="dropdown-items">
+          <div className="movies-dropdown-items">
             <p>ON DVD & STREAMING</p>
             <p>VUDU</p>
             <p>Netflix Streaming</p>
@@ -48,14 +48,14 @@ function MoviesDropdown() {
             <Nav.Link href="/podcast">Certified Fresh Movies</Nav.Link>
             <Nav.Link href="/tv-shows">Browse All</Nav.Link> */}
           </div>
-          <div className="dropdown-items">
+          <div className="movies-dropdown-items">
             <p>MORE</p>
             <p>Top Movies</p>
             <p>Trailers</p>
             {/* <Nav.Link href="/tv-shows">Top Movies</Nav.Link>
             <Nav.Link href="/podcast">Trailers</Nav.Link> */}
           </div>
-          <div className="dropdown-imgs">
+          <div className="movies-dropdown-imgs">
             <p>CERTIFIED FRESH PICKS</p>
             <div className="movie-poster">
               <img src={poster1} className="posterStyle" alt="movie poster"></img>

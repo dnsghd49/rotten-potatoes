@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { ExternalLink } from 'react-external-link';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from '@fortawesome/fontawesome-free-brands'
 
 import Card from 'react-bootstrap/Card'
 import ListGroup from 'react-bootstrap/ListGroup'
@@ -30,7 +32,7 @@ function Aaron() {
 
     return (
         <Card style={{ width: '20rem' }}>
-            <Card.Img variant="top" src={githubAvatar} alt="Aarons profile picture" />
+            <Card.Img className='dev-profile' variant="top" src={githubAvatar} alt="Aarons profile picture" />
             <Card.Body>
                 <Card.Title>{githubName}</Card.Title>
                 <Card.Text className='card-text'>
@@ -42,7 +44,9 @@ function Aaron() {
                 <ListGroupItem>Located: {githubLocation}</ListGroupItem>
             </ListGroup>
             <Card.Body>
-                <ExternalLink href={githubUrl} target="_blank">Github Page</ExternalLink>
+                <ExternalLink href={githubUrl} target="_blank">
+                    <FontAwesomeIcon className='fa-lg github-icon' icon={faGithub} />
+                </ExternalLink>
             </Card.Body>
         </Card>
     )
