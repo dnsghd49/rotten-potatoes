@@ -20,12 +20,12 @@ p {
     display: block;
 }
 
-.dropdown-items {
+.tvshows-dropdown-items {
     padding-right: 3em;
     font-size: small;
 }
 
-.dropdown-imgs {
+.tvshows-dropdown-imgs {
     padding-left: 100px;
     font-size: small;
 }
