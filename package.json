@@ -1,29 +1,19 @@
 {
   "name": "rotten-potatoes",
-  "version": "1.0.0",
-  "description": "[![GitHub contributors](https://img.shields.io/github/contributors/Dnsghd49/rotten-potatoes.svg)](https://GitHub.com/Dnsghd49/rotten-potatoes/graphs/contributors/)   [![Build Status](https://img.shields.io/github/forks/Dnsghd49/rotten-potatoes.svg)](https://github.com/Dnsghd49/rotten-potatoes/network/)   [![Build Status](https://img.shields.io/github/stars/Dnsghd49/rotten-potatoes.svg)](https://github.com/Dnsghd49/rotten-potatoes/)   [![GitHub issues](https://img.shields.io/github/issues/Dnsghd49/rotten-potatoes.svg)](https://GitHub.com/Dnsghd49/rotten-potatoes/issues/)   ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)",
-  "main": "server.js",
+  "version": "0.1.0",
+  "private": true,
+  "main": "app.js",
   "scripts": {
     "server": "node index.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dnsghd49/rotten-potatoes.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/dnsghd49/rotten-potatoes/issues"
-  },
-  "homepage": "https://github.com/dnsghd49/rotten-potatoes#readme",
   "dependencies": {
-    "cors": "^2.8.5",
+    "config.json": "^0.0.4",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
-    "mongodb": "^4.4.1"
+    "pg": "^8.7.3",
+    "sequelize": "^6.17.0"
   },
   "devDependencies": {
     "concurrently": "^7.0.0"
