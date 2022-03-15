@@ -60,6 +60,7 @@
     ]
   },
   "devDependencies": {
+    "concurrently": "^7.0.0",
     "jest-fetch-mock": "^3.0.3"
   }
 }
