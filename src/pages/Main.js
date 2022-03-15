@@ -1,4 +1,4 @@
-import {React, useState} from "react";
+import {React} from "react";
 import SlideShow from "../components/SlideShow";
 import NewUpcoming from "../components/Carousel/newupcoming";
 import "./style.css";
@@ -6,6 +6,7 @@ import PopularIn from "../components/Carousel/popular";
 import BestSuperhero from "../components/Carousel/bestsuperhero";
 import BestSeries from "../components/Carousel/bestseries";
 import ChartList from "../components/Charts/charts";
+
 
 function Main() {
 
