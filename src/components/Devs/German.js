@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { ExternalLink } from "react-external-link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from '@fortawesome/fontawesome-free-brands'
 
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
@@ -47,7 +49,7 @@ function German() {
       </ListGroup>
       <Card.Body>
         <ExternalLink href={githubUrl} target="_blank">
-          Github Page
+          <FontAwesomeIcon className='fa-lg github-icon' icon={faGithub} />
         </ExternalLink>
       </Card.Body>
     </Card>

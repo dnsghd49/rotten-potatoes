@@ -46,9 +46,7 @@ const BestSuperhero = ({ deviceType }) => {
               src={movie.Poster}
               key={movie.imbdbID}
             />
-            <Figure.Caption>
-              {movie.Title}, ({movie.Year}) 🔥
-            </Figure.Caption>
+            <Figure.Caption>{movie.Title} 🔥</Figure.Caption>
           </Figure>
         </div>
       ))

@@ -2,7 +2,7 @@ p {
     color: aliceblue;
 }
 
-.dropdown-content {
+.movies-dropdown-content {
     display: none;
     position: absolute;
     z-index: 2;
@@ -16,19 +16,23 @@ p {
     display: flex;
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown:hover .movies-dropdown-content {
     display: block;
     z-index: 2;
 }
 
-.dropdown-items {
+.movies-dropdown-items {
     padding-right: 3em;
     font-size: small;
 }
 
-.dropdown-imgs {
+.movies-dropdown-imgs {
     padding-left: 100px;
     font-size: small;
+}
+
+.movies-dropdown-imgs p {
+    padding-right: 225px;
 }
 
 .movie-poster {

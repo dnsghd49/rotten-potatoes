@@ -65,11 +65,11 @@ ratings.post('/', async (req, res) => {
 })
 
 // UPDATE A Rating
-ratings.put('/:show', async (req, res) => {
+ratings.put('/:id', async (req, res) => {
     try {
         const updatedRatings = await Rating.update(req.body, {
             where: {
-                stage_id: req.params.id
+                rating_id: req.params.id
             }
         })
         res.status(200).json({

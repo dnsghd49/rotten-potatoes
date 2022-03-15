@@ -14,10 +14,10 @@ function TvshowsDropdown() {
       <Nav.Link onClick={routeShow}>TV shows</Nav.Link>
       <div className="tvshows-dropdown-content">
         <div className="dp-flex">
-          <div className="dropdown-items">
+          <div className="tvshows-dropdown-items">
             <p>COMING SOON...</p>
           </div>
-          <div className="dropdown-imgs">
+          <div className="tvshows-dropdown-imgs">
             <p>CERTIFIED FRESH PICKS</p>
             {/* <div className='movie-poster'>
                             <img src={{}} alt='movie poster'></img>

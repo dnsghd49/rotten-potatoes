@@ -1,5 +1,5 @@
 import "./style.css";
-import { Container, Row, Col, Form } from "react-bootstrap";
+import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -7,6 +7,7 @@ import {
     fetchnewTVData,
 } from "../../features/chartSlice";
 import thumbnail from "./img/icon.png"
+import ReactStars from 'react-stars'
 
 const ContentComments = () => {
     const dispatch = useDispatch();
@@ -22,7 +23,6 @@ const ContentComments = () => {
         dispatch(fetchnewTVData());
     }, [dispatch]);
 
-
     const renderMostPopular =
         mostPopular.Response === "True" ? (
             mostPopular.Search.map((movie, index) => (
@@ -34,18 +34,27 @@ const ContentComments = () => {
             <li>{mostPopular.Error}</li>
         );
 
-    const renderNewTV =
-        newTV.Response === "True" ? (
-            newTV.Search.map((movie, index) => <li key={index}>{movie.Title}</li>)
-        ) : (
-            <li>{newTV.Error}</li>
-        );
-    const handleFormSubmit =async () => {
-        const response = await fetch("/ratings", {
-            
-        })
+    const handleFormSubmit = async e => {
+        e.preventDefault();
+            // try {
+            //   const body = { user_id, movie_id, rating, comment };
+            //   const response = await fetch(`PG_URI`, {
+            //     method: "POST",
+            //     headers: { "Content-Type": "application/json" },
+            //     body: JSON.stringify(body)
+            //   });
+            //   window.location = "/";
+            //   console.log(response)
+            // } catch (err) {
+            //   console.error(err.message);
+            // };
 
     }
+    // STARS RATING
+    const ratingChanged = (newRating) => {
+        console.log(newRating)
+    }
+
     return (
         <Container>
             <Row>
@@ -83,10 +92,24 @@ const ContentComments = () => {
                     <div className="commentheader"><h3 className="headertext">Rate and Review</h3></div>
                     <Row>
                         <Form className="formcontentname" onSubmit={handleFormSubmit} >
+                            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                                <Form.Label>Email address: </Form.Label>
+                                <Form.Control type="email" placeholder="name@example.com" />
+                            </Form.Group>
+                            <Form.Group>
+                                <Form.Label>Rating: </Form.Label>
+                                <ReactStars className="ratingStyles"
+                                    count={5}
+                                    onChange={ratingChanged}
+                                    size={24}
+                                    edit={true}
+                                    color2={'#ffd700'} />
+                            </Form.Group>
                             <Form.Group controlId="form.Textarea">
-                                <Form.Label>Review</Form.Label>
+                                <Form.Label>Review: </Form.Label>
                                 <Form.Control as="textarea" rows={3} />
                             </Form.Group>
+                            <Button type="submit" className="submitStyle">Submit Review</Button>
                         </Form>
                     </Row>
                 </Col>
