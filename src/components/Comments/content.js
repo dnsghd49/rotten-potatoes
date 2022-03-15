@@ -1,4 +1,5 @@
 import "./style.css";
+require('dotenv')
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -35,15 +36,16 @@ const ContentComments = () => {
         );
 
     const handleFormSubmit = async e => {
-        // e.preventDefault();
+        e.preventDefault();
             // try {
             //   const body = { user_id, movie_id, rating, comment };
-            //   const response = await fetch("http://localhost:5000/todos", {
+            //   const response = await fetch(`PG_URI`, {
             //     method: "POST",
             //     headers: { "Content-Type": "application/json" },
             //     body: JSON.stringify(body)
             //   });
             //   window.location = "/";
+            //   console.log(response)
             // } catch (err) {
             //   console.error(err.message);
             // };
