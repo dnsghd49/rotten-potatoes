@@ -1,5 +1,4 @@
 import "./style.css";
-require('dotenv')
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -36,6 +35,7 @@ const ContentComments = () => {
         );
 
     const handleFormSubmit = async e => {
+        // require('dotenv')
         e.preventDefault();
             // try {
             //   const body = { user_id, movie_id, rating, comment };
