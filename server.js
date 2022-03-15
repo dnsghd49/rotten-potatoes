@@ -8,7 +8,8 @@ const port = process.env.PORT || 3001;
 
 // CONFIGURATION / MIDDLEWARE
 require('dotenv').config()
-app.use(express.json())
+app.use(express.json()) // recognize requests objects a JSON objects
+app.use(express.static('build'));
 app.use(express.urlencoded({ extended: false }))
 
 // SEQUELIZE CONNECTION
