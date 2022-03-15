@@ -45,7 +45,7 @@ function Aaron() {
             </ListGroup>
             <Card.Body>
                 <ExternalLink href={githubUrl} target="_blank">
-                    <FontAwesomeIcon className='fa-lg' icon={faGithub} />
+                    <FontAwesomeIcon className='fa-lg github-icon' icon={faGithub} />
                 </ExternalLink>
             </Card.Body>
         </Card>
