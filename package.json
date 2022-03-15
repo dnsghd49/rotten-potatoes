@@ -4,8 +4,9 @@
   "private": true,
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build:ui": "rm -rf build && cd ./client && npm run build --prod && cp -r build ../"
+    "server": "node index.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "dependencies": {
     "config.json": "^0.0.4",
@@ -13,5 +14,8 @@
     "express": "^4.17.3",
     "pg": "^8.7.3",
     "sequelize": "^6.17.0"
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0"
   }
 }
