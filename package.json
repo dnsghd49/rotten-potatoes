@@ -5,9 +5,11 @@
   "main": "app.js",
   "scripts": {
     "server": "node index.js",
-    "client": "npm start --prefix client",
+    "client": "cd client && npm start",
     "start": "concurrently \"npm run server\" \"npm run client\"",
-    "build": "cd client/ && yarn install && yarn build"
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "config.json": "^0.0.4",
