@@ -6,7 +6,8 @@
   "scripts": {
     "server": "node index.js",
     "client": "npm start --prefix client",
-    "start": "concurrently \"npm run server\" \"npm run client\""
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "cd client/ && yarn install && yarn build"
   },
   "dependencies": {
     "config.json": "^0.0.4",
