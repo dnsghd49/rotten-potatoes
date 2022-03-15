@@ -9,17 +9,17 @@ const db = {};
 
 let sequelize;
 if (configPath.use_env_variable) {
-    sequelize = new Sequelize(process.env.PG_URI, 
+    sequelize = new Sequelize(process.env.PG_URI,
         {
-            
-            ssl: {require: false}
+
+            ssl: { require: false }
         }
     );
 } else {
-    sequelize = new Sequelize(process.env.PG_URI, 
+    sequelize = new Sequelize(process.env.PG_URI,
         {
-            
-            ssl: {require: false}
+
+            ssl: { require: false }
         }
     );
 }

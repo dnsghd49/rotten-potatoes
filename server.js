@@ -14,8 +14,7 @@ app.use(express.urlencoded({ extended: false }))
 
 // SEQUELIZE CONNECTION
 const sequelize = new Sequelize(process.env.PG_URI, 
-    {
-        
+    { 
         ssl: {require: false}
     }
 )
@@ -34,11 +33,6 @@ app.get('/', (req, res) => {
     })
 })
 
-
-// app.get("*", (req, res) => {
-//   // res.sendFile(path.join(publicPath, "index.html"));
-// });
-
 // CONTROLLERS 
 const usersController = require('./src/controllers/user_controller')
 app.use('/users', usersController)
@@ -49,9 +43,6 @@ app.use('/ratings', ratingsController)
 const moviesController = require('./src/controllers/movie_controller')
 app.use('/movies', moviesController)
 
-// require('./Routes/user_routes');
-// require('./Routes/movie_routes');
-// require('./Routes/rating_routes');
 app.listen(port, () => {
   console.log(`Server is up on port ${port}!`);
 });
