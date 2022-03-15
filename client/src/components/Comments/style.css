@@ -1,0 +1,66 @@
+.mainpic{
+    margin-top: 3vh;
+    margin-left: 2vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+}
+
+.lilpreview{
+    margin-top: 6vh;
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
+    width: 35%;
+}
+
+.listComment > li{
+    text-align: left;
+    border-bottom: 1px solid #ebebeb;
+    border-right: 1px solid #ebebeb;
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.listComment {
+    list-style: none;
+    display: block;
+    padding: 0;
+  }
+
+.headingtrial{
+    margin-top: 5vh;
+    margin-left: -20vh;
+    color: #282c34;
+}
+
+.commentheader{
+    margin-left: -10vw;
+    margin-right: -0.6vw;
+    background-color: #282c34;
+    text-align: left;
+}
+
+.headertext{
+    background-color: #ffffff;
+    margin-right: 25vw;
+    margin-left: 2vw;
+    font-style: italic;
+}
+
+.formcontentname{
+    margin-left: -5vw;
+    margin-bottom: 2vh;
+    text-align: left;
+}
+
+.ratingStyles{
+    align-items: center;
+}
+
+.submitStyle{
+    margin-top: 1vh;
+}
+

@@ -1,0 +1,36 @@
+p {
+    color: aliceblue;
+}
+
+.tvshows-dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 2;
+    left: -746px;
+    width: 1103px;
+    background-color: #212529;
+    padding: 2em;
+}
+
+.dp-flex {
+    display: flex;
+}
+
+.dropdown:hover .tvshows-dropdown-content {
+    display: block;
+}
+
+.tvshows-dropdown-items {
+    padding-right: 3em;
+    font-size: small;
+}
+
+.tvshows-dropdown-imgs {
+    padding-left: 100px;
+    font-size: small;
+}
+
+.movie-poster {
+    display: flex;
+    padding-left: 100px;
+}
