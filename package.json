@@ -35,7 +35,6 @@
   "scripts": {
     "start": "node server.js",
     "react-start": "react-scripts start",
-    "dev": "concurrently \"npm run server\" \"npm run react-start\"",
     "build": "react-scripts build",
     "test": "react-scripts test --coverage",
     "eject": "react-scripts eject"
