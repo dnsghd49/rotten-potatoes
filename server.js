@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: false }))
 const sequelize = new Sequelize(process.env.PG_URI, 
     {
         
-        ssl: {require: true}
+        ssl: {require: false}
     }
 )
 
