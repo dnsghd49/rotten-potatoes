@@ -13,7 +13,12 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
 // SEQUELIZE CONNECTION
-const sequelize = new Sequelize(process.env.PG_URI)
+const sequelize = new Sequelize(process.env.PG_URI, 
+    {
+        
+        ssl: {require: false}
+    }
+)
 
 try {
     sequelize.authenticate() 
