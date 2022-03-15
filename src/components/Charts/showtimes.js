@@ -133,9 +133,7 @@ function Showtimes() {
       <Row>
         <Col sm={4}>
           <ul className="listStyle">
-            <h6 className="headingtitle" id="showtime">
-              showcase cinemax showtimes
-            </h6>
+            <h6 className="headingtitle" id="showtime">showcase cinemax showtimes</h6>
             {renderMostStreaming}
           </ul>
         </Col>

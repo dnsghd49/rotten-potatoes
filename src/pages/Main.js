@@ -1,3 +1,4 @@
+import {React, useState} from "react";
 import SlideShow from "../components/SlideShow";
 import NewUpcoming from "../components/Carousel/newupcoming";
 import "./style.css";
@@ -7,15 +8,16 @@ import BestSeries from "../components/Carousel/bestseries";
 import ChartList from "../components/Charts/charts";
 
 function Main() {
+
   return (
-    <div className="content">
+      <div className="content">
       <SlideShow />
       <NewUpcoming />
       <ChartList />
       <PopularIn />
       <BestSuperhero />
       <BestSeries />
-    </div>
+      </div>
   );
 }
 
