@@ -16,10 +16,10 @@ app.use(express.urlencoded({ extended: false }))
 const sequelize = new Sequelize(process.env.PG_URI)
 
 try {
-    sequelize.authenticate() 
+    sequelize.authenticate()
     // console.log(`Connected with Sequelize at ${process.env.PG_URI}`)
-} catch(err) {
-    console.log(`Unable to connect to PG: ${err}`) 
+} catch (err) {
+    console.log(`Unable to connect to PG: ${err}`)
 }
 
 // ROOT
@@ -35,18 +35,18 @@ app.get('/', (req, res) => {
 // });
 
 // CONTROLLERS 
-const usersController = require('./src/controllers/user_controller')
+const usersController = require('./controllers/user_controller')
 app.use('/users', usersController)
 
-const ratingsController = require('./src/controllers/rating_controller')
+const ratingsController = require('./controllers/rating_controller')
 app.use('/ratings', ratingsController)
 
-const moviesController = require('./src/controllers/movie_controller')
+const moviesController = require('./controllers/movie_controller')
 app.use('/movies', moviesController)
 
 // require('./Routes/user_routes');
 // require('./Routes/movie_routes');
 // require('./Routes/rating_routes');
 app.listen(port, () => {
-  console.log(`Server is up on port ${port}!`);
+    console.log(`Server is up on port ${port}!`);
 });
