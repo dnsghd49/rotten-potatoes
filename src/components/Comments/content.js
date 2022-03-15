@@ -28,12 +28,20 @@ const ContentComments = () => {
         ) : (
             <li>{mostPopular.Error}</li>
         );
-
-    const handleFormSubmit = async () => {
-        const response = await fetch("/ratings", {
-            // need to update this area of code to POST what is on the form/
-
-        })
+    const handleFormSubmit = async e => {
+        e.preventDefault();
+            // try {
+            //   const body = { user_id, movie_id, rating, comment };
+            //   const response = await fetch(`PG_URI`, {
+            //     method: "POST",
+            //     headers: { "Content-Type": "application/json" },
+            //     body: JSON.stringify(body)
+            //   });
+            //   window.location = "/";
+            //   console.log(response)
+            // } catch (err) {
+            //   console.error(err.message);
+            // };
 
     }
     // STARS RATING
