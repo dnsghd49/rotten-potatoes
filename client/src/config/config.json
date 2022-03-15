@@ -1,0 +1,29 @@
+{
+  "development": {
+    "username": "lksyseexbeyifp",
+    "password": "Dk_D0oM13!",
+    "port": "5432",
+    "database": "d9b60il8p4l217",
+    "host": "ec2-54-159-175-113.compute-1.amazonaws.com",
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": {
+        "require": false
+      }
+    }
+  },
+  "test": {
+    "username": "postgres",
+    "password": "Dk_D0oM13!",
+    "database": "Rotten_Potatoes_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "postgres",
+    "password": "Dk_D0oM13!",
+    "database": "Rotten_Potatoes_production",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}

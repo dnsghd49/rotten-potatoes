@@ -3,9 +3,44 @@
 }
 
 .card-text {
+<<<<<<< HEAD
     color: black;
+=======
+    color: white;
+>>>>>>> 0bc2c15637d6370cd9c326371bc0aa3845b21fbf
 }
 
 .card {
     margin: 70px;
+<<<<<<< HEAD
+=======
+    background-color: #212529;
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+.card>.list-group {
+    border-top: 1px solid white;
+}
+
+.list-group-item {
+    background-color: #212529;
+    color: white;
+    border: 1px solid white;
+}
+
+.card-img-top {
+    border-radius: 100px;
+    width: 200px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+}
+
+.github-icon {
+    color: white;
+    width: 30px;
+    height: auto;
+>>>>>>> 0bc2c15637d6370cd9c326371bc0aa3845b21fbf
 }

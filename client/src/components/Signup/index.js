@@ -28,7 +28,7 @@ function Signup(props) {
                     </Form.Group>
                     <Form.Group className="mb-3 signup-label" controlId="formBasicPassword">
                         <Form.Label>Confirm Password</Form.Label>
-                        <Form.Control type="password" placeholder="Password2" />
+                        <Form.Control type="password" placeholder="Confirm Your Password" />
                     </Form.Group>
                     <Button variant="primary" type="submit">
                         Submit

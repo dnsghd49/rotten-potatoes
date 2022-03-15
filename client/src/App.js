@@ -1,24 +1,36 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Suspense, lazy } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import PacmanLoader from "react-spinners/PacmanLoader";
+import { css } from "@emotion/react";
 
-// Components
-import Topbar from "./components/Topbar";
-import Footer from "./components/Footer";
+import Comments from "./pages/Comments";
+import SearchPage from "./pages/Search";
+import MoviesTab from "./pages/MoviesTab";
+import TvShowsTab from "./pages/TvShowsTab";
+import DevTeam from "./pages/DevTeam";
+import ShowtimesTab from "./pages/ShowtimesTab";
+import Dashboard from "./pages/Dashboard";
+import PodCast from "./pages/Podcast";
 
-// Pages
-import Main from "../src/pages/Main";
-import Comments from "../src/pages/Comments";
-import SearchPage from "../src/pages/Search";
-import MoviesTab from "../src/pages/MoviesTab";
-import TvShowsTab from "../src/pages/TvShowsTab";
-import DevTeam from "../src/pages/DevTeam";
-import ShowtimesTab from "../src/pages/ShowtimesTab";
-import Dashboard from "../src/pages/Dashboard";
-import PodCast from "../src/pages/Podcast";
+// COMPONENTS
+const Topbar = lazy(() => import("./components/Topbar"));
+const Footer = lazy(() => import("./components/Footer"));
+
+//PAGES
+const Main = lazy(() => import("./pages/Main"));
+
 
 function App() {
+  const override = css`
+  display: block;
+  margin: 0 auto;
+  position: aboslute;
+  top: 25vh;
+  color: #282c34`
   return (
+    <Suspense fallback={<div><PacmanLoader size="50px" css={override}/><h2 className="loadingStyle">Loading</h2></div>}>
     <div className="AppBG">
       <div className="App">
         <BrowserRouter>
@@ -39,6 +51,8 @@ function App() {
         <Footer />
       </div>
     </div>
+    </Suspense>
+
   );
 }
 

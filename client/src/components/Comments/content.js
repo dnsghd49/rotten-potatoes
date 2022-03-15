@@ -4,23 +4,18 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
     fetchMostPopularData,
-    fetchnewTVData,
 } from "../../features/chartSlice";
 import thumbnail from "./img/icon.png"
 import ReactStars from 'react-stars'
 
 const ContentComments = () => {
     const dispatch = useDispatch();
-    const { mostPopular, newTV } = useSelector(
+    const { mostPopular} = useSelector(
         (state) => state.chart
     );
 
     useEffect(() => {
         dispatch(fetchMostPopularData());
-    }, [dispatch]);
-
-    useEffect(() => {
-        dispatch(fetchnewTVData());
     }, [dispatch]);
 
     const renderMostPopular =
@@ -33,7 +28,6 @@ const ContentComments = () => {
         ) : (
             <li>{mostPopular.Error}</li>
         );
-
     const handleFormSubmit = async e => {
         // require('dotenv')
         e.preventDefault();

@@ -45,5 +45,5 @@ const moviesController = require('./controllers/movie_controller')
 app.use('/movies', moviesController)
 
 app.listen(port, () => {
-  console.log(`Server is up on port ${port}!`);
+    console.log(`Server is up on port ${port}!`);
 });
