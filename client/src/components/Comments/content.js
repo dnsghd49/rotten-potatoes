@@ -29,6 +29,7 @@ const ContentComments = () => {
             <li>{mostPopular.Error}</li>
         );
     const handleFormSubmit = async e => {
+        // require('dotenv')
         e.preventDefault();
             // try {
             //   const body = { user_id, movie_id, rating, comment };
