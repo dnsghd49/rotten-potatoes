@@ -3,17 +3,11 @@
 }
 
 .card-text {
-<<<<<<< HEAD
-    color: black;
-=======
     color: white;
->>>>>>> 0bc2c15637d6370cd9c326371bc0aa3845b21fbf
 }
 
 .card {
     margin: 70px;
-<<<<<<< HEAD
-=======
     background-color: #212529;
     color: white;
     border-bottom: 1px solid white;
@@ -42,5 +36,4 @@
     color: white;
     width: 30px;
     height: auto;
->>>>>>> 0bc2c15637d6370cd9c326371bc0aa3845b21fbf
 }
