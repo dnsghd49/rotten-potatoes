@@ -4,10 +4,9 @@
   "private": true,
   "main": "app.js",
   "scripts": {
-    "server": "node index.js",
-    "client": "cd client && npm start",
     "start": "concurrently \"npm run server\" \"npm run client\"",
     "install": "cd client && npm install",
+    "client": "cd client && npm run start",
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build"
   },

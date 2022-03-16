@@ -1,6 +1,6 @@
 import "./style.css";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
     fetchMostPopularData,
@@ -10,9 +10,14 @@ import ReactStars from 'react-stars'
 
 const ContentComments = () => {
     const dispatch = useDispatch();
-    const { mostPopular} = useSelector(
+    const { mostPopular } = useSelector(
         (state) => state.chart
     );
+
+    const [userID, setUserID] = useState(0);
+    const [rating, setRating] = useState(0);
+    const [movieId, setMovieId] = useState(0);
+    const [comment, setComment] = useState('');
 
     useEffect(() => {
         dispatch(fetchMostPopularData());
@@ -31,23 +36,31 @@ const ContentComments = () => {
     const handleFormSubmit = async e => {
         // require('dotenv')
         e.preventDefault();
-            // try {
-            //   const body = { user_id, movie_id, rating, comment };
-            //   const response = await fetch(`PG_URI`, {
-            //     method: "POST",
-            //     headers: { "Content-Type": "application/json" },
-            //     body: JSON.stringify(body)
-            //   });
-            //   window.location = "/";
-            //   console.log(response)
-            // } catch (err) {
-            //   console.error(err.message);
-            // };
+        try {
+            const response = await fetch("https://lit-sea-72283.herokuapp.com/ratings", {
+                method: "POST",
+                headers: {
+                    "Accept": "application/json",
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    user_id: userID,
+                    movie_id: movieId,
+                    rating: rating,
+                    comment: comment
+                }),
+            });
+            const data = await response();
+            console.log(data);
+        } catch (error) {
+        }
+
 
     }
     // STARS RATING
     const ratingChanged = (newRating) => {
         console.log(newRating)
+        setRating(newRating)
     }
 
     return (
@@ -87,22 +100,39 @@ const ContentComments = () => {
                     <div className="commentheader"><h3 className="headertext">Rate and Review</h3></div>
                     <Row>
                         <Form className="formcontentname" onSubmit={handleFormSubmit} >
-                            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                <Form.Label>Email address: </Form.Label>
-                                <Form.Control type="email" placeholder="name@example.com" />
+                            <Form.Group className="mb-3">
+                                <Form.Label>User ID</Form.Label>
+                                <Form.Control min="1" max="4" value={userID} type="number" name="user" id="user" placeholder="Enter ID 1~4" onChange={(e) => setUserID(e.target.value)} required />
+                            </Form.Group>
+                            <Form.Group className="mb-3">
+                                <Form.Label>Movie Title </Form.Label>
+                                <Form.Select value={movieId} type="number" name="movie" id="movie" onChange={(e) => setMovieId(e.target.value)}>
+                                    {/* Map from your movires */}
+                                    <option value={1}>Another Day to Die</option>
+                                    <option value={2}>Occtopussy</option>
+                                    <option value={3}>A Time to kill</option>
+                                    <option value={4}>Dr. No</option>
+                                    <option value={5}>Goldfinger</option>
+                                    <option value={6}>Caino Royal</option>
+                                    <option value={7}>The World is Not Enough</option>
+                                    <option value={8}>License To Kill</option>
+                                    <option value={9}>The Dark Knight Rises</option>
+                                    <option value={10}>Batman Returns</option>
+                                </Form.Select>
                             </Form.Group>
                             <Form.Group>
                                 <Form.Label>Rating: </Form.Label>
                                 <ReactStars className="ratingStyles"
                                     count={5}
+                                    value={rating}
                                     onChange={ratingChanged}
                                     size={24}
                                     edit={true}
                                     color2={'#ffd700'} />
                             </Form.Group>
-                            <Form.Group controlId="form.Textarea">
+                            <Form.Group>
                                 <Form.Label>Review: </Form.Label>
-                                <Form.Control as="textarea" rows={3} />
+                                <Form.Control value={comment} type="text" name="comment" id="comment" as="textarea" rows={3} onChange={(e) => setComment(e.target.value)} />
                             </Form.Group>
                             <Button type="submit" className="submitStyle">Submit Review</Button>
                         </Form>
