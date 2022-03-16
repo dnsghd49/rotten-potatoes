@@ -9,7 +9,7 @@ import { fetchBestSeriesData } from "../../features/movieSlice";
 const responsive = {
   superLargeDesktop: {
     breakpoint: { max: 4000, min: 3000 },
-    items: 6,
+    items: 5,
   },
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
@@ -17,7 +17,7 @@ const responsive = {
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
-    items: 2,
+    items: 1,
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
@@ -66,10 +66,10 @@ const BestSeries = ({ deviceType }) => {
       </Row>
       <Row>
         <Carousel
+        responsive={responsive}
           centerMode={true}
           swipeable={true}
           draggable={true}
-          responsive={responsive}
           infinite={true}
           containerClass="carousel-container"
           autoPlay={false}
