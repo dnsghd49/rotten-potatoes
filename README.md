@@ -79,7 +79,6 @@ To run tests, run the following command:
 
 ```
 npm test
-
 ```
 
 
