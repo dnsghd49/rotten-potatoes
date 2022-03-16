@@ -19,7 +19,7 @@ https://rotten-p0tat0es.herokuapp.com/
 
 ## Description
 
-A movie critic site allowing users to browse different selection of movie titles, tv shows, pod cast and more! A user can click on Whats a Potatoe Meter? to access the comments pagre a leave a rating on their favorite title from the list we have on the dropdown.
+A movie critic site allowing users to browse different selection of movie titles, tv shows, pod cast and more! A user can click on Whats a Potatoe Meter? to access the comments page a leave a rating on their favorite title from the list we have on the dropdown.
 
 ## Inspiration
 
@@ -41,7 +41,7 @@ We as a group wanted to remake a site that currently is running and make it as p
 
 * [Credits](#Credits)
 
-* [Bugs and Still in Production](#Bugs and Still in Production)
+* [Bugs and Still in Production](#Bugs-and-Still-in-Production)
 
 ## APIs
 
@@ -59,6 +59,26 @@ https://lit-sea-72283.herokuapp.com/
 ## Installation
 
 To install necessary dependencies, run the following command:
+
+## Technologies
+
+* React
+* React-Stars
+* React-Spinners
+* React-Bootstrap
+* Express
+* Postgres
+* JavaScript
+* Fontawesome
+* Redux
+* JSON
+* dotenv
+* PG
+* Sequelize
+* Jest
+* Web-Vitals
+* Concurrently
+* Heroku
 
 ```
 npm install
