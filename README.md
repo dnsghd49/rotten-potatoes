@@ -13,6 +13,10 @@
 * Omar Moreta
 * Aaron Lu
 
+## Deployed-Link:
+
+https://rotten-p0tat0es.herokuapp.com/
+
 ## Description
 
 A movie critic site allowing users to browse different selection of movie titles, tv shows, pod cast and more! A user can click on Whats a Potatoe Meter? to access the comments pagre a leave a rating on their favorite title from the list we have on the dropdown.
@@ -23,7 +27,7 @@ We as a group wanted to remake a site that currently is running and make it as p
 
 ## Table of Contents 
 
-* [Deployed-Link](#Deployed-Link)
+* [APIs](#APIs)
 
 * [Screenshot](#screenshot)
 
@@ -35,19 +39,22 @@ We as a group wanted to remake a site that currently is running and make it as p
 
 * [Tests](#tests)
 
-* [Questions](#questions)
+* [Credits](#Credits)
 
-## Deployed-Link:
+* [Bugs and Still in Production](#Bugs and Still in Production)
 
-https://rotten-p0tat0es.herokuapp.com/
+## APIs
 
-## API-Helper-Link:
+* Movies API:
+https://www.omdbapi.com/
 
-https://developer.imdb.com/documentation/
+* Our Own API:
+https://lit-sea-72283.herokuapp.com/
+
 
 ## Screenshot
 
-![ScreenShot](https://github.com/Dnsghd49/rotten-potatoes/notyet)
+![ScreenShot](https://github.com/dnsghd49/rotten-potatoes/blob/remove-warning/client/public/screenshot.png)
 
 ## Installation
 
@@ -60,7 +67,6 @@ npm install
 ## Usage
 
 nothing yet
-
 
   
 ## Contributing
@@ -76,6 +82,25 @@ npm test
 
 ```
 
+
+## Credits
+
+* [React](https://reactjs.org/)
+* [Stack Overflow](https://stackoverflow.com/)
+* [Github](https://github.com/)
+* [fortawesome](https://fontawesome.com/)
+* [React Bootstrap](https://react-bootstrap.github.io/)
+* [Zoom](https://zoom.us/)
+* [Heroku](https://www.heroku.com/)
+* [Dev](https://dev.to/)
+* [IMDb](https://www.imdb.com/?ref_=nv_home)
+* [GeeksForGeeks](https://www.geeksforgeeks.org/)
+* [bitnami](https://bitnami.com/)
+* [sequelize](https://sequelize.org/master/identifiers.html)
+* [Jennifer Vannier](https://github.com/jvannier)
+* [Jonathon Hinchley](https://github.com/hinchley2018)
+
+
 ## Bugs and Still in Production
 
 Still in production: 
@@ -83,9 +108,4 @@ Still in production:
 * Interacting with movies called from API 
 * Update & Delete buttons added to comments page: fucntionality for it is there though 
 * Show casing ratings on the comments page
-
-
-## Questions
-
-If you have any questions about the repo, open an issue or contact me directly at . You can find more of my work at [Dnsghd49](https://github.com/Dnsghd49/).
 
