@@ -15,7 +15,11 @@
 
 ## Description
 
-later
+A movie critic site allowing users to browse different selection of movie titles, tv shows, pod cast and more! A user can click on Whats a Potatoe Meter? to access the comments pagre a leave a rating on their favorite title from the list we have on the dropdown.
+
+## Inspiration
+
+We as a group wanted to remake a site that currently is running and make it as precise as it was built with the given time frame. Although, we did not get to every component as we wanted to. We accomplished many feats and made an amazing site that we all are walking away from with a feeling of accomplishment. And many new learned skill sets we did not have prior or were still working on to date. 
 
 ## Table of Contents 
 
@@ -69,7 +73,17 @@ To run tests, run the following command:
 
 ```
 npm test
+
 ```
+
+## Bugs and Still in Production
+
+Still in production: 
+* Sign up form | Login form 
+* Interacting with movies called from API 
+* Update & Delete buttons added to comments page: fucntionality for it is there though 
+* Show casing ratings on the comments page
+
 
 ## Questions
 
