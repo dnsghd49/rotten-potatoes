@@ -54,7 +54,7 @@ https://lit-sea-72283.herokuapp.com/
 
 ## Screenshot
 
-![ScreenShot](https://github.com/dnsghd49/rotten-potatoes/blob/remove-warning/client/public/screenshot.png)
+![ScreenShot](https://github.com/dnsghd49/rotten-potatoes/blob/main/client/public/screenshot.png)
 
 ## Installation
 
