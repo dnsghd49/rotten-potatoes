@@ -31,7 +31,7 @@ function Rightbar() {
     return (
         <div className="rightbar-container">
             <Nav className="justify-content-end nav-fonts">
-                <Nav.Link href="/movie">What's the Potatometer®?</Nav.Link>
+                <Nav.Link href="/comments">What's the Potatometer®?</Nav.Link>
                 {/* <Nav.Link href="/movies">What's the Potatometer®?</Nav.Link> */}
                 <Nav.Link href="/developers">Critics</Nav.Link>
                 <Nav.Link onClick={() => setSignupPopup(true)}>SIGN UP</Nav.Link>
