@@ -13,13 +13,15 @@
 * Omar Moreta
 * Aaron Lu
 
+## Deployed-Link:
+
+https://rotten-p0tat0es.herokuapp.com/
+
 ## Description
 
 later
 
 ## Table of Contents 
-
-* [Deployed-Link](#Deployed-Link)
 
 * [APIs](#APIs)
 
@@ -34,10 +36,6 @@ later
 * [Tests](#tests)
 
 * [Credits](#Credits)
-
-## Deployed-Link:
-
-https://rotten-p0tat0es.herokuapp.com/
 
 ## APIs
 
