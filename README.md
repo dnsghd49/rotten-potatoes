@@ -102,10 +102,12 @@ npm test
 
 
 ## Bugs and Still in Production
+Bugs: 
+* TBA
 
 Still in production: 
 * Sign up form | Login form 
 * Interacting with movies called from API 
-* Update & Delete buttons added to comments page: fucntionality for it is there though 
+* Update & Delete buttons added to comments page: functionality for it is there though 
 * Show casing ratings on the comments page
 
