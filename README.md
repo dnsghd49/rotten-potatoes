@@ -21,6 +21,8 @@ later
 
 * [Deployed-Link](#Deployed-Link)
 
+* [APIs](#APIs)
+
 * [Screenshot](#screenshot)
 
 * [Installation](#installation)
@@ -31,19 +33,24 @@ later
 
 * [Tests](#tests)
 
-* [Questions](#questions)
+* [Credits](#Credits)
 
 ## Deployed-Link:
 
 https://rotten-p0tat0es.herokuapp.com/
 
-## API-Helper-Link:
+## APIs
 
-https://developer.imdb.com/documentation/
+* Movies API:
+https://www.omdbapi.com/
+
+* Our Own API:
+https://lit-sea-72283.herokuapp.com/
+
 
 ## Screenshot
 
-![ScreenShot](https://github.com/Dnsghd49/rotten-potatoes/notyet)
+![ScreenShot](https://github.com/dnsghd49/rotten-potatoes/blob/main/client/public/logo192.png)
 
 ## Installation
 
@@ -56,7 +63,6 @@ npm install
 ## Usage
 
 nothing yet
-
 
   
 ## Contributing
@@ -71,7 +77,20 @@ To run tests, run the following command:
 npm test
 ```
 
-## Questions
+## Credits
 
-If you have any questions about the repo, open an issue or contact me directly at . You can find more of my work at [Dnsghd49](https://github.com/Dnsghd49/).
+* [React](https://reactjs.org/)
+* [Stack Overflow](https://stackoverflow.com/)
+* [Github](https://github.com/)
+* [fortawesome](https://fontawesome.com/)
+* [React Bootstrap](https://react-bootstrap.github.io/)
+* [Zoom](https://zoom.us/)
+* [Heroku](https://www.heroku.com/)
+* [Dev](https://dev.to/)
+* [IMDb](https://www.imdb.com/?ref_=nv_home)
+* [GeeksForGeeks](https://www.geeksforgeeks.org/)
+* [bitnami](https://bitnami.com/)
+* [sequelize](https://sequelize.org/master/identifiers.html)
+* [Jennifer Vannier](https://github.com/jvannier)
+* [Jonathon Hinchley](https://github.com/hinchley2018)
 
