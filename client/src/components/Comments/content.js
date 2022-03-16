@@ -10,7 +10,7 @@ import ReactStars from 'react-stars'
 
 const ContentComments = () => {
     const dispatch = useDispatch();
-    const { mostPopular} = useSelector(
+    const { mostPopular } = useSelector(
         (state) => state.chart
     );
 
@@ -31,18 +31,14 @@ const ContentComments = () => {
     const handleFormSubmit = async e => {
         // require('dotenv')
         e.preventDefault();
-            // try {
-            //   const body = { user_id, movie_id, rating, comment };
-            //   const response = await fetch(`PG_URI`, {
-            //     method: "POST",
-            //     headers: { "Content-Type": "application/json" },
-            //     body: JSON.stringify(body)
-            //   });
-            //   window.location = "/";
-            //   console.log(response)
-            // } catch (err) {
-            //   console.error(err.message);
-            // };
+        try {
+            const response = await fetch("https://lit-sea-72283.herokuapp.com/ratings");
+            const data = await response.json();
+            console.log(data);
+        } catch (error) {
+            console.log(error);
+        }
+
 
     }
     // STARS RATING
