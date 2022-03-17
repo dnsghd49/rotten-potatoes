@@ -105,6 +105,9 @@ npm test
 ## Credits
 
 * [React](https://reactjs.org/)
+* [React Stars](https://github.com/n49/react-stars)
+* [React Multi-Carousel](https://github.com/YIZHUANG/react-multi-carousel)
+* [React Spinners](https://github.com/davidhu2000/react-spinners)
 * [Stack Overflow](https://stackoverflow.com/)
 * [Github](https://github.com/)
 * [fortawesome](https://fontawesome.com/)
