@@ -4,7 +4,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 75%;
+    width: 50%;
 }
 
 .lilpreview{
@@ -12,14 +12,12 @@
     display: block;
     margin-left: 0;
     margin-right: auto;
-    width: 35%;
+    width: 70%;
 }
 
 .listComment > li{
-    text-align: left;
     border-bottom: 1px solid #ebebeb;
     border-right: 1px solid #ebebeb;
-
     padding-top: 15px;
     padding-bottom: 15px;
 }
@@ -32,26 +30,27 @@
 
 .headingtrial{
     margin-top: 5vh;
-    margin-left: -20vh;
+    /* margin-left: -20vh; */
     color: #282c34;
+    text-align: center;
 }
 
+
 .commentheader{
-    margin-left: -10vw;
-    margin-right: -0.6vw;
+    /* margin-left: -10vw; */
+    /* margin-right: -0.6vw; */
     background-color: #282c34;
     text-align: left;
 }
 
 .headertext{
     background-color: #ffffff;
-    margin-right: 25vw;
+    margin-right: 40vw;
     margin-left: 2vw;
     font-style: italic;
 }
 
 .formcontentname{
-    margin-left: -5vw;
     margin-bottom: 2vh;
     text-align: left;
 }

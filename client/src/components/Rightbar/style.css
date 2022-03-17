@@ -6,3 +6,9 @@
 .rightbar-container {
     padding-left: auto;
 }
+
+@media screen and (max-width: 991px) {
+    .rightbar-container {
+        display:none;
+    }
+}

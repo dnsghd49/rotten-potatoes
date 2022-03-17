@@ -66,36 +66,19 @@ const ContentComments = () => {
     return (
         <Container>
             <Row>
-                <Col sm={5}>
-                    <Row>
-                        <Col sm={10}>
-                            <ul className="listComment">
-                                <h6 className="headingtitle">most popular on rp</h6>
-                                {renderMostPopular}
-                            </ul>
-                        </Col>
-                    </Row>
-                </Col>
-                <Col sm={6}>
-                    <Row>
-                        <img src={thumbnail} className="mainpic" alt="potato" />
-                    </Row>
-                    <Row>
-                        <Col sm={6}>
-                            <img src={thumbnail} className="lilpreview" alt="potato" />
-                        </Col>
-                        <Col sm={6}>
-                            <div className="headingtrial">
-                                <h3>MOVIE/SHOW TITLE</h3>
-                                <div>GENRE</div>
-                                <div>RANDOM SCORE</div>
-                            </div>
-                        </Col>
-                    </Row>
-                </Col>
+                <Row>
+                    <img src={thumbnail} className="mainpic" alt="potato" />
+                </Row>
+                <Row>
+                    <div className="headingtrial">
+                        <h3>MOVIE/SHOW TITLE</h3>
+                        <div>GENRE</div>
+                        <div>RANDOM SCORE</div>
+                    </div>
+                </Row>
             </Row>
             <Row>
-                <Col></Col>
+
                 <Col>
                     <div className="commentheader"><h3 className="headertext">Rate and Review</h3></div>
                     <Row>
@@ -140,7 +123,7 @@ const ContentComments = () => {
                 </Col>
             </Row>
             <Row>
-                <Col></Col>
+
                 <Col>
                     <div className="commentheader"><h3 className="headertext">Comments</h3></div>
                     <Row>

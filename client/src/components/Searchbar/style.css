@@ -34,10 +34,11 @@
 /* from this size should be mobile resolution  */
 @media screen and (max-width: 991px) {
     .me-2 {
-        width: 200px;
+        width: 130px;
     }
     .search-btn {
         line-height: 1;
         font-size: smaller;
+        display:none;
     }
 }
