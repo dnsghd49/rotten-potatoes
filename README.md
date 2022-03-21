@@ -13,13 +13,21 @@
 * Omar Moreta
 * Aaron Lu
 
+## Deployed-Link:
+
+https://rotten-p0tat0es.herokuapp.com/
+
 ## Description
 
-later
+A movie critic site allowing users to browse different selection of movie titles, tv shows, pod cast and more! A user can click on Whats a Potatoe Meter? to access the comments page a leave a rating on their favorite title from the list we have on the dropdown.
+
+## Inspiration
+
+We as a group wanted to remake a site that currently is running and make it as precise as it was built with the given time frame. Although, we did not get to every component as we wanted to. We accomplished many feats and made an amazing site that we all are walking away from with a feeling of accomplishment. And many new learned skill sets we did not have prior or were still working on to date. 
 
 ## Table of Contents 
 
-* [Deployed-Link](#Deployed-Link)
+* [APIs](#APIs)
 
 * [Screenshot](#screenshot)
 
@@ -31,23 +39,46 @@ later
 
 * [Tests](#tests)
 
-* [Questions](#questions)
+* [Credits](#Credits)
 
-## Deployed-Link:
+* [Bugs and Still in Production](#Bugs-and-Still-in-Production)
 
-https://rotten-p0tat0es.herokuapp.com/
+## APIs
 
-## API-Helper-Link:
+* Movies API:
+https://www.omdbapi.com/
 
-https://developer.imdb.com/documentation/
+* Our Own API:
+https://lit-sea-72283.herokuapp.com/
+
 
 ## Screenshot
 
-![ScreenShot](https://github.com/Dnsghd49/rotten-potatoes/notyet)
+![ScreenShot](https://github.com/dnsghd49/rotten-potatoes/blob/main/client/public/screenshot.png)
 
 ## Installation
 
 To install necessary dependencies, run the following command:
+
+## Technologies
+
+* React
+* React-Stars
+* React-Spinners
+* React-Bootstrap
+* Express
+* Postgres
+* JavaScript
+* Fontawesome
+* Redux
+* JSON
+* dotenv
+* PG
+* Sequelize
+* Jest
+* Web-Vitals
+* Concurrently
+* Heroku
 
 ```
 npm install
@@ -56,7 +87,6 @@ npm install
 ## Usage
 
 nothing yet
-
 
   
 ## Contributing
@@ -71,7 +101,35 @@ To run tests, run the following command:
 npm test
 ```
 
-## Questions
 
-If you have any questions about the repo, open an issue or contact me directly at . You can find more of my work at [Dnsghd49](https://github.com/Dnsghd49/).
+## Credits
+
+* [React](https://reactjs.org/)
+* [React Stars](https://github.com/n49/react-stars)
+* [React Multi-Carousel](https://github.com/YIZHUANG/react-multi-carousel)
+* [React Spinners](https://github.com/davidhu2000/react-spinners)
+* [Stack Overflow](https://stackoverflow.com/)
+* [Github](https://github.com/)
+* [fortawesome](https://fontawesome.com/)
+* [React Bootstrap](https://react-bootstrap.github.io/)
+* [Zoom](https://zoom.us/)
+* [Heroku](https://www.heroku.com/)
+* [Dev](https://dev.to/)
+* [IMDb](https://www.imdb.com/?ref_=nv_home)
+* [GeeksForGeeks](https://www.geeksforgeeks.org/)
+* [bitnami](https://bitnami.com/)
+* [sequelize](https://sequelize.org/master/identifiers.html)
+* [Jennifer Vannier](https://github.com/jvannier)
+* [Jonathon Hinchley](https://github.com/hinchley2018)
+
+
+## Bugs and Still in Production
+Bugs: 
+* TBA
+
+Still in production: 
+* Sign up form | Login form 
+* Interacting with movies called from API 
+* Update & Delete buttons added to comments page: functionality for it is there though 
+* Show casing ratings on the comments page
 
