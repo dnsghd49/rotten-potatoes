@@ -86,12 +86,8 @@ npm install
 
 ## Usage
 
-nothing yet
+This is a movie critics site, once you logged in you can post a review of a movie like or dislike and post it to the comments section!
 
-  
-## Contributing
-
-fork it and make a pr :)))
 
 ## Tests
 
