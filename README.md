@@ -35,8 +35,6 @@ We as a group wanted to remake a site that currently is running and make it as p
 
 * [Usage](#usage)
 
-* [Contributing](#contributing)
-
 * [Tests](#tests)
 
 * [Credits](#Credits)
