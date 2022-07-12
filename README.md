@@ -35,8 +35,6 @@ We as a group wanted to remake a site that currently is running and make it as p
 
 * [Usage](#usage)
 
-* [Contributing](#contributing)
-
 * [Tests](#tests)
 
 * [Credits](#Credits)
@@ -86,12 +84,8 @@ npm install
 
 ## Usage
 
-nothing yet
+This is a movie critics site, once you logged in you can post a review of a movie like or dislike and post it to the comments section!
 
-  
-## Contributing
-
-fork it and make a pr :)))
 
 ## Tests
 
